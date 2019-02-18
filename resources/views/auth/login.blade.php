@@ -64,6 +64,16 @@
                                 @endif
                             </div>
                         </div>
+
+
+                    <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a class="btn-btn-link" href="{{ url('socialauth/github')}}">
+                                           <i class=fa-fa-github fa-3x >GITHUB</i>
+                                    </a>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
             </div>

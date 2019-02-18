@@ -24,6 +24,8 @@ class CreateUsersTable extends Migration
             $table->text('college_name');
             $table->string('branch');
             $table->string('year');
+            $table->string('avatar_original');
+            $table->string('    avatar');
             $table->rememberToken();
             $table->timestamps();
         });
