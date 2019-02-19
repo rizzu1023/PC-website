@@ -24,3 +24,12 @@ Route::get('github/success', 'Auth\SocialAuthController@handleProviderCallback')
 
 
 Route::get('/admin','AdminController@Index');
+
+
+// TEST
+Route::get('/access/root','AdminController@Index');
+Route::get('/access/root/login','AdminController@GetLogin');
+Route::post('/access/root/login','AdminController@PostLogin');
+Route::get('/access/root/GetSignup','AdminController@GetSignup');
+Route::post('/access/root/GetSignup','AdminController@PostSignup');
+Route::get('/logout','AdminController@Logout');
