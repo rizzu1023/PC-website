@@ -1,27 +1,34 @@
 <?php
-    namespace App\Http\Controllers;
+
+namespace Illuminate\Foundation\Auth;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use App\adminauth;
-use App\admin;
-use DB;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Mail;
-use App\Http\Requests;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Foundation\Auth\Admins;
+use Illuminate\Validation\ValidationException;
 
-
-class AdminController extends Controller
+trait AuthenticatesUsers
 {
-   public function login(Request $request)
+    use RedirectsUsers, ThrottlesLogins;
+
+    /**
+     * Show the application's login form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showLoginForm()
+    {
+        return view('admin.adminlogin');
+    }
+
+    /**
+     * Handle a login request to the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Http\JsonResponse
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function login(Request $request)
     {
         $this->validateLogin($request);
 
@@ -173,35 +180,5 @@ class AdminController extends Controller
     protected function guard()
     {
         return Auth::guard();
-    }        
-
-  
-
-        public function AdminLogin()
-    {
-        return view('admin\adminlogin');
     }
-    
-    public function AdminRegister()
-    {
-    	
-        return view('admin\adminregister');
-    }
-
-      public function Insert(Request $req,Response $res)
-    {
-    	$admin = new Admin();
-
-       $admin->name=$req->input('name');
-       $admin->email=$req->input('email');
-       $admin->password=$req->input('password');
-       $admin->save();
-       return Redirect::route('admin\adminlogin');
-    }
-
-
 }
-
-
-
-

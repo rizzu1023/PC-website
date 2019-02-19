@@ -24,7 +24,7 @@ Route::get('github/success', 'Auth\SocialAuthController@handleProviderCallback')
 
 
 
-Route::get('/admin/login','AdminController@AdminLogin')->middleware('admin');
-//Route::post('/admin/login','AdminController@Authenticate');
+Route::get('/admin/login','AdminController@AdminLogin');
+Route::post('/admin/login','AdminController@login');
 Route::get('/admin/register','AdminController@AdminRegister');
 Route::post('/admin/register','AdminController@Insert')->name('AdminRegister');
