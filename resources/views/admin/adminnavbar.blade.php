@@ -1,4 +1,3 @@
-
  {{-- <ul class="nav navbar-nav navbar-right">
   <li><a href="/posts/create">Create Post</a></li>
 </ul> --}}
@@ -39,11 +38,11 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="login">{{ __('Login') }}</a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" href="register">{{ __('Register') }}</a>
                             </li>
                         @endif
                     @else

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.adminapp')
 
 @section('content')
 <div class="container">
@@ -61,10 +61,6 @@
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                 <a class="btn btn-link" href="socialauth/github">
-                                        Github
-                                    </a>
-                              
                                 @endif
                             </div>
                         </div>
