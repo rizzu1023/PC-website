@@ -35,6 +35,7 @@ class SocialAuthController extends Controller
 // 		$user->getAvatar();
     	try {
             $user = Socialite::driver('github')->user();
+
         } catch (\Exception $e) {
             return redirect('/login');
         }
@@ -47,6 +48,7 @@ class SocialAuthController extends Controller
         if($existingUser){
             // log them in
             auth()->login($existingUser, true);
+
         } else {
             // create a new user
             $newUser                  = new User;
@@ -58,7 +60,7 @@ class SocialAuthController extends Controller
             $newUser->save();
             auth()->login($newUser, true);
         }
-        return redirect()->to('/home');
+        return redirect('/home');
     }
 
     	//get the user

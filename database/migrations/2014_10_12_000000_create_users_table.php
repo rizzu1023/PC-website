@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('branch');
             $table->string('year');
             $table->string('avatar_original');
-            $table->string('    avatar');
+            $table->string('avatar');
             $table->rememberToken();
             $table->timestamps();
         });

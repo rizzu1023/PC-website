@@ -20,3 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('socialauth/github', 'Auth\SocialAuthController@redirectToProvider');
 Route::get('github/success', 'Auth\SocialAuthController@handleProviderCallback');
+
+
+
+Route::get('/admin','AdminController@Index');
