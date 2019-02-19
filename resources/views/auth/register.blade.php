@@ -26,6 +26,20 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus>
+
+                                @if ($errors->has('username'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('username') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
@@ -58,6 +72,44 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="contact" class="col-md-4 col-form-label text-md-right">{{ __('Contact') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="number" type="number" class="form-control{{ $errors->has('contact') ? ' is-invalid' : '' }}" name="contact" value="{{ old('contact') }}" required>
+
+                                <!-- @if ($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif -->
+                            </div>
+                        </div>
+                        
+                         <div class="form-group row">
+                            <label for="college_name" class="col-md-4 col-form-label text-md-right">{{ __('College Name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="college_name" type="text" class="form-control{{ $errors->has('college_name') ? ' is-invalid' : '' }}" name="college_name" value="{{ old('college_name') }}" required>
+                            </div>
+                        </div>
+
+                         <div class="form-group row">
+                            <label for="branch" class="col-md-4 col-form-label text-md-right">{{ __('Branch') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="branch" type="text" class="form-control{{ $errors->has('branch') ? ' is-invalid' : '' }}" name="branch" value="{{ old('branch') }}" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="year" class="col-md-4 col-form-label text-md-right">{{ __('Year') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="year" type="text" class="form-control{{ $errors->has('year') ? ' is-invalid' : '' }}" name="year" value="{{ old('year') }}" required>
                             </div>
                         </div>
 
