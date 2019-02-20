@@ -35,7 +35,7 @@
       <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
             <div class="nano">
                 <div class="nano-content">
-                    <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Focus</span></a></div>
+                    <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Programmers Club</span></a></div>
                     <ul>
                         <li class="label">Main</li>
                         <li class="active"><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard  </a>
@@ -107,30 +107,41 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="basic-form">
-                                        <form>
+
+                                    
+                                        @if(\Session::has('success'))
+                                        <div class="alert alert-success">
+                                        <p>{{ \Session::get('success') }}</p>
+                                        </div>
+                                        @endif
+
+
+                                        <form  method ="POST" action="{{route('addWorkshop')}}">
+                                        @csrf
+                                        
                                             <div class="form-group">
-                                                <input type="text" class="form-control input-default " placeholder="Title">
+                                                <input type="text" class="form-control input-default " name="title" placeholder="Title">
                                             </div>
                                             <div class="form-group">
                                                <p class="text-muted m-b-15 f-s-12">Upload Image</p>
-                                                <input type="file" class="form-control input-default" placeholder="Image">
+                                                <input type="file" accept="image/x-png,image/gif,image/jpeg" class="form-control input-default" name="image" placeholder="Image" required>
                                             </div>
                                              <div class="form-group">
                                                 
-                                                <input type="text" class="form-control input-default" placeholder="Discription">
+                                                <input type="text" class="form-control input-default" placeholder="Description" name="discription" required>
                                             </div>
                                             <div class="form-group">
                                                 
-                                                <input type="text" class="form-control input-default" placeholder="status">
+                                                <input type="text" class="form-control input-default" placeholder="status(Active/Inactive)" name="status" required>
                                             
                                             </div>
                                              <div class="form-group">
-                                                
-                                                <input type="date" class="form-control input-default" placeholder="date">
+                                                <p class="text-muted m-b-15 f-s-12">Date</p>
+                                                <input type="date" class="form-control input-default" placeholder="date" name="date" required>
                                             </div>
                                              <div class="form-group">
-                                                
-                                                <input type="time" class="form-control input-default" placeholder="time">
+                                                <p class="text-muted m-b-15 f-s-12">Time</p>
+                                                <input type="time" class="form-control input-default" placeholder="time" name="time" required>
                                             </div>
 
                                             <button type="submit" class="btn btn-primary m-b-10 m-l-5">Submit</button>
