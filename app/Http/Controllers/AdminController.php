@@ -3,7 +3,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\User;
+use App\adminauth;
 use App\admin;
 use DB;
 use App\Http\Controllers\Controller;
@@ -16,31 +16,21 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Requests;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Foundation\Auth\Admins;
 
 
 class AdminController extends Controller
 {
-    //
-
-
-
+   public function login(Request $request)
+    {
+      
+    }
 
         public function AdminLogin()
     {
         return view('admin\adminlogin');
     }
-    public function Authenticate()
-    {
-
-  			 
-
-
-
-   }
-
-
-
-  }
+    
     public function AdminRegister()
     {
     	
@@ -55,6 +45,7 @@ class AdminController extends Controller
        $admin->email=$req->input('email');
        $admin->password=$req->input('password');
        $admin->save();
+       return Redirect::route('admin\adminlogin');
     }
 
 

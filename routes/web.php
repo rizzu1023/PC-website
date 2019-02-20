@@ -31,7 +31,7 @@ Route::get('/workshop','WorkshopController@getWorkshop');
 Route::post('/workshop','WorkshopController@postWorkshop');
 // Route::post('/workshop','admin.workshop');
 
-Route::get('/admin/login','AdminController@AdminLogin')->middleware('admin');
-//Route::post('/admin/login','AdminController@Authenticate');
+Route::get('/admin/login','AdminController@AdminLogin');
+Route::post('/admin/login','AdminController@login');
 Route::get('/admin/register','AdminController@AdminRegister');
 Route::post('/admin/register','AdminController@Insert')->name('AdminRegister');
