@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Cloudder;
+use App\Upload;
 
 class ImageUploadController extends Controller
 {
