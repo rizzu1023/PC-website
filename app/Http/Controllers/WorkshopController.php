@@ -16,5 +16,7 @@ class WorkshopController extends Controller
     public function getWorkshop(){
         return view('admin.workshop');
     }
-
+    public function postWorkshop(){
+        
+    }
 }
