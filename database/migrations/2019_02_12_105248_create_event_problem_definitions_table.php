@@ -15,7 +15,6 @@ class CreateEventProblemDefinitionsTable extends Migration
     {
         Schema::create('event_problem_definitions', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('event_id');
             $table->timestamps();
             $table->string('title');
             $table->longText('description');

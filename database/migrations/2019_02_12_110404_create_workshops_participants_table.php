@@ -15,7 +15,6 @@ class CreateWorkshopsParticipantsTable extends Migration
     {
         Schema::create('workshops_participants', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('workshop_id');
             $table->string('workshop_name');
             $table->string('username');
             $table->string('email');
