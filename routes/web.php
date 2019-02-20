@@ -39,6 +39,4 @@ Route::post('/admin/register','AdminController@Insert')->name('AdminRegister');
 //cloudder route
 Route::get('/', 'ImageUploadController@home');
 
-Route::post('/upload/images', [
-  'uses'   =>  'ImageUploadController@uploadImages',
-  'as'     =>  'uploadImage']);
+Route::post('/upload/images', ['uses'=>'ImageUploadController@uploadImages','as'=>'uploadImage']);
