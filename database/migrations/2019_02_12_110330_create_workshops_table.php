@@ -17,9 +17,9 @@ class CreateWorkshopsTable extends Migration
             $table->increments('id');
             $table->integer('workshop_id');
             $table->string('title');
-            $table->binary('banner_image');
+            $table->binary('banner_image')->nullable();
             $table->longText('about');
-            $table->string('status');
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }
