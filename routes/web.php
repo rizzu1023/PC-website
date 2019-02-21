@@ -38,3 +38,7 @@ Route::post('/admin/register','AdminController@Insert')->name('AdminRegister');
 Route::get('/', 'ImageUploadController@home');
 
 Route::post('/upload/images', ['uses'=>'ImageUploadController@uploadImages','as'=>'uploadImage']);
+
+//Backend Routes
+Route::resource('workshop','WorkshopController');
+Route::resource('workshopinfo','Workshopinfo');
