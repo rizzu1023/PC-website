@@ -97,7 +97,9 @@ class WorkshopController extends Controller
      */
     public function edit($id)
     {
-        //
+                $workshop = workshops::find($id);
+        return view('workshop.edit', compact('workshop'));
+
     }
 
     /**
