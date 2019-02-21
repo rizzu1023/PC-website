@@ -117,7 +117,7 @@ class WorkshopController extends Controller
       $workshop->title= $request->get('title');
       $workshop->banner_image=$request->get('banner_image');
       $workshop->about=$request->get('about');
-      $biodata->save();
+      $workshop->save();
       return redirect()->route('workshop.index')
                       ->with('success', 'workshop updated successfully');
     
