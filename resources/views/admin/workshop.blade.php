@@ -110,13 +110,7 @@
                                     <div class="basic-form">
 
                                     
-                                        @if(\Session::has('success'))
-                                        <div class="alert alert-success">
-                                        <p>{{ \Session::get('success') }}</p>
-                                        </div>
-                                        @endif
-
-
+                                        
                                         <form  method ="POST" action="{{route('addWorkshop')}}">
                                         @csrf
                                         

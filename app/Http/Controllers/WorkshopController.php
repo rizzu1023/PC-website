@@ -29,3 +29,4 @@ class WorkshopController extends Controller
         return Redirect::route(admin.workshop)->with('success','Workshop Added successfully');
     }
 }
+    
