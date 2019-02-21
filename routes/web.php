@@ -29,8 +29,6 @@ Route::get('/admin','AdminController@Index');
 // workshop
 Route::get('/workshop','WorkshopController@getWorkshop');
 Route::post('/workshop','WorkshopController@postWorkshop')->name('addWorkshop');
-
-
 Route::get('/admin/login','AdminController@AdminLogin');
 Route::post('/admin/login','AdminController@login');
 Route::get('/admin/register','AdminController@AdminRegister');
