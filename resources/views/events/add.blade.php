@@ -18,17 +18,17 @@
       </div>
     @endif
  
-    <form action="#" method="post">
+    <form action="/events/add" method="post">
       @csrf
       <div class="row">
-         <div class="col-md-5">
+         <div class="col-md-12">
           <strong>Event Name</strong>
           <input type="text" name="name" class="form-control" placeholder="Event Name">
         </div>
 
-        <div class="col-md-5">
-          <strong>Title</strong>
-          <input type="text" name="title" class="form-control" placeholder="Event Title">
+        <div class="col-md-12">
+          <strong>Tag-Line</strong>
+          <input type="text" name="tagline" class="form-control" placeholder="Event Title">
         </div>
         
         <div class="col-md-5">
@@ -36,22 +36,22 @@
           <input type="file" name="banner">
         </div>
         
-        <div class="col-md-10">
+        <div class="col-md-12">
           <strong>About</strong>
           <textarea class="form-control" placeholder="About Workshop" name="about" rows="8" cols="80"></textarea>
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md-12">
             <strong>Theme</strong>
             <input type="text" name="theme" class="form-control" placeholder="Event theme">
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md-12">
             <strong>Keypoints</strong>
             <input type="text" name="keypoints" class="form-control" placeholder="Event Keypoints">
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md-12">
             <strong>Status</strong>
             <input type="text" name="status" class="form-control" placeholder="Events Status">
         </div>
