@@ -15,7 +15,8 @@ class WorkshopController extends Controller
     
     public function getWorkshop(){
         return view('admin.workshop');
-    }
+}
+
     public function postWorkshop(Request $request){
 
         $workshop = new Workshop;
@@ -27,6 +28,7 @@ class WorkshopController extends Controller
         $workshop->time= $request->time;
         $workshop->save();
         return Redirect::route(admin.workshop)->with('success','Workshop Added successfully');
+    }
 
     public function participantsindex()
     {
