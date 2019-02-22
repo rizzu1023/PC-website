@@ -20,7 +20,7 @@ class CreateWorkshopsInfosTable extends Migration
             $table->string('workshop_time');
             $table->string('location');
             $table->integer('fees');
-            $table->binary('notes');
+            $table->binary('notes')->nullable();
             $table->timestamps();
         });
     }

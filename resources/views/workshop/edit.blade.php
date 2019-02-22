@@ -24,16 +24,16 @@
       <div class="row">
         <div class="col-md-12">
           <strong>Workshop ID</strong>
-          <input type="text" name="namaSiswa" class="form-control" value="{{$workshop->workshop_id}}">
+          <input type="text" name="workshop_id" class="form-control" value="{{$workshop->workshop_id}}">
         </div>
 
         <strong>Title</strong>
-          <input type="text" name="namaSiswa" class="form-control" value="{{$workshop->title}}">
+          <input type="text" name="title" class="form-control" value="{{$workshop->title}}">
         </div>
 
         <div class="col-md-12">
           <strong>Banner Image</strong>
-          <textarea class="form-control" name="alamatSiswa" rows="8" cols="80">{{$workshop->banner_image}}</textarea>
+          <textarea class="form-control" name="about" rows="8" cols="80">{{$workshop->banner_image}}</textarea>
         </div>
 
         <strong>About</strong>
@@ -41,7 +41,7 @@
         </div>
 
         <div class="col-md-12">
-          <a href="{{route('biodata.index')}}" class="btn btn-sm btn-success">Back</a>
+          <a href="{{route('workshop.index')}}" class="btn btn-sm btn-success">Back</a>
           <button type="submit" class="btn btn-sm btn-primary">Submit</button>
         </div>
       </div>

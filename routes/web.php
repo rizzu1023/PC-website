@@ -41,4 +41,17 @@ Route::post('/upload/images', ['uses'=>'ImageUploadController@uploadImages','as'
 
 //Backend Routes
 Route::resource('workshop','WorkshopController');
-Route::resource('workshopinfo','Workshopinfo');
+//Route::resource('workshopinfo','Workshopinfo');
+
+
+Route::get('/Workshopnew','WorkshopNew@index');
+Route::get('/Workshopnew/add','WorkshopNew@create');
+Route::post('/Workshopnew/add','WorkshopNew@store');
+Route::get('/Workshopnew/show','WorkshopNew@show');
+Route::get('/Workshopnew/delete/{id}','WorkshopNew@delete');
+Route::get('/Workshopnew/edit','WorkshopNew@edit');
+Route::post('/Workshopnew/edit','WorkshopNew@update');
+
+
+
+
