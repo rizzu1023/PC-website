@@ -21,10 +21,10 @@
     <form action="{{route('workshop.store')}}" method="post">
       @csrf
       <div class="row">
-        <div class="col-md-5">
+        {{-- <div class="col-md-5">
           <strong>workshop id</strong>
           <input type="text" name="workshop_id" class="form-control" placeholder="Workshop id">
-        </div>
+        </div> --}}
 
         <div class="col-md-10">
           <strong>Title</strong>

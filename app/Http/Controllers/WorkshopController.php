@@ -54,9 +54,9 @@ class WorkshopController extends Controller
         //validate
         // read more on validation at http://laravel.com/docs/validation
         $rules = array(
-            'workshop_id'       => 'required',
+           // 'workshop_id'       => 'required',
             'title'      => 'required',
-            'banner_image' => 'required',
+            //'banner_image' => 'required',
             'about' => 'required'
         );
         //$validator = Validator::make(Input::all(), $rules);
@@ -69,9 +69,9 @@ class WorkshopController extends Controller
         // } else {
         //     // store
             $workshop = new workshops;
-            $workshop->workshop_id       =  $request->input('workshop_id');
+           // $workshop->workshop_id       =  $request->input('workshop_id');
             $workshop->title      =  $request->input('title');
-            $workshop->banner_image = $request->input('banner_image');
+            //$workshop->banner_image = $request->input('banner_image');
             $workshop->about = $request->input('about');
             $workshop->save();
 
