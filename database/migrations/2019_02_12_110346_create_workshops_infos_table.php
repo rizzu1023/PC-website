@@ -15,13 +15,13 @@ class CreateWorkshopsInfosTable extends Migration
     {
         Schema::create('workshops_infos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('workshop_id');
+            
             $table->string('duration');
             $table->string('workshop_date');
             $table->string('workshop_time');
             $table->string('location');
             $table->integer('fees');
-            $table->binary('notes');
+            $table->binary('notes')->nullable();
             $table->timestamps();
         });
     }

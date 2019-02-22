@@ -15,7 +15,6 @@ class CreateEventWinnersTable extends Migration
     {
         Schema::create('event_winners', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('event_id');
             $table->string('winner_name');
             $table->text('winner_college_name');
             $table->string('1runnerup_name');

@@ -15,7 +15,6 @@ class CreateEventSchedulesTable extends Migration
     {
         Schema::create('event_schedules', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('event_id');
             $table->string('title');
             $table->string('start_time');
             $table->string('end_time');

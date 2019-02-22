@@ -21,6 +21,16 @@ class WorkshopController extends Controller
        
     }
 
+    public function participantsindex()
+    {
+        $workshop_participants = workshops::latest()->paginate(5);
+        return view('workshop.index', compact('workshops'))
+                  ->with('i', (request()->input('page',1) -1)*5);
+    
+       
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
