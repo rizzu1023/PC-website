@@ -15,7 +15,6 @@ class CreateWorkshopsInfosTable extends Migration
     {
         Schema::create('workshops_infos', function (Blueprint $table) {
             $table->increments('id');
-            
             $table->string('duration');
             $table->string('workshop_date');
             $table->string('workshop_time');

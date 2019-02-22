@@ -23,13 +23,21 @@ Route::get('github/success', 'Auth\SocialAuthController@handleProviderCallback')
 
 
 
+Route::get('/admin','AdminController@Index');
 
+
+// workshop
+Route::get('/workshop','WorkshopController@getWorkshop');
+Route::post('/workshop','WorkshopController@postWorkshop')->name('addWorkshop');
 Route::get('/admin/login','AdminController@AdminLogin');
 Route::post('/admin/login','AdminController@login');
 Route::get('/admin/register','AdminController@AdminRegister');
 Route::post('/admin/register','AdminController@Insert')->name('AdminRegister');
 
+//cloudder route
+Route::get('/', 'ImageUploadController@home');
 
+Route::post('/upload/images', ['uses'=>'ImageUploadController@uploadImages','as'=>'uploadImage']);
 
 //Backend Routes
 Route::resource('workshop','WorkshopController');
