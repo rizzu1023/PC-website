@@ -58,7 +58,7 @@
         </div>
 
         <div class="col-md-12">
-          <a href="events/index" class="btn btn-sm btn-success">Back</a>
+          <a href="/events" class="btn btn-sm btn-success">Back</a>
           {{-- {{Form::hidden('_method','put')}} --}}
           <button type="submit" class="btn btn-sm btn-primary">Submit</button>
         </div>

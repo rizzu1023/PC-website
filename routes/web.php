@@ -55,11 +55,18 @@ Route::post('/Workshopnew/edit','WorkshopNew@update');
 
 //Events
 
-Route::get('/events','eventsController@index');
-Route::get('/events/add','eventsController@create');
-Route::post('/events/add','eventsController@store');
-Route::get('/events/edit/{id}','eventsController@edit');
-Route::post('/events/edit/{id}','eventsController@update');
-Route::post('/events/delete/{id}','eventsController@destroy');
+Route::get('events','eventsController@index');
+Route::get('events/add','eventsController@create');
+Route::post('events/add','eventsController@store');
+Route::get('events/edit/{id}','eventsController@edit');
+Route::post('events/edit/{id}','eventsController@update');
+Route::post('events/delete/{id}','eventsController@destroy');
 
 // Events  info
+
+Route::get('eventsInfo','eventsInfoController@index');
+Route::get('eventsInfo/add','eventsInfoController@create');
+Route::post('eventsInfo/add','eventsInfoController@store');
+Route::get('eventsInfo/edit/{id}','eventsInfoController@edit');
+Route::post('eventsInfo/edit{id}','eventsInfoController@update');
+Route::post('eventsInfo/delete/{id}','eventsInfoController@destroy');

@@ -18,7 +18,7 @@
       </div>
     @endif
  
-    <form action="/events/add" method="post">
+    <form action="/eventsInfo/add" method="post">
       @csrf
       <div class="row">
          <div class="col-md-12">
@@ -57,7 +57,7 @@
         </div>
 
         <div class="col-md-12">
-          <a href="events/index" class="btn btn-sm btn-success">Back</a>
+          <a href="/events" class="btn btn-sm btn-success">Back</a>
           <button type="submit" class="btn btn-sm btn-primary">Submit</button>
         </div>
       </div>

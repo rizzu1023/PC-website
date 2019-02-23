@@ -7,7 +7,7 @@
 				
 			</div>
 			<div class="col-sm-2">
-            <a class="btn btn-sm btn-success" href="events/add">Add New Events</a>
+            <a class="btn btn-sm btn-success" href="/events/add">Add New Events</a>
 			</div><br>
 
 
