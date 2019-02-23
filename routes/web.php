@@ -70,3 +70,12 @@ Route::post('eventsInfo/add','eventsInfoController@store');
 Route::get('eventsInfo/edit/{id}','eventsInfoController@edit');
 Route::post('eventsInfo/edit/{id}','eventsInfoController@update');
 Route::post('eventsInfo/delete/{id}','eventsInfoController@destroy');
+
+// Events Participant
+
+Route::get('eventsParticipant','eventsParticipantController@index');
+Route::get('eventsParticipant/add','eventsParticipantController@create');
+Route::post('eventsParticipant/add','eventsParticipantController@store');
+Route::get('eventsParticipant/edit/{id}','eventsParticipantController@edit');
+Route::post('eventsParticipant/edit/{id}','eventsParticipantController@update');
+Route::post('eventsParticipant/delete/{id}','eventsParticipantController@destroy');
