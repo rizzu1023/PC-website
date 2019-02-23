@@ -79,3 +79,13 @@ Route::post('eventsParticipant/add','eventsParticipantController@store');
 Route::get('eventsParticipant/edit/{id}','eventsParticipantController@edit');
 Route::post('eventsParticipant/edit/{id}','eventsParticipantController@update');
 Route::post('eventsParticipant/delete/{id}','eventsParticipantController@destroy');
+
+// Events Problem Definitions
+
+Route::get('eventsPdefinition','eventsProbDefiController@index');
+Route::get('eventsPdefinition/add','eventsProbDefiController@create');
+Route::post('eventsPdefinition/add','eventsProbDefiController@store');
+Route::get('eventsPdefinition/edit/{id}','eventsProbDefiController@edit');
+Route::post('eventsPdefinition/edit/{id}','eventsProbDefiController@update');
+Route::post('eventsPdefinition/delete/{id}','eventsProbDefiController@destroy');
+
