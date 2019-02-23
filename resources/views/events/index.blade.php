@@ -31,7 +31,8 @@
                 </tr>
                     @foreach($event as $event)
                     <tr>
-                        <td><b>{{++$i}}</b></td>
+                        
+                        <td>{{$event->id}}</td>
                         <td>{{$event->event_name}}</td>
                         <td>{{$event->tagline}}</td>
                         <td>{{$event->banner_image}}</td>
@@ -40,8 +41,14 @@
                         <td>{{$event->keypoints}}</td>
                         <td>{{$event->status}}</td>
                         <td>
-                            <button type="submit" class="btn btn-sm btn-warning col-md-5" >Edit</button>
-                            <button type="submit" class="btn btn-sm btn-danger col-md-5">Delete</button>
+                                <div class="col-sm-2">
+                                    <a class="btn btn-sm btn-warning" href="events/edit/{{$event->id}} ">Edit</a>
+                                </div>
+                                <form action="/events/delete/{{$event->id}}" method="POST">
+                                    @csrf
+                                        <div class="col-sm-2">
+                                                <button type="submit" class="btn btn-sm btn-danger">delete</button>
+                                        </div>
                             </div>
                          </td>
                     </tr>

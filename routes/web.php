@@ -58,5 +58,6 @@ Route::post('/Workshopnew/edit','WorkshopNew@update');
 Route::get('/events','eventsController@index');
 Route::get('/events/add','eventsController@create');
 Route::post('/events/add','eventsController@store');
-Route::post('/events/show','eventsController@show');
-
+Route::get('/events/edit/{id}','eventsController@edit');
+Route::post('/events/edit/{id}','eventsController@update');
+Route::post('/events/delete/{id}','eventsController@destroy');
