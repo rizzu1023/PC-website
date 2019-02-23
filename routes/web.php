@@ -61,3 +61,5 @@ Route::post('/events/add','eventsController@store');
 Route::get('/events/edit/{id}','eventsController@edit');
 Route::post('/events/edit/{id}','eventsController@update');
 Route::post('/events/delete/{id}','eventsController@destroy');
+
+// Events  info
