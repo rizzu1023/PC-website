@@ -55,6 +55,7 @@ Route::post('/Workshopnew/edit','WorkshopNew@update');
 
 //Events
 
+<<<<<<< HEAD
 Route::get('events','eventsController@index');
 Route::get('events/add','eventsController@create');
 Route::post('events/add','eventsController@store');
@@ -70,3 +71,15 @@ Route::post('eventsInfo/add','eventsInfoController@store');
 Route::get('eventsInfo/edit/{id}','eventsInfoController@edit');
 Route::post('eventsInfo/edit{id}','eventsInfoController@update');
 Route::post('eventsInfo/delete/{id}','eventsInfoController@destroy');
+=======
+Route::get('/events','eventsController@index');
+Route::get('/events/add','eventsController@create');
+Route::post('/events/add','eventsController@store');
+Route::get('/events/edit/{id}','eventsController@edit');
+Route::post('/events/edit/{id}','eventsController@update');
+Route::post('/events/delete/{id}','eventsController@destroy');
+
+// Events  info
+
+Route::view('/event','admin.eventdashboard');
+>>>>>>> 573872f1ac114e14249610b0e980ada1b767635e

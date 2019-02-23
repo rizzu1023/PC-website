@@ -32,4 +32,27 @@ class eventsInfoController extends Controller
 
         return Redirect::to('/eventsInfo')->with('message','Succesffullly Added the eventInfo..!');
     }
+
+    public function edit(R$id){
+
+        $eventsInfo = event_info::find($id);
+        $eventsInfo->duration = $request->input('duration');
+        $eventsInfo->date=$request->input('date');
+        $eventsInfo->time=$request->input('time');
+        $eventsInfo->location=$request->input('location');
+        $eventsInfo->eligible_departments=$request->input('elgibDept');
+        $eventsInfo->fees=$request->input('fees');
+        $eventsInfo->max_member=$request->input('mMember');
+
+        $eventsInfo->save();
+
+        return Redirect::to('/eventsInfo')->with('message','Succesffullly Updated the eventInfo..!');
+    }
+
+    public function destroy($id){
+        $eventsInfo = event_info::find($id);
+        $event->delete();
+
+        return Redirect::to('/eventsInfo')->with('message','EventInfo Deleted Successfully..!');
+    }
 }
