@@ -42,7 +42,7 @@
                         <td>{{$eventsInfo->max_member}}</td>
                         <td>
                                 <div class="col-sm-2">
-                                    <a class="btn btn-sm btn-warning" href="/eventsInfo/edit/{{$eventsInfo->id}} ">Edit</a>
+                                    <a class="btn btn-sm btn-warning" href="/eventsInfo/edit/{{$eventsInfo->id}}">Edit</a>
                                 </div>
                                 <form action="/eventsInfo/delete/{{$eventsInfo->id}}" method="POST">
                                     @csrf

@@ -33,10 +33,16 @@ class eventsInfoController extends Controller
         return Redirect::to('/eventsInfo')->with('message','Succesffullly Added the eventInfo..!');
     }
 
-    public function edit(R$id){
+    public function edit($id){
+        //dd($request->id);
+        $eventsInfo = event_info::find($id);
+        return view('eventsInfo.edit')->with('eventsInfo',$eventsInfo); 
+    }
+
+    public function update(Request $request,$id){
 
         $eventsInfo = event_info::find($id);
-        $eventsInfo->duration = $request->input('duration');
+        $eventsInfo->duration=$request->input('duration');
         $eventsInfo->date=$request->input('date');
         $eventsInfo->time=$request->input('time');
         $eventsInfo->location=$request->input('location');
@@ -51,7 +57,7 @@ class eventsInfoController extends Controller
 
     public function destroy($id){
         $eventsInfo = event_info::find($id);
-        $event->delete();
+        $eventsInfo->delete();
 
         return Redirect::to('/eventsInfo')->with('message','EventInfo Deleted Successfully..!');
     }
