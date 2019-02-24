@@ -118,7 +118,21 @@ Route::post('/blog/delete/{id}','BlogController@delete');
 Route::get('/blog/edit/{id}','BlogController@edit');
 Route::post('/blog/edit/{id}','BlogController@update');
 
+<<<<<<< HEAD
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+=======
+Route::get('/user/feedback','HomeController@feedback');
+//feedback
+
+Route::get('/feedback','FeedbackController@index');
+//Route::get('/feedback/add','BlogController@create');
+Route::post('/feedback/add','FeedbackController@store');
+Route::post('/feedback/delete/{id}','FeedbackController@delete');
+Route::get('/feedback/show/{username}','FeedbackController@userdetails');
+
+
+
+>>>>>>> c61f7d987cb847b4fafe5d8a5601d4c3ab2d1f8c
