@@ -52,6 +52,15 @@ Route::get('/Workshopnew/delete/{id}','WorkshopNew@delete');
 Route::get('/Workshopnew/edit','WorkshopNew@edit');
 Route::post('/Workshopnew/edit','WorkshopNew@update');
 
+//Workshopparticipants
+Route::get('/Workshopparticipants','WorkshopNew@index');
+Route::get('/Workshopparticipants/add','WorkshopNew@create');
+Route::post('/Workshopparticipants/add','WorkshopNew@store');
+Route::get('/Workshopparticipants/show','WorkshopNew@show');
+Route::get('/Workshopparticipants/delete/{id}','WorkshopNew@delete');
+Route::get('/Workshopparticipants/edit','WorkshopNew@edit');
+Route::post('/Workshopparticipants/edit','WorkshopNew@update');
+
 
 //Events
 
@@ -88,4 +97,16 @@ Route::post('eventsPdefinition/add','eventsProbDefiController@store');
 Route::get('eventsPdefinition/edit/{id}','eventsProbDefiController@edit');
 Route::post('eventsPdefinition/edit/{id}','eventsProbDefiController@update');
 Route::post('eventsPdefinition/delete/{id}','eventsProbDefiController@destroy');
+
+
+//Blog
+
+
+Route::get('/blog','BlogController@index');
+Route::get('/blog/add','BlogController@create');
+Route::post('/blog/add','BlogController@store');
+Route::get('/blog/show','BlogController@show');
+Route::post('/blog/delete/{id}','BlogController@delete');
+Route::get('/blog/edit/{id}','BlogController@edit');
+Route::post('/blog/edit/{id}','BlogController@update');
 
