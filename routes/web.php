@@ -56,7 +56,7 @@ Route::post('/Workshopnew/edit','WorkshopNew@update');
 Route::get('/Workshopsparticipants','WorkshopNew@home');
 Route::get('/Workshopsparticipants/add','WorkshopNew@new');
 Route::post('/Workshopsparticipants/add','WorkshopNew@storeparticipants');
-Route::get('/Workshopsparticipants/show','WorkshopNew@userdetails');
+Route::get('/Workshopsparticipants/show/{username}','WorkshopNew@userdetails');
 Route::post('/Workshopsparticipants/delete/{id}','WorkshopNew@deleteparticipant');
 Route::get('/Workshopsparticipants/edit/{id}','WorkshopNew@editparticipant');
 Route::post('/Workshopsparticipants/edit/{id}','WorkshopNew@updateparticipant');

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\workshops_info;
+use App\User;
 use App\workshops_participant;
+use DB;
 use Redirect;
 
 class WorkshopNew extends Controller
@@ -126,22 +128,21 @@ class WorkshopNew extends Controller
 
         
     }
-    public function userdetails()
+    public function userdetails($username)
     {
-             $workshop_info= workshops_info::all()->first();
-    return view('workshopsinfo.show')->with('workshop_info', $workshop_info);
+            
+            
+             $workshopparticipant= workshops_participant::all()->first();
+             //dd($workshopparticipant->username);
+             $users=DB::table('users')->where('username','=',$workshopparticipant->username)->first();
+             //dd($user);
+    return view('adminpanel.workshopsparticipant.show')->with('users', $users);
 
-        // show the view and pass the nerd to it
+        
        
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function editparticipant($id)
+     public function editparticipant($id)
     {
           $workshopparticipant = workshops_participant::find($id);
         return view('adminpanel.workshopsparticipant.edit', compact('workshopparticipant'));
