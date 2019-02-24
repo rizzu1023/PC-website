@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/login', function () {
     return view('welcome');
 });
 
@@ -118,3 +118,7 @@ Route::post('/blog/delete/{id}','BlogController@delete');
 Route::get('/blog/edit/{id}','BlogController@edit');
 Route::post('/blog/edit/{id}','BlogController@update');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

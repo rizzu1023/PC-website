@@ -18,7 +18,7 @@
       </div>
     @endif
  
-    <form action="/eventsInfo/add" method="post">
+    <form action="/events/add" method="post">
       @csrf
       <div class="row">
          <div class="col-md-12">

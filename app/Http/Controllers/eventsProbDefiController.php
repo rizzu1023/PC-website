@@ -29,7 +29,7 @@ class eventsProbDefiController extends Controller
 
         $eventsPdefinition->save();
 
-        return view('/eventsPdefinition')->with('message','Successfully Addes the problem Difinition..!');
+        return view('/eventsPdefinition')->with('success','Successfully Addes the problem Difinition..!');
     }
 
     public function edit($id){
@@ -47,7 +47,7 @@ class eventsProbDefiController extends Controller
 
         $eventsPdefinition->save();
 
-        return Redirect::to('/eventsPdefinition')->with('message','Successfully Addes the problem Difinition..!');
+        return Redirect::to('/eventsPdefinition')->with('success','Successfully Addes the problem Difinition..!');
 
     }
 
@@ -57,7 +57,7 @@ class eventsProbDefiController extends Controller
 
         $eventsPdefinition->delete();        
 
-        return Redirect::to('/eventsPdefinition')->with('message','Problem Definition Deleted Successfully..!');
+        return Redirect::to('/eventsPdefinition')->with('success','Problem Definition Deleted Successfully..!');
     }
 
     // Events Shedule Function
@@ -81,7 +81,7 @@ class eventsProbDefiController extends Controller
 
         $eventSchedule->save();
 
-        return Redirect::to('/eventSchedule')->with('message','Event Scheduled Added Successfully..!');
+        return Redirect::to('/eventSchedule')->with('success','Event Scheduled Added Successfully..!');
     }
 
     public function sedit($id){
@@ -99,7 +99,7 @@ class eventsProbDefiController extends Controller
 
         $eventSchedule->save();
 
-        return Redirect::to('/eventSchedule')->with('message','Event Scheduled Updated Successfully..!');
+        return Redirect::to('/eventSchedule')->with('success','Event Scheduled Updated Successfully..!');
 
     }
 
@@ -107,6 +107,6 @@ class eventsProbDefiController extends Controller
         $eventSchedule = event_schedule::find($id);
 
         $eventSchedule->delete();
-        return Redirect::to('/eventSchedule')->with('message','Deleted Successfully...!');
+        return Redirect::to('/eventSchedule')->with('success','Deleted Successfully...!');
     }
 }

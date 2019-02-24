@@ -30,7 +30,7 @@ class eventsInfoController extends Controller
 
         $eventsInfo->save();
 
-        return Redirect::to('/eventsInfo')->with('message','Succesffullly Added the eventInfo..!');
+        return Redirect::to('/eventsInfo')->with('success','Succesffullly Added the eventInfo..!');
     }
 
     public function edit($id){
@@ -52,13 +52,13 @@ class eventsInfoController extends Controller
 
         $eventsInfo->save();
 
-        return Redirect::to('/eventsInfo')->with('message','Succesffullly Updated the eventInfo..!');
+        return Redirect::to('/eventsInfo')->with('success','Succesffullly Updated the eventInfo..!');
     }
 
     public function destroy($id){
         $eventsInfo = event_info::find($id);
         $eventsInfo->delete();
 
-        return Redirect::to('/eventsInfo')->with('message','EventInfo Deleted Successfully..!');
+        return Redirect::to('/eventsInfo')->with('success','EventInfo Deleted Successfully..!');
     }
 }
