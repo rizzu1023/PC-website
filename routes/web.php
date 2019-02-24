@@ -99,6 +99,15 @@ Route::get('eventsPdefinition/edit/{id}','eventsProbDefiController@edit');
 Route::post('eventsPdefinition/edit/{id}','eventsProbDefiController@update');
 Route::post('eventsPdefinition/delete/{id}','eventsProbDefiController@destroy');
 
+// Events Shedule
+
+Route::get('eventSchedule','eventsProbDefiController@sindex');
+Route::get('eventSchedule/add','eventsProbDefiController@screate');
+Route::post('eventSchedule/add','eventsProbDefiController@sstore');
+Route::get('eventSchedule/edit/{id}','eventsProbDefiController@sedit');
+Route::post('eventSchedule/edit/{id}','eventsProbDefiController@supdate');
+Route::post('eventSchedule/delete/{id}','eventsProbDefiController@sdestroy');
+
 
 //Blog
 Route::get('/blog','BlogController@index');
