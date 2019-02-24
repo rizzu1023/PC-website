@@ -44,6 +44,7 @@
                         <td>{{$eventsParticipant->payment}}</td>
                         <td>
                                 <div class="col-sm-2">
+                                     <a class="btn btn-sm btn-warning" href="/eventsParticipant/show">User details</a>
                                     <a class="btn btn-sm btn-warning" href="/eventsParticipant/edit/{{$eventsParticipant->id}}">Edit</a>
                                 </div>
                                 <form action="/eventsParticipant/delete/{{$eventsParticipant->id}}" method="POST">

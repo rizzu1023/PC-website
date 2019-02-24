@@ -88,6 +88,7 @@ Route::post('eventsParticipant/add','eventsParticipantController@store');
 Route::get('eventsParticipant/edit/{id}','eventsParticipantController@edit');
 Route::post('eventsParticipant/edit/{id}','eventsParticipantController@update');
 Route::post('eventsParticipant/delete/{id}','eventsParticipantController@destroy');
+Route::get('/eventsParticipant/show/','eventsParticipantController@userdetails');
 
 // Events Problem Definitions
 
@@ -100,8 +101,6 @@ Route::post('eventsPdefinition/delete/{id}','eventsProbDefiController@destroy');
 
 
 //Blog
-
-
 Route::get('/blog','BlogController@index');
 Route::get('/blog/add','BlogController@create');
 Route::post('/blog/add','BlogController@store');
