@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\event_problem_definition;
+use App\event_schedule;
 use Redirect;
 
 class eventsProbDefiController extends Controller
@@ -31,7 +32,7 @@ class eventsProbDefiController extends Controller
         return view('/eventsPdefinition')->with('message','Successfully Addes the problem Difinition..!');
     }
 
-    public function edit(){
+    public function edit($id){
         $eventsPdefinition = event_problem_definition::find($id);
         return view('eventsPdefinition.edit')->with('eventsPdefinition',$eventsPdefinition);
     }
@@ -53,9 +54,59 @@ class eventsProbDefiController extends Controller
     public function destroy($id){
 
         $eventsPdefinition = event_problem_definition::find($id);
-        
+
         $eventsPdefinition->delete();        
 
         return Redirect::to('/eventsPdefinition')->with('message','Problem Definition Deleted Successfully..!');
+    }
+
+    // Events Shedule Function
+
+    public function sindex(){
+        $eventSchedule = event_schedule::latest()->paginate(5);
+        return view('eventSchedule.sindex',compact('eventSchedule'))->with('i',(request()->input('page',1)-1)*5);
+    }
+
+    public function screate(){
+        return view('eventSchedule.sadd');
+    }
+
+    public function sstore(Request $request){
+        $eventSchedule = new event_schedule;
+
+        $eventSchedule->title=$request->input('title');
+        $eventSchedule->start_time=$request->input('stime');
+        $eventSchedule->end_time=$request->input('etime');
+        $eventSchedule->status=$request->input('status');
+
+        $eventSchedule->save();
+
+        return Redirect::to('/eventSchedule')->with('message','Event Scheduled Added Successfully..!');
+    }
+
+    public function sedit($id){
+        $eventSchedule = event_schedule::find($id);
+        return view('eventSchedule.sedit')->with('eventSchedule',$eventSchedule);
+    }
+
+    public function supdate(Request $request, $id){
+        $eventSchedule = event_schedule::find($id);
+
+        $eventSchedule->title=$request->input('title');
+        $eventSchedule->start_time=$request->input('stime');
+        $eventSchedule->end_time=$request->input('etime');
+        $eventSchedule->status=$request->input('status');
+
+        $eventSchedule->save();
+
+        return Redirect::to('/eventSchedule')->with('message','Event Scheduled Updated Successfully..!');
+
+    }
+
+    public function sdestroy($id){
+        $eventSchedule = event_schedule::find($id);
+
+        $eventSchedule->delete();
+        return Redirect::to('/eventSchedule')->with('message','Deleted Successfully...!');
     }
 }

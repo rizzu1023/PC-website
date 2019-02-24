@@ -3,11 +3,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10">
-				<h3>Events Problem Definition Detail</h3>
+				<h3>Events Shedule Details</h3>
 				
 			</div>
 			<div class="col-sm-2">
-            <a class="btn btn-sm btn-success" href="/eventsPdefinition/add">Add Problem Definition</a>
+            <a class="btn btn-sm btn-success" href="/eventSchedule/add">Add event schedule</a>
 			</div><br>
 
 
@@ -20,23 +20,25 @@
 	    <div class="col-md-10">
 			<table class="table table-hover table-md">
 				<tr>
-					<th width="50px"><b>Sr No</b></th>
+					<th width="100px"><b>Sr No</b></th>
 					<th width="100px"><b>Title</b></th>
-					<th width="30px"><b>Description</b></th>
-					<th width="30px"><b>Status</b></th>
+                    <th width="150px"><b>Start Time</b></th>
+                    <th width="100px"><b>End Time</b></th>
+					<th width="100px"><b>Status</b></th>
                 </tr>
-                    @foreach($eventsPdefinition as $eventsPdefinition)
+                    @foreach($eventSchedule as $eventSchedule)
                     <tr>
                         
-                        <td>{{$eventsPdefinition->id}}</td>
-                        <td>{{$eventsPdefinition->title}}</td>
-                        <td>{{$eventsPdefinition->description}}</td>
-                        <td>{{$eventsPdefinition->status}}</td>
+                        <td>{{$eventSchedule->id}}</td>
+                        <td>{{$eventSchedule->title}}</td>
+                        <td>{{$eventSchedule->start_time}}</td>
+                        <td>{{$eventSchedule->end_time}}</td>
+                        <td>{{$eventSchedule->status}}</td>
                         <td>
                                 <div class="col-sm-2">
-                                    <a class="btn btn-sm btn-warning" href="/eventsPdefinition/edit/{{$eventsPdefinition->id}}">Edit</a>
+                                    <a class="btn btn-sm btn-warning" href="/eventSchedule/edit/{{$eventSchedule->id}}">Edit</a>
                                 </div>
-                                <form action="/eventsPdefinition/delete/{{$eventsPdefinition->id}}" method="POST">
+                                <form action="/eventSchedule/delete/{{$eventSchedule->id}}" method="POST">
                                     @csrf
                                         <div class="col-sm-2">
                                                 <button type="submit" class="btn btn-sm btn-danger">Delete</button>
