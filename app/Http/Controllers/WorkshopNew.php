@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\workshops_info;
+use App\workshops_participant;
 use Redirect;
 
 class WorkshopNew extends Controller
@@ -15,11 +16,10 @@ class WorkshopNew extends Controller
                   ->with('i', (request()->input('page',1) -1)*5);
     
     }
-
-    public function create()    
-    {
-        return view('workshopsinfo.add');
-    }
+    public function create()
+        {
+            return view('adminpanel.workshopsinfo.add');
+        }
 
     public function store(Request $request)
     {
@@ -96,6 +96,80 @@ class WorkshopNew extends Controller
         return redirect()->route('workshopinfo.index')
                         ->with('success', 'workshopinfo  entry deleted successfully');
     }
+
+    //Workshop Participants
+     public function home()
+    {
+          $workshopparticipant= workshops_participant::latest()->paginate(5);
+        return view('adminpanel.workshopsparticipant.index', compact('workshopparticipant'))
+                  ->with('i', (request()->input('page',1) -1)*5);
+    
+    }
+
+    public function new()
+        {
+            return view('adminpanel.workshopsparticipant.add');
+        }
+
+
+    public function storeparticipants(Request $request)
+    {
+
+         $workshopparticipant = new workshops_participant;
+            
+            $workshopparticipant->workshop_name      =  $request->input('workshopname');
+            $workshopparticipant->username= $request->input('username');
+            $workshopparticipant->email= $request->input('email');
+            $workshopparticipant->save();
+
+            return Redirect::to('/Workshopsparticipants');
+
+        
+    }
+    public function userdetails()
+    {
+             $workshop_info= workshops_info::all()->first();
+    return view('workshopsinfo.show')->with('workshop_info', $workshop_info);
+
+        // show the view and pass the nerd to it
+       
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function editparticipant($id)
+    {
+          $workshopparticipant = workshops_participant::find($id);
+        return view('adminpanel.workshopsparticipant.edit', compact('workshopparticipant'));
+
+    }
+
+    public function updateparticipant(Request $request, $id)
+    {
+          $workshopparticipant= workshops_participant::find($id);
+      $workshopparticipant->workshop_name      =  $request->input('workshopname');
+            $workshopparticipant->username= $request->input('username');
+            $workshopparticipant->email= $request->input('email');
+            $workshopparticipant->save();
+return      Redirect::to('/Workshopsparticipants')
+                      ->with('success', 'workshop Participant updated successfully');
+    
+    }
+
+    public function deleteparticipant($id)
+    {
+        $workshopparticipant= workshops_participant::find($id);
+        $workshopparticipant->delete();
+        return Redirect::to('/Workshopsparticipants')
+                        ->with('success', 'workshop participant  entry deleted successfully');
+    }
+
+
+
 
 
 

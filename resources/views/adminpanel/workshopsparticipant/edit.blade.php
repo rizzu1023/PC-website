@@ -18,28 +18,28 @@
       </div>
     @endif
 
-    <form action="/Workshopsparticipant/edit/{{$workshopsparticipant->id}}" method="post">
+    <form action="/Workshopsparticipants/edit/{{$workshopparticipant->id}}" method="post">
       {{csrf_field()}}
     
       
  <div class="col-md-12">
         <strong>Workshop name</strong>
-          <input type="text" name="workshopname" class="form-control" value="{{$workshopsparticipant->workshop_name}}">
+          <input type="text" name="workshopname" class="form-control" value="{{$workshopparticipant->workshop_name}}">
         </div>
 
          <div class="col-md-12">
           <strong>username</strong>
-           <input type="text" name="username" class="form-control" value="{{$workshopsparticipant->username}}">
+           <input type="text" name="username" class="form-control" value="{{$workshopparticipant->username}}">
         </div>
 
 
         <div class="col-md-12">
           <strong>email</strong>
-           <input type="text" name="email" class="form-control" value="{{$workshopsparticipant->email}">
+           <input type="text" name="email" class="form-control" value="{{$workshopparticipant->email}}">
         </div>
 
         <div class="col-md-12">
-          <a href="Workshopsparticipant" class="btn btn-sm btn-success">Back</a>
+          <a href="Workshopsparticipants" class="btn btn-sm btn-success">Back</a>
           <button type="submit" class="btn btn-sm btn-primary">Submit</button>
         </div>
       </div>

@@ -18,7 +18,7 @@
       </div>
     @endif
  
-    <form action="/Workshopsparticipant/add" method="post">
+    <form action="/Workshopsparticipants/add" method="post">
       @csrf
       <div class="row">
         

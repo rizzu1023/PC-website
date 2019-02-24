@@ -7,7 +7,7 @@
 				
 			</div>
 			<div class="col-sm-2">
-				<a class="btn btn-sm btn-success" href="/Workshopsparticipant/add">Add New Workshopparticipant</a>
+				<a class="btn btn-sm btn-success" href="/Workshopsparticipants/add">Add New Workshopparticipant</a>
 				
 
 			</div>
@@ -30,7 +30,7 @@
 						<th width="30px"><b>username</b></th>
 						<th width="30px"><b>email</b></th>
 					</tr>
-					@foreach($workshops_participant as $workshopsparticipant)
+					@foreach($workshopparticipant as $workshopsparticipant)
 						<tr>
 							<td><b>{{++$i}}</b></td>
 						
@@ -40,10 +40,10 @@
 						<td>
 								
               <a class="btn btn-sm btn-success" href="Workshopsparticipant/show/{{$workshopsparticipant->id}}">User details</a>
-              <a class="btn btn-sm btn-warning" href="/Workshopsparticipant/edit/{{$workshopsparticipant->id}}">Edit</a>
+              <a class="btn btn-sm btn-warning" href="/Workshopsparticipants/edit/{{$workshopsparticipant->id}}">Edit</a>
              
 
-                               <form action="/Workshopsparticipant/delete/{{$workshopsparticipant->id}}" method="POST">
+                               <form action="/Workshopsparticipants/delete/{{$workshopsparticipant->id}}" method="POST">
                                     @csrf
                                         <div class="col-sm-2">
                                                 <button type="submit" class="btn btn-sm btn-warning"> delete</button>
@@ -60,6 +60,6 @@
         </tr>
       @endforeach
     </table>
-{!! $workshops_participant->links() !!}
+{!! $workshopparticipant->links() !!}
   </div>
 @endsection

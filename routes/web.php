@@ -53,13 +53,13 @@ Route::get('/Workshopnew/edit','WorkshopNew@edit');
 Route::post('/Workshopnew/edit','WorkshopNew@update');
 
 //Workshopparticipants
-Route::get('/Workshopparticipants','WorkshopNew@index');
-Route::get('/Workshopparticipants/add','WorkshopNew@create');
-Route::post('/Workshopparticipants/add','WorkshopNew@store');
-Route::get('/Workshopparticipants/show','WorkshopNew@show');
-Route::get('/Workshopparticipants/delete/{id}','WorkshopNew@delete');
-Route::get('/Workshopparticipants/edit','WorkshopNew@edit');
-Route::post('/Workshopparticipants/edit','WorkshopNew@update');
+Route::get('/Workshopsparticipants','WorkshopNew@home');
+Route::get('/Workshopsparticipants/add','WorkshopNew@new');
+Route::post('/Workshopsparticipants/add','WorkshopNew@storeparticipants');
+Route::get('/Workshopsparticipants/show','WorkshopNew@userdetails');
+Route::post('/Workshopsparticipants/delete/{id}','WorkshopNew@deleteparticipant');
+Route::get('/Workshopsparticipants/edit/{id}','WorkshopNew@editparticipant');
+Route::post('/Workshopsparticipants/edit/{id}','WorkshopNew@updateparticipant');
 
 
 //Events
