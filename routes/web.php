@@ -56,7 +56,7 @@ Route::post('/Workshopnew/edit','WorkshopNew@update');
 Route::get('/Workshopsparticipants','WorkshopNew@home');
 Route::get('/Workshopsparticipants/add','WorkshopNew@new');
 Route::post('/Workshopsparticipants/add','WorkshopNew@storeparticipants');
-Route::get('/Workshopsparticipants/show','WorkshopNew@userdetails');
+Route::get('/Workshopsparticipants/show/{username}','WorkshopNew@userdetails');
 Route::post('/Workshopsparticipants/delete/{id}','WorkshopNew@deleteparticipant');
 Route::get('/Workshopsparticipants/edit/{id}','WorkshopNew@editparticipant');
 Route::post('/Workshopsparticipants/edit/{id}','WorkshopNew@updateparticipant');
@@ -88,6 +88,7 @@ Route::post('eventsParticipant/add','eventsParticipantController@store');
 Route::get('eventsParticipant/edit/{id}','eventsParticipantController@edit');
 Route::post('eventsParticipant/edit/{id}','eventsParticipantController@update');
 Route::post('eventsParticipant/delete/{id}','eventsParticipantController@destroy');
+Route::get('/eventsParticipant/show/','eventsParticipantController@userdetails');
 
 // Events Problem Definitions
 
@@ -109,8 +110,6 @@ Route::post('eventSchedule/delete/{id}','eventsProbDefiController@sdestroy');
 
 
 //Blog
-
-
 Route::get('/blog','BlogController@index');
 Route::get('/blog/add','BlogController@create');
 Route::post('/blog/add','BlogController@store');

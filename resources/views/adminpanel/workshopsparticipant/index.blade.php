@@ -39,7 +39,7 @@
 							<td>{{$workshopsparticipant->email}}</td>
 						<td>
 								
-              <a class="btn btn-sm btn-success" href="Workshopsparticipant/show/{{$workshopsparticipant->id}}">User details</a>
+              <a class="btn btn-sm btn-success" href="Workshopsparticipants/show/{{$workshopsparticipant->username}}">User details</a>
               <a class="btn btn-sm btn-warning" href="/Workshopsparticipants/edit/{{$workshopsparticipant->id}}">Edit</a>
              
 
