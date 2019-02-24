@@ -109,3 +109,14 @@ Route::post('/blog/delete/{id}','BlogController@delete');
 Route::get('/blog/edit/{id}','BlogController@edit');
 Route::post('/blog/edit/{id}','BlogController@update');
 
+Route::get('/user/feedback','HomeController@feedback');
+//feedback
+
+Route::get('/feedback','FeedbackController@index');
+//Route::get('/feedback/add','BlogController@create');
+Route::post('/feedback/add','FeedbackController@store');
+Route::post('/feedback/delete/{id}','FeedbackController@delete');
+Route::get('/feedback/show/{username}','FeedbackController@userdetails');
+
+
+
