@@ -30,7 +30,7 @@ class eventsController extends Controller
         
         $event->save();
 
-        return Redirect::to('/events')->with('message','Event has succesfully added..!');
+        return Redirect::to('/events')->with('success','Event has succesfully added..!');
 
     }
 
@@ -53,7 +53,7 @@ class eventsController extends Controller
         
         $event->save();
 
-        return Redirect::to('/events')->with('message','Event has succesfully updated..!');
+        return Redirect::to('/events')->with('success','Event has succesfully updated..!');
     }
 
     public function destroy($id){
@@ -61,6 +61,6 @@ class eventsController extends Controller
         $event = event::find($id);
         $event->delete();
         // dd($event);
-        return Redirect::to('/events')->with('message','Event Removed');
+        return Redirect::to('/events')->with('success','Event Removed');
     }
 }

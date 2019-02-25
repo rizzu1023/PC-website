@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/login', function () {
     return view('welcome');
 });
 
@@ -51,15 +51,24 @@ Route::get('/Workshopnew/delete/{id}','WorkshopNew@delete');
 Route::get('/Workshopnew/edit','WorkshopNew@edit');
 Route::post('/Workshopnew/edit','WorkshopNew@update');
 
+//Workshopparticipants
+Route::get('/Workshopsparticipants','WorkshopNew@home');
+Route::get('/Workshopsparticipants/add','WorkshopNew@new');
+Route::post('/Workshopsparticipants/add','WorkshopNew@storeparticipants');
+Route::get('/Workshopsparticipants/show/{username}','WorkshopNew@userdetails');
+Route::post('/Workshopsparticipants/delete/{id}','WorkshopNew@deleteparticipant');
+Route::get('/Workshopsparticipants/edit/{id}','WorkshopNew@editparticipant');
+Route::post('/Workshopsparticipants/edit/{id}','WorkshopNew@updateparticipant');
+
 
 //Events
 
-Route::get('/events','eventsController@index');
-Route::get('/events/add','eventsController@create');
-Route::post('/events/add','eventsController@store');
-Route::get('/events/edit/{id}','eventsController@edit');
-Route::post('/events/edit/{id}','eventsController@update');
-Route::post('/events/delete/{id}','eventsController@destroy');
+Route::get('events','eventsController@index');
+Route::get('events/add','eventsController@create');
+Route::post('events/add','eventsController@store');
+Route::get('events/edit/{id}','eventsController@edit');
+Route::post('events/edit/{id}','eventsController@update');
+Route::post('events/delete/{id}','eventsController@destroy');
 
 //Admin Routes
 
@@ -86,3 +95,79 @@ Route::view('/pcteam','admin.pcteam');
 Route::view('/addproblemdefination','admin.addpd');
 Route::view('/addschedule','admin.addschedule');
 Route::view('/addsponsor','admin.addsponsor');
+// Events  info
+
+Route::get('eventsInfo','eventsInfoController@index');
+Route::get('eventsInfo/add','eventsInfoController@create');
+Route::post('eventsInfo/add','eventsInfoController@store');
+Route::get('eventsInfo/edit/{id}','eventsInfoController@edit');
+Route::post('eventsInfo/edit/{id}','eventsInfoController@update');
+Route::post('eventsInfo/delete/{id}','eventsInfoController@destroy');
+
+// Events Participant
+
+Route::get('eventsParticipant','eventsParticipantController@index');
+Route::get('eventsParticipant/add','eventsParticipantController@create');
+Route::post('eventsParticipant/add','eventsParticipantController@store');
+Route::get('eventsParticipant/edit/{id}','eventsParticipantController@edit');
+Route::post('eventsParticipant/edit/{id}','eventsParticipantController@update');
+Route::post('eventsParticipant/delete/{id}','eventsParticipantController@destroy');
+Route::get('/eventsParticipant/show/','eventsParticipantController@userdetails');
+
+// Events Problem Definitions
+
+Route::get('eventsPdefinition','eventsProbDefiController@index');
+Route::get('eventsPdefinition/add','eventsProbDefiController@create');
+Route::post('eventsPdefinition/add','eventsProbDefiController@store');
+Route::get('eventsPdefinition/edit/{id}','eventsProbDefiController@edit');
+Route::post('eventsPdefinition/edit/{id}','eventsProbDefiController@update');
+Route::post('eventsPdefinition/delete/{id}','eventsProbDefiController@destroy');
+
+// Events Shedule
+
+Route::get('eventSchedule','eventsProbDefiController@sindex');
+Route::get('eventSchedule/add','eventsProbDefiController@screate');
+Route::post('eventSchedule/add','eventsProbDefiController@sstore');
+Route::get('eventSchedule/edit/{id}','eventsProbDefiController@sedit');
+Route::post('eventSchedule/edit/{id}','eventsProbDefiController@supdate');
+Route::post('eventSchedule/delete/{id}','eventsProbDefiController@sdestroy');
+
+
+//Blog
+Route::get('/blog','BlogController@index');
+Route::get('/blog/add','BlogController@create');
+Route::post('/blog/add','BlogController@store');
+Route::get('/blog/show','BlogController@show');
+Route::post('/blog/delete/{id}','BlogController@delete');
+Route::get('/blog/edit/{id}','BlogController@edit');
+Route::post('/blog/edit/{id}','BlogController@update');
+
+//feedback form
+Route::get('/user/feedback','HomeController@feedback');
+//feedback
+
+Route::get('/feedback','FeedbackController@index');
+Route::post('/feedback/add','FeedbackController@store');
+Route::post('/feedback/delete/{id}','FeedbackController@delete');
+Route::get('/feedback/show/{username}','FeedbackController@userdetails');
+
+//sponsors
+Route::get('/sponsors','SponsorController@index');
+Route::get('/sponsors/add','SponsorController@create');
+Route::post('/sponsors/add','SponsorController@store');
+Route::get('/sponsors/edit/{id}','SponsorController@edit');
+Route::post('/sponsors/edit/{id}','SponsorController@update');
+
+Route::post('/sponsors/delete/{id}','SponsorController@delete');
+
+
+
+// <<<<<<< HEAD>>>>>>>>>
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+// =======
+
+
+// >>>>>>> c61f7d987cb847b4fafe5d8a5601d4c3ab2d1f8c

@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h3>New Events</h3>
+        <h3>Edit Events</h3>
       </div>
     </div>
 
@@ -18,17 +18,18 @@
       </div>
     @endif
  
-    <form action="/events/add" method="post">
+    <form action="/events/edit/{{$event->id}}" method="POST">
       @csrf
+      
       <div class="row">
          <div class="col-md-12">
           <strong>Event Name</strong>
-          <input type="text" name="name" class="form-control" placeholder="Event Name">
+         <input type="text" value="{{$event->event_name}}" name="name" class="form-control" placeholder="Event Name">
         </div>
 
         <div class="col-md-12">
           <strong>Tag-Line</strong>
-          <input type="text" name="tagline" class="form-control" placeholder="Event Title">
+          <input type="text" value="{{$event->tagline}}" name="tagline" class="form-control" placeholder="Event Title">
         </div>
         
         <div class="col-md-5">
@@ -38,26 +39,27 @@
         
         <div class="col-md-12">
           <strong>About</strong>
-          <textarea class="form-control" placeholder="About Workshop" name="about" rows="8" cols="80"></textarea>
+          <textarea class="form-control" value="{{$event->about_event}}" placeholder="About Workshop" name="about" rows="8" cols="80"></textarea>
         </div>
 
         <div class="col-md-12">
             <strong>Theme</strong>
-            <input type="text" name="theme" class="form-control" placeholder="Event theme">
+            <input type="text" name="theme" class="form-control" value="{{$event->event_theme}}" placeholder="Event theme">
         </div>
 
         <div class="col-md-12">
             <strong>Keypoints</strong>
-            <input type="text" name="keypoints" class="form-control" placeholder="Event Keypoints">
+            <input type="text" value="{{$event->keypoints}}" name="keypoints" class="form-control" placeholder="Event Keypoints">
         </div>
 
         <div class="col-md-12">
             <strong>Status</strong>
-            <input type="text" name="status" class="form-control" placeholder="Events Status">
+            <input type="text" name="status" value="{{$event->status}}" class="form-control" placeholder="Events Status">
         </div>
 
         <div class="col-md-12">
-          <a href="/events" class="btn btn-sm btn-success">Back</a>
+          <a href="events/index" class="btn btn-sm btn-success">Back</a>
+          {{-- {{Form::hidden('_method','put')}} --}}
           <button type="submit" class="btn btn-sm btn-primary">Submit</button>
         </div>
       </div>
