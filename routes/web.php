@@ -142,15 +142,12 @@ Route::post('/blog/delete/{id}','BlogController@delete');
 Route::get('/blog/edit/{id}','BlogController@edit');
 Route::post('/blog/edit/{id}','BlogController@update');
 
-<<<<<<< HEAD
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-=======
 //feedback form
->>>>>>> 1795e637e4c0a3f8f10ae33292ed9ef8b450c577
 Route::get('/user/feedback','HomeController@feedback');
 //feedback
 
@@ -177,8 +174,5 @@ Route::post('/sponsors/delete/{id}','SponsorController@delete');
 // Route::get('/home', 'HomeController@index')->name('home');
 // =======
 
-<<<<<<< HEAD
-=======
 
 // >>>>>>> c61f7d987cb847b4fafe5d8a5601d4c3ab2d1f8c
->>>>>>> 1795e637e4c0a3f8f10ae33292ed9ef8b450c577
