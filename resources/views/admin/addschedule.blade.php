@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>schedule</title>
+</head>
+<body>
+    <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Workshop</title>
+        <title>schedule</title>
 
         <!-- ================= Favicon ================== -->
         <!-- Standard -->
@@ -31,20 +38,24 @@
         <link href="assets/css/lib/helper.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
     </head>
-<body>
+
+    <body>
       <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
             <div class="nano">
                 <div class="nano-content">
                     <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Programmers Club</span></a></div>
                     <ul>
-                        <li class="label">Main</li>
-                        <li class="active"><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard  </a>
-                        
-                           
-                        </li>
-
-                       
-   
+                        <li ><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard  </a>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-stack-overflow"></i> Blog </a>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-money"></i> Sponsor </a>
+                        <li  class="active"><a class="sidebar-sub-toggle"><i class="ti-pin-alt"></i> Events </a>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-spray"></i> Workshop </a>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Poll  </a>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-user"></i> PC Team </a>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-server"></i> User </a>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-comment"></i>  Feedback </a>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-agenda"></i> About Us  </a>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-email"></i> Contact Us </a>
                         <li><a><i class="ti-close"></i> Logout</a></li>
                     </ul>
                 </div>
@@ -103,41 +114,37 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-title">
-                                    <h4>Add Workshop</h4>
+                                    <h4>Add schedule</h4>
                                     
                                 </div>
                                 <div class="card-body">
                                     <div class="basic-form">
-
-                                    
-                                        
-                                        <form  method ="POST" action="{{route('addWorkshop')}}">
+                                        <form  method ="POST" action="#">
                                         @csrf
                                         
                                             <div class="form-group">
-                                                <input type="text" class="form-control input-default " name="title" placeholder="Title">
-                                            </div>
-                                            <div class="form-group">
-                                               <p class="text-muted m-b-15 f-s-12">Upload Image</p>
-                                                <input type="file" accept="image/x-png,image/gif,image/jpeg" class="form-control input-default" name="image" placeholder="Image" required>
+                                                <input type="text" class="form-control input-default " placeholder="Title" name="title" required >
                                             </div>
                                              <div class="form-group">
-                                                
-                                                <input type="text" class="form-control input-default" placeholder="Description" name="discription" required>
-                                            </div>
-                                            <div class="form-group">
-                                                
-                                                <input type="text" class="form-control input-default" placeholder="status(Active/Inactive)" name="status" required>
-                                            
+                                             <label class="text-muted m-b-15 f-s-15">Start Time</label>
+                                                <input type="time" class="form-control input-default " placeholder="Title" name="title" required >
                                             </div>
                                              <div class="form-group">
-                                                <p class="text-muted m-b-15 f-s-12">Date</p>
-                                                <input type="date" class="form-control input-default" placeholder="date" name="date" required>
+                                             <label class="text-muted m-b-15 f-s-15">End Time</label>
+                                                <input type="time" class="form-control input-default " placeholder="Title" name="title" required >
                                             </div>
                                              <div class="form-group">
-                                                <p class="text-muted m-b-15 f-s-12">Time</p>
-                                                <input type="time" class="form-control input-default" placeholder="time" name="time" required>
+                                                <label class="text-muted m-b-15 f-s-20">Staus</label>
+                                                        <select class="form-control">
+															<option>Active</option>
+															<option>Inactive</option>
+														</select>
                                             </div>
+                                        </div>
+                                        <!-- /# card -->
+                                    </div>
+                                    <!-- /# column -->
+                                </div>
 
                                             <button type="submit" class="btn btn-primary m-b-10 m-l-5">Submit</button>
                                         </form>
@@ -159,62 +166,8 @@
         <script src="assets/js/lib/preloader/pace.min.js"></script>
         <!-- sidebar -->
         <script src="assets/js/lib/bootstrap.min.js"></script>
-
-        <!-- bootstrap -->
-
-        <script src="assets/js/lib/circle-progress/circle-progress.min.js"></script>
-        <script src="assets/js/lib/circle-progress/circle-progress-init.js"></script>
-
-        <script src="assets/js/lib/morris-chart/raphael-min.js"></script>
-        <script src="assets/js/lib/morris-chart/morris.js"></script>
-        <script src="assets/js/lib/morris-chart/morris-init.js"></script>
-
-        <!--  flot-chart js -->
-        <script src="assets/js/lib/flot-chart/jquery.flot.js"></script>
-        <script src="assets/js/lib/flot-chart/jquery.flot.resize.js"></script>
-        <script src="assets/js/lib/flot-chart/flot-chart-init.js"></script>
-        <!-- // flot-chart js -->
-
-
-        <script src="assets/js/lib/vector-map/jquery.vmap.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/jquery.vmap.min.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/jquery.vmap.sampledata.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.world.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.algeria.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.argentina.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.brazil.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.france.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.germany.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.greece.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.iran.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.iraq.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.russia.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.tunisia.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.europe.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.usa.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/vector.init.js"></script>
-
-        <script src="assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
-        <script src="assets/js/lib/weather/weather-init.js"></script>
-        <script src="assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
-        <script src="assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
         <script src="assets/js/scripts.js"></script>
         <!-- scripit init-->
+</body>
 </body>
 </html>

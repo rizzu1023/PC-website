@@ -36,11 +36,10 @@ Route::post('/admin/register','AdminController@Insert')->name('AdminRegister');
 
 //cloudder route
 Route::get('/', 'ImageUploadController@home');
-
 Route::post('/upload/images', ['uses'=>'ImageUploadController@uploadImages','as'=>'uploadImage']);
 
 //Backend Routes
-Route::resource('workshop','WorkshopController');
+// Route::resource('workshop','WorkshopController');
 //Route::resource('workshopinfo','Workshopinfo');
 
 
@@ -62,6 +61,28 @@ Route::get('/events/edit/{id}','eventsController@edit');
 Route::post('/events/edit/{id}','eventsController@update');
 Route::post('/events/delete/{id}','eventsController@destroy');
 
-// Events  info
+//Admin Routes
 
 Route::view('/event','admin.eventdashboard');
+Route::view('/dashboard','admin.dashboard')->name('dashboard');
+Route::view('/workshop','admin.workshopdash');
+Route::view('/poll','admin.polldash');
+Route::view('/blog','admin.blogdash');
+Route::view('/sponsor','admin.sponsordash');
+Route::view('/pc','admin.pcdash');
+Route::view('/user','admin.userdash');
+Route::view('/feedback','admin.feedbackdash');
+Route::view('/aboutus','admin.aboutusdash');
+Route::view('/contactus','admin.contactusdash');
+
+//Links
+Route::view('/about','admin.aboutus');
+Route::view('/addpoll','admin.addpoll');
+Route::view('/addblog','admin.addblog');
+Route::view('/addevent','admin.addevent');
+Route::view('/addeventinfo','admin.addeventinfo');
+Route::view('/eventparticipant','admin.eventparticipant');
+Route::view('/pcteam','admin.pcteam');
+Route::view('/addproblemdefination','admin.addpd');
+Route::view('/addschedule','admin.addschedule');
+Route::view('/addsponsor','admin.addsponsor');

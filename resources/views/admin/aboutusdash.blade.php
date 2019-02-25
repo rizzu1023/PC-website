@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Event Dashboard</title>
+    <title>About Us</title>
 </head>
 <body>
     <head>
@@ -38,26 +38,21 @@
     </head>
 
     <body>
-            @if ($message = Session::get('success'))
-                <div class="alert alert-success">
-                    <p>{{$message}}</p>
-                </div>
-            @endif
       <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
             <div class="nano">
                 <div class="nano-content">
                     <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Programmers Club</span></a></div>
                     <ul>
-                        <li ><a href="{{route('dashboard')}}" class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard  </a>
-                        <li><a href="{{url('/blog')}}" class="sidebar-sub-toggle"><i class="ti-stack-overflow"></i> Blog </a>
-                        <li class="active"><a class="sidebar-sub-toggle"><i class="ti-pin-alt"></i> Events </a>
+                        <li ><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard  </a>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-stack-overflow"></i> Blog </a>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-pin-alt"></i> Events </a>
                         <li><a class="sidebar-sub-toggle"><i class="ti-spray"></i> Workshop </a>
                         <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Poll  </a>
                         <li><a class="sidebar-sub-toggle"><i class="ti-money"></i> Sponsor </a>
                         <li><a class="sidebar-sub-toggle"><i class="ti-user"></i> PC Team </a>
                         <li><a class="sidebar-sub-toggle"><i class="ti-server"></i> User </a>
                         <li><a class="sidebar-sub-toggle"><i class="ti-comment"></i>  Feedback </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-agenda"></i> About Us  </a>
+                        <li  class="active"><a class="sidebar-sub-toggle"><i class="ti-agenda"></i> About Us  </a>
                         <li><a class="sidebar-sub-toggle"><i class="ti-email"></i> Contact Us </a>
                         <li><a><i class="ti-close"></i> Logout</a></li>
                     </ul>
@@ -108,9 +103,7 @@
                             <div class="page-header">
                                 <div class="page-title">
                                     <h1>Hello, <span>Welcome Here</span></h1>
-                                    <button type="button" class="btn btn-primary m-b-10 m-l-5">+  Add Event</button>
-                                    <button type="button" class="btn btn-primary m-b-10 m-l-5">+  Add EventInfo</button>
-                                     
+                                    <button type="button" class="btn btn-primary m-b-10 m-l-5">+  Add About Programmer's Club</button>
                                 </div>
                             </div>
                         </div>
@@ -121,7 +114,7 @@
                                     <div class="col-lg-12">
                                         <div class="card">
                                             <div class="card-title">
-                                                <h4>Event Dashboard</h4>
+                                                <h4>About Us</h4>
                                                 
                                             </div>
                                 <div class="bootstrap-data-table-panel">
@@ -130,12 +123,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>Sr. No</th>
-                                                    <th>Event Name</th>
-                                                    <th>Tagline</th>
-                                                    <th>Image</th>
-                                                    <th>About Event</th>
-                                                    <th>Event Theme</th>
-                                                    <th>Keypoint</th>
+                                                    <th>About Us</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -144,21 +132,9 @@
                                                 <tr>
                                                     <td>1.</td>
                                                     <td>Donna Snider</td>
-                                                    <td>Customer Support</td>
-                                                    <td>New York</td>
-                                                    <td>27</td>
-                                                    <td>2011/01/25</td>
-                                                    <td>$112,000</td>
-                                                    <td><button type="button" class="btn btn-warning btn-sm m-b-10 m-l-5">Edit</button>
-                                                    <button type="button" class="btn btn-danger btn-sm m-b-10 m-l-5">Delete</button>
-                                                    <button type="button" class="btn btn-success btn-sm m-b-10 m-l-5">View Participants</button>
-                                                    <button type="button" class="btn btn-success btn-sm m-b-10 m-l-5">Schedule</button>
-                                                    <button type="button" class="btn btn-success btn-sm m-b-10 m-l-5">Problem Defination</button>
-                                                    <button type="button" class="btn btn-success btn-sm m-b-10 m-l-5">Winners</button>
-                                                    </td>
+                                                    <td><button type="button" class="btn btn-warning btn-sm m-b-10 m-l-5">Edit</button><button type="button" class="btn btn-danger btn-sm m-b-10 m-l-5">Delete</button></td>
                                                 </tr>
                                             </tbody>
-                                            </tfoot>
                                         </table>
                                     </div>
                                 </div>
