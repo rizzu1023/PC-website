@@ -8,12 +8,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12">
-        <div class="form-group">
-          <strong>Workshop Id </strong> {{$workshop->workshop_id}}
-        </div>
-      </div>
-
+     
        <div class="col-md-12">
         <div class="form-group">
           <strong>Title</strong> {{$workshop->title}}
@@ -32,9 +27,16 @@
         </div>
       </div>
 
+      <div class="col-md-12">
+        <div class="form-group">
+          <strong>Status</strong> {{$workshop->status}}
+        </div>
+      </div>
+
+
 
       <div class="col-md-12">
-        <a href="{{route('workshop.index')}}" class="btn btn-sm btn-success">Back</a>
+        <a href="/Workshops" class="btn btn-sm btn-success">Back</a>
       </div>
     </div>
   </div>

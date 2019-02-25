@@ -26,9 +26,6 @@ Route::get('github/success', 'Auth\SocialAuthController@handleProviderCallback')
 Route::get('/admin','AdminController@Index');
 
 
-// workshop
-//Route::get('/workshop','WorkshopController@getWorkshop');
-//Route::post('/workshop','WorkshopController@postWorkshop')->name('addWorkshop');
 Route::get('/admin/login','AdminController@AdminLogin');
 Route::post('/admin/login','AdminController@login');
 Route::get('/admin/register','AdminController@AdminRegister');
@@ -38,9 +35,14 @@ Route::post('/admin/register','AdminController@Insert')->name('AdminRegister');
 Route::get('/', 'ImageUploadController@home');
 Route::post('/upload/images', ['uses'=>'ImageUploadController@uploadImages','as'=>'uploadImage']);
 
-//Backend Routes
- Route::resource('workshop','WorkshopController');
-//Route::resource('workshopinfo','Workshopinfo');
+//workshop add
+Route::get('/Workshops','WorkshopController@index');
+Route::get('/Workshop/add','WorkshopController@create');
+Route::post('/Workshop/add','WorkshopController@store');
+Route::get('/Workshop/show/{id}','WorkshopController@show');
+Route::post('/Workshop/delete/{id}','WorkshopController@delete');
+Route::get('/Workshop/edit/{id}','WorkshopController@edit');
+Route::post('/Workshop/edit/{id}','WorkshopController@update');
 
 
 Route::get('/Workshopnew','WorkshopNew@index');
@@ -142,15 +144,8 @@ Route::post('/blog/delete/{id}','BlogController@delete');
 Route::get('/blog/edit/{id}','BlogController@edit');
 Route::post('/blog/edit/{id}','BlogController@update');
 
-<<<<<<< HEAD
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-=======
-//feedback form
->>>>>>> 1795e637e4c0a3f8f10ae33292ed9ef8b450c577
 Route::get('/user/feedback','HomeController@feedback');
 //feedback
 
@@ -169,16 +164,3 @@ Route::post('/sponsors/edit/{id}','SponsorController@update');
 Route::post('/sponsors/delete/{id}','SponsorController@delete');
 
 
-
-// <<<<<<< HEAD>>>>>>>>>
-
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
-// =======
-
-<<<<<<< HEAD
-=======
-
-// >>>>>>> c61f7d987cb847b4fafe5d8a5601d4c3ab2d1f8c
->>>>>>> 1795e637e4c0a3f8f10ae33292ed9ef8b450c577
