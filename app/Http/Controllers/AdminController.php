@@ -29,10 +29,8 @@ class AdminController extends Controller
        $email=$request->input('email');
        $password=$request->input('password');
        $admin= admin::find($id);
-       bcrypt()
+       bcrypt();
 
-      
-      
     }
 
         public function AdminLogin()
@@ -54,8 +52,9 @@ class AdminController extends Controller
        $admin->email=$req->input('email');
        $admin->password=$req->input('password');
        $admin->save();
-       return Redirect::route('login');
+       return Redirect::route('admin/login');
     }
+
 
 
 }

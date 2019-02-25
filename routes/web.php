@@ -27,8 +27,8 @@ Route::get('/admin','AdminController@Index');
 
 
 // workshop
-Route::get('/workshop','WorkshopController@getWorkshop');
-Route::post('/workshop','WorkshopController@postWorkshop')->name('addWorkshop');
+//Route::get('/workshop','WorkshopController@getWorkshop');
+//Route::post('/workshop','WorkshopController@postWorkshop')->name('addWorkshop');
 Route::get('/admin/login','AdminController@AdminLogin');
 Route::post('/admin/login','AdminController@login');
 Route::get('/admin/register','AdminController@AdminRegister');
@@ -36,11 +36,10 @@ Route::post('/admin/register','AdminController@Insert')->name('AdminRegister');
 
 //cloudder route
 Route::get('/', 'ImageUploadController@home');
-
 Route::post('/upload/images', ['uses'=>'ImageUploadController@uploadImages','as'=>'uploadImage']);
 
 //Backend Routes
-Route::resource('workshop','WorkshopController');
+ Route::resource('workshop','WorkshopController');
 //Route::resource('workshopinfo','Workshopinfo');
 
 
@@ -71,6 +70,31 @@ Route::get('events/edit/{id}','eventsController@edit');
 Route::post('events/edit/{id}','eventsController@update');
 Route::post('events/delete/{id}','eventsController@destroy');
 
+//Admin Routes
+
+Route::view('/event','admin.eventdashboard');
+Route::view('/dashboard','admin.dashboard')->name('dashboard');
+Route::view('/workshop','admin.workshopdash');
+Route::view('/poll','admin.polldash');
+Route::view('/blog','admin.blogdash');
+Route::view('/sponsor','admin.sponsordash');
+Route::view('/pc','admin.pcdash');
+Route::view('/user','admin.userdash');
+Route::view('/feedback','admin.feedbackdash');
+Route::view('/aboutus','admin.aboutusdash');
+Route::view('/contactus','admin.contactusdash');
+
+//Links
+Route::view('/about','admin.aboutus');
+Route::view('/addpoll','admin.addpoll');
+Route::view('/addblog','admin.addblog');
+Route::view('/addevent','admin.addevent');
+Route::view('/addeventinfo','admin.addeventinfo');
+Route::view('/eventparticipant','admin.eventparticipant');
+Route::view('/pcteam','admin.pcteam');
+Route::view('/addproblemdefination','admin.addpd');
+Route::view('/addschedule','admin.addschedule');
+Route::view('/addsponsor','admin.addsponsor');
 // Events  info
 
 Route::get('eventsInfo','eventsInfoController@index');
@@ -118,18 +142,43 @@ Route::post('/blog/delete/{id}','BlogController@delete');
 Route::get('/blog/edit/{id}','BlogController@edit');
 Route::post('/blog/edit/{id}','BlogController@update');
 
+<<<<<<< HEAD
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+=======
+//feedback form
+>>>>>>> 1795e637e4c0a3f8f10ae33292ed9ef8b450c577
 Route::get('/user/feedback','HomeController@feedback');
 //feedback
 
 Route::get('/feedback','FeedbackController@index');
-//Route::get('/feedback/add','BlogController@create');
 Route::post('/feedback/add','FeedbackController@store');
 Route::post('/feedback/delete/{id}','FeedbackController@delete');
 Route::get('/feedback/show/{username}','FeedbackController@userdetails');
 
+//sponsors
+Route::get('/sponsors','SponsorController@index');
+Route::get('/sponsors/add','SponsorController@create');
+Route::post('/sponsors/add','SponsorController@store');
+Route::get('/sponsors/edit/{id}','SponsorController@edit');
+Route::post('/sponsors/edit/{id}','SponsorController@update');
 
+Route::post('/sponsors/delete/{id}','SponsorController@delete');
+
+
+
+// <<<<<<< HEAD>>>>>>>>>
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+// =======
+
+<<<<<<< HEAD
+=======
+
+// >>>>>>> c61f7d987cb847b4fafe5d8a5601d4c3ab2d1f8c
+>>>>>>> 1795e637e4c0a3f8f10ae33292ed9ef8b450c577

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Event Dashboard</title>
+    <title> Event Participants</title>
 </head>
 <body>
     <head>
@@ -38,19 +38,14 @@
     </head>
 
     <body>
-            @if ($message = Session::get('success'))
-                <div class="alert alert-success">
-                    <p>{{$message}}</p>
-                </div>
-            @endif
       <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
             <div class="nano">
                 <div class="nano-content">
                     <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Programmers Club</span></a></div>
                     <ul>
-                        <li ><a href="{{route('dashboard')}}" class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard  </a>
-                        <li><a href="{{url('/blog')}}" class="sidebar-sub-toggle"><i class="ti-stack-overflow"></i> Blog </a>
-                        <li class="active"><a class="sidebar-sub-toggle"><i class="ti-pin-alt"></i> Events </a>
+                        <li ><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard  </a>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-stack-overflow"></i> Blog </a>
+                        <li  class="active"><a class="sidebar-sub-toggle"><i class="ti-pin-alt"></i> Events </a>
                         <li><a class="sidebar-sub-toggle"><i class="ti-spray"></i> Workshop </a>
                         <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Poll  </a>
                         <li><a class="sidebar-sub-toggle"><i class="ti-money"></i> Sponsor </a>
@@ -108,57 +103,53 @@
                             <div class="page-header">
                                 <div class="page-title">
                                     <h1>Hello, <span>Welcome Here</span></h1>
-                                    <button type="button" class="btn btn-primary m-b-10 m-l-5">+  Add Event</button>
-                                    <button type="button" class="btn btn-primary m-b-10 m-l-5">+  Add EventInfo</button>
-                                     
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Dashboard -->
-                     <section id="main-content">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="card">
-                                            <div class="card-title">
-                                                <h4>Event Dashboard</h4>
-                                                
-                                            </div>
+                    <section id="main-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-title">
+                                    <h4>Event Participants</h4>                
+                                </div>
                                 <div class="bootstrap-data-table-panel">
                                     <div class="table-responsive">
-                                        <table id="row-select" class="display table table-borderd table-hover">
+                                        <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                             <thead>
                                                 <tr>
                                                     <th>Sr. No</th>
-                                                    <th>Event Name</th>
-                                                    <th>Tagline</th>
-                                                    <th>Image</th>
-                                                    <th>About Event</th>
-                                                    <th>Event Theme</th>
-                                                    <th>Keypoint</th>
+                                                    <th>Team Name</th>
+                                                    <th>No Of Team Members</th>
+                                                    <th>Menber 1</th>
+                                                    <th>Menber 2</th>
+                                                    <th>Menber 3</th>
+                                                    <th>Menber 4</th>
+                                                    <th>Payment Status</th>
                                                     <th>Action</th>
+
                                                 </tr>
                                             </thead>
-
                                             <tbody>
                                                 <tr>
                                                     <td>1.</td>
-                                                    <td>Donna Snider</td>
-                                                    <td>Customer Support</td>
-                                                    <td>New York</td>
-                                                    <td>27</td>
-                                                    <td>2011/01/25</td>
-                                                    <td>$112,000</td>
-                                                    <td><button type="button" class="btn btn-warning btn-sm m-b-10 m-l-5">Edit</button>
+                                                    <td>Tiger Nixon</td>
+                                                    <td>System Architect</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>$320,800</td>
+                                                    <td>System Architect</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>Paid </td>
+                                                    <td>
+                                                    <button type="button" class="btn btn-success btn-sm m-b-10 m-l-5">Paid</button>
+                                                    <button type="button" class="btn btn-warning btn-sm m-b-10 m-l-5">Unpaid</button>
                                                     <button type="button" class="btn btn-danger btn-sm m-b-10 m-l-5">Delete</button>
-                                                    <button type="button" class="btn btn-success btn-sm m-b-10 m-l-5">View Participants</button>
-                                                    <button type="button" class="btn btn-success btn-sm m-b-10 m-l-5">Schedule</button>
-                                                    <button type="button" class="btn btn-success btn-sm m-b-10 m-l-5">Problem Defination</button>
-                                                    <button type="button" class="btn btn-success btn-sm m-b-10 m-l-5">Winners</button>
                                                     </td>
                                                 </tr>
+                                                
                                             </tbody>
-                                            </tfoot>
                                         </table>
                                     </div>
                                 </div>
@@ -169,12 +160,10 @@
                     </div>
                     <!-- /# row -->
                 </section>
-                <!-- End dashboard -->
-                </div>  
-            </div>
-        </div>
+                    
+                    <!-- End Dashboard -->
 
-            
+          
           <script src="assets/js/lib/jquery.min.js"></script>
         <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
         <!-- nano scroller -->
@@ -182,8 +171,20 @@
         <script src="assets/js/lib/preloader/pace.min.js"></script>
         <!-- sidebar -->
         <script src="assets/js/lib/bootstrap.min.js"></script>
+
         <script src="assets/js/scripts.js"></script>
         <!-- scripit init-->
+        <!-- Export Table -->
+        <script src="assets/js/lib/data-table/datatables.min.js"></script>
+        <script src="assets/js/lib/data-table/buttons.dataTables.min.js"></script>
+        <script src="assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+        <script src="assets/js/lib/data-table/buttons.flash.min.js"></script>
+        <script src="assets/js/lib/data-table/jszip.min.js"></script>
+        <script src="assets/js/lib/data-table/pdfmake.min.js"></script>
+        <script src="assets/js/lib/data-table/vfs_fonts.js"></script>
+        <script src="assets/js/lib/data-table/buttons.html5.min.js"></script>
+        <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
+        <script src="assets/js/lib/data-table/datatables-init.js"></script>
 </body>
 </body>
 </html>
