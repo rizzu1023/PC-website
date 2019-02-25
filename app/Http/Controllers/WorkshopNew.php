@@ -50,12 +50,6 @@ class WorkshopNew extends Controller
        
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
           $workshopinfo = workshops_info::find($id);
@@ -63,13 +57,6 @@ class WorkshopNew extends Controller
 
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
           $workshopinfo= workshops_info::find($id);
@@ -85,12 +72,6 @@ class WorkshopNew extends Controller
     
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function delete($id)
     {
         $workshopinfo= workshops_info::find($id);
@@ -156,7 +137,7 @@ class WorkshopNew extends Controller
             $workshopparticipant->username= $request->input('username');
             $workshopparticipant->email= $request->input('email');
             $workshopparticipant->save();
-return      Redirect::to('/Workshopsparticipants')
+            return Redirect::to('/Workshopsparticipants')
                       ->with('success', 'workshop Participant updated successfully');
     
     }

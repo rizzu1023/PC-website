@@ -16,7 +16,7 @@ class CreateSponsorshipsTable extends Migration
         Schema::create('sponsorships', function (Blueprint $table) {
             $table->increments('id');
             $table->string('company_name');
-            $table->binary('company_logo');
+            $table->binary('company_logo')->nullable();
             $table->timestamps();
         });
     }

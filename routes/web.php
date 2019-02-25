@@ -118,21 +118,32 @@ Route::post('/blog/delete/{id}','BlogController@delete');
 Route::get('/blog/edit/{id}','BlogController@edit');
 Route::post('/blog/edit/{id}','BlogController@update');
 
-<<<<<<< HEAD
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-=======
+//feedback form
 Route::get('/user/feedback','HomeController@feedback');
 //feedback
 
 Route::get('/feedback','FeedbackController@index');
-//Route::get('/feedback/add','BlogController@create');
 Route::post('/feedback/add','FeedbackController@store');
 Route::post('/feedback/delete/{id}','FeedbackController@delete');
 Route::get('/feedback/show/{username}','FeedbackController@userdetails');
 
+//sponsors
+Route::get('/sponsors','SponsorController@index');
+Route::get('/sponsors/add','SponsorController@create');
+Route::post('/sponsors/add','SponsorController@store');
+Route::get('/sponsors/edit/{id}','SponsorController@edit');
+Route::post('/sponsors/edit/{id}','SponsorController@update');
+
+Route::post('/sponsors/delete/{id}','SponsorController@delete');
 
 
->>>>>>> c61f7d987cb847b4fafe5d8a5601d4c3ab2d1f8c
+
+// <<<<<<< HEAD>>>>>>>>>
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+// =======
+
+
+// >>>>>>> c61f7d987cb847b4fafe5d8a5601d4c3ab2d1f8c
