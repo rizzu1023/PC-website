@@ -31,8 +31,9 @@ class AdminController extends Controller
 
        $email=$request->input('email');
        $password=$request->input('password');
-       $admin= admin::find($id);
-       bcrypt();
+       $admins=DB::table('admins')->where('email','=',$email)->first();
+       $admins=DB::table('admins')->where('password','=',$password)->first();
+       return redirect('admin/dashboard');
 
     }
 
@@ -56,6 +57,8 @@ class AdminController extends Controller
        $admin->password=$req->input('password');
        $admin->save();
        return Redirect::route('admin/adminlogin');
+       return Redirect::to('admin/adminlogin');
+
     }
 
     public function logout(Request $request) {
