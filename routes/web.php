@@ -112,7 +112,7 @@ Route::post('eventsInfo/edit/{id}','eventsInfoController@update');
 Route::post('eventsInfo/delete/{id}','eventsInfoController@destroy');
 
 // Events Participant
-/////////////
+
 Route::get('eventsParticipant','eventsParticipantController@index');
 Route::get('eventsParticipant/add','eventsParticipantController@create');
 Route::post('eventsParticipant/add','eventsParticipantController@store');
@@ -169,5 +169,12 @@ Route::post('/sponsors/edit/{id}','SponsorController@update');
 
 Route::post('/sponsors/delete/{id}','SponsorController@delete');
 
+// Contact Us
 
+Route::get('contact','contactController@index');
+Route::get('contact/add','contactController@create');
+Route::post('contact/add','contactController@store');
+Route::get('contact/edit/{id}','contactController@edit');
+Route::post('contact/edit/{id}','contactController@update');
+Route::post('contact/delete/{id}','contactController@destroy');
 
