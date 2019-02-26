@@ -112,7 +112,7 @@ Route::post('eventsInfo/edit/{id}','eventsInfoController@update');
 Route::post('eventsInfo/delete/{id}','eventsInfoController@destroy');
 
 // Events Participant
-
+/////////////
 Route::get('eventsParticipant','eventsParticipantController@index');
 Route::get('eventsParticipant/add','eventsParticipantController@create');
 Route::post('eventsParticipant/add','eventsParticipantController@store');
@@ -171,12 +171,3 @@ Route::post('/sponsors/delete/{id}','SponsorController@delete');
 
 
 
-// <<<<<<< HEAD>>>>>>>>>
-
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
-// =======
-
-
-// >>>>>>> c61f7d987cb847b4fafe5d8a5601d4c3ab2d1f8c
