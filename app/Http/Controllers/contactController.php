@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\contact_us;
 use Redirect;
+use App\about_us;
 
 class contactController extends Controller
 {
@@ -51,4 +52,47 @@ class contactController extends Controller
         $contact->delete();
         return Redirect::to('/contact')->with('success','Deleted Successfully...!');
     }
+
+   // About US Controller function
+
+    public function aindex(){
+        $about_us = about_us::latest()->paginate(5);
+        return view('about.aindex',compact('about_us'))->with('i',(request()->input('page',1)-1)*5);
+    }
+
+    public function acreate(){
+        return view('about.aadd');
+    }
+
+    public function astore(Request $request){
+        $about = new about_us;
+
+        $about->pc_detail=$request->input('pcDetail');
+        $about->save();
+
+        return Redirect::to('/about')->with('success','About Pc Added successfully..!');
+    }
+
+    public function aedit($id){
+        $about_us = about_us::find($id);
+        return view('about.aedit',compact('about_us'));
+    }
+
+    public function aupdate(Request $request, $id){
+        $about_us = about_us::find($id);
+
+        $about_us->pc_detail=$request->input('pcDetail');
+
+        $about_us->save();
+
+        return Redirect::to('/about')->with('success','Updated About US Successfully....!');
+      }
+
+      public function adestroy($id){
+
+        $about = about_us::find($id);
+
+        $about->delete();
+        return Redirect::to('/about')->with('success','Deleted Successfully..!');
+      }
 }

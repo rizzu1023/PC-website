@@ -178,3 +178,13 @@ Route::get('contact/edit/{id}','contactController@edit');
 Route::post('contact/edit/{id}','contactController@update');
 Route::post('contact/delete/{id}','contactController@destroy');
 
+// About US 
+
+Route::get('about','contactController@aindex');
+Route::get('about/add','contactController@acreate');
+Route::post('about/add','contactController@astore');
+Route::get('about/edit/{id}','contactController@aedit');
+Route::post('about/edit/{id}','contactController@aupdate');
+Route::post('about/delete/{id}','contactController@adestroy');
+
+
