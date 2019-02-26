@@ -49,17 +49,13 @@ class AdminController extends Controller
 
       public function Insert(Request $req,Response $res)
     {
-    	$admin = new Admin();
+    	$admin = new admin();
 
        $admin->name=$req->input('name');
        $admin->email=$req->input('email');
        $admin->password=$req->input('password');
        $admin->save();
-<<<<<<< HEAD
        return Redirect::route('admin/adminlogin');
-=======
-       return Redirect::to('admin/login');
->>>>>>> 7c0a888258fa6267fd3de5b03415328abeb8ca17
     }
 
     public function logout(Request $request) {
