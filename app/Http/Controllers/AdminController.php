@@ -52,7 +52,7 @@ class AdminController extends Controller
        $admin->email=$req->input('email');
        $admin->password=$req->input('password');
        $admin->save();
-       return Redirect::route('admin/login');
+       return Redirect::to('admin/login');
     }
 
 
