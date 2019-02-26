@@ -55,7 +55,11 @@ class AdminController extends Controller
        $admin->email=$req->input('email');
        $admin->password=$req->input('password');
        $admin->save();
+<<<<<<< HEAD
        return Redirect::route('admin/adminlogin');
+=======
+       return Redirect::to('admin/login');
+>>>>>>> 7c0a888258fa6267fd3de5b03415328abeb8ca17
     }
 
     public function logout(Request $request) {

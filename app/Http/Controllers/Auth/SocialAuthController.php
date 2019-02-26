@@ -43,10 +43,12 @@ class SocialAuthController extends Controller
 
        if ($account) {
            return $account->user;
-       } else {
+       } 
+       else {
            $user = User::whereEmail($providerUser->getEmail())->first();
 
-           if (! $user) {
+           if (! $user)
+            {
                $user = User::create([
                    'email' => $providerUser->getEmail(),
                    'name'  => $providerUser->getName(),
@@ -59,6 +61,7 @@ class SocialAuthController extends Controller
            ]);
 
            return $user;
+           Redirect::to('home');
        }
    }
 
