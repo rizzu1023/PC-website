@@ -21,11 +21,14 @@ use Illuminate\Foundation\Auth\Admins;
 
 class AdminController extends Controller
 {
+
+    public function Index(){
+        return view('admin.dashboard');
+    }
+
    public function login(Request $request)
     {
 
-
-       
        $email=$request->input('email');
        $password=$request->input('password');
        $admin= admin::find($id);
@@ -35,13 +38,13 @@ class AdminController extends Controller
 
         public function AdminLogin()
     {
-        return view('admin\adminlogin');
+        return view('admin/adminlogin');
     }
     
     public function AdminRegister()
     {
     	
-        return view('admin\adminregister');
+        return view('admin/adminregister');
     }
 
       public function Insert(Request $req,Response $res)
@@ -52,9 +55,13 @@ class AdminController extends Controller
        $admin->email=$req->input('email');
        $admin->password=$req->input('password');
        $admin->save();
-       return Redirect::route('admin/login');
+       return Redirect::route('admin/adminlogin');
     }
 
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect('admin/dashboard');
+      }
 
 
 }

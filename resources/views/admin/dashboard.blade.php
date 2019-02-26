@@ -25,16 +25,15 @@
         <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
 
         <!-- Styles -->
-        <link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
-        <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
-        <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
-        <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
-        <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
-        <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
-        <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
-
-        <link href="assets/css/lib/helper.css" rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="{{asset('assets/css/lib/weather-icons.css')}}" rel="stylesheet" />
+        <link href="{{asset('assets/css/lib/owl.carousel.min.css')}}" rel="stylesheet" />
+        <link href="{{asset('assets/css/lib/owl.theme.default.min.css')}}" rel="stylesheet" />
+        <link href="{{asset('assets/css/lib/font-awesome.min.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/css/lib/themify-icons.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/css/lib/menubar/sidebar.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/css/lib/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/css/lib/helper.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
     </head>
 
     <body>
@@ -144,7 +143,7 @@
                             <div class="stat-widget-one">
                                 <div class="stat-icon dib"><i class="ti-layout-grid2 color-pink border-pink"></i></div>
                                 <div class="stat-content dib">
-                                <div class="stat-text">Active Event</div>
+                                <div class="stat-text">s Event</div>
                                 <div class="stat-digit">770</div>
                                 </div>
                             </div>

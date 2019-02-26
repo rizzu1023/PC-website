@@ -11,11 +11,14 @@
 |
 */
 
-Route::get('/login', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
+
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('socialauth/github', 'Auth\SocialAuthController@redirectToProvider');
@@ -24,12 +27,14 @@ Route::get('github/success', 'Auth\SocialAuthController@handleProviderCallback')
 
 
 Route::get('/admin','AdminController@Index');
+ Route::view('/admin/dashboard','admin.dashboard');
+Route::view('admin','admin.adminlogin');
 
 
-Route::get('/admin/login','AdminController@AdminLogin');
-Route::post('/admin/login','AdminController@login');
-Route::get('/admin/register','AdminController@AdminRegister');
-Route::post('/admin/register','AdminController@Insert')->name('AdminRegister');
+Route::get('/admin/adminlogin','AdminController@AdminLogin');
+Route::post('/admin/adminlogin','AdminController@login');
+Route::get('/admin/adminregister','AdminController@AdminRegister');
+Route::post('/admin/adminregister','AdminController@Insert')->name('AdminRegister');
 
 //cloudder route
 Route::get('/', 'ImageUploadController@home');
@@ -75,7 +80,7 @@ Route::post('events/delete/{id}','eventsController@destroy');
 //Admin Routes
 
 Route::view('/event','admin.eventdashboard');
-Route::view('/dashboard','admin.dashboard')->name('dashboard');
+Route::view('/dashboard','admin.dashboard');
 Route::view('/workshop','admin.workshopdash');
 Route::view('/poll','admin.polldash');
 Route::view('/blog','admin.blogdash');
