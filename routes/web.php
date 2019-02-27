@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+
 Auth::routes();
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
@@ -24,12 +27,18 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('socialauth/github', 'Auth\SocialAuthController@redirectToProvider');
 Route::get('github/success', 'Auth\SocialAuthController@handleProviderCallback');
 
+//Frontend Routes
+Route::get('/pc','FrontendController@home');
 
 
 Route::get('/admin','AdminController@Index');
 Route::view('/admin/dashboard','admin.dashboard');
 Route::view('admin','admin.adminlogin');
+// Route::get('/admin','AdminController@Index');
+// Route::view('/admin/dashboard','admin.dashboard');
+// Route::view('admin','admin.adminlogin');
 
+//Admin Login
 
 Route::get('/admin/adminlogin','AdminController@AdminLogin');
 Route::post('/admin/adminlogin','AdminController@login');
@@ -77,19 +86,19 @@ Route::get('events/edit/{id}','eventsController@edit');
 Route::post('events/edit/{id}','eventsController@update');
 Route::post('events/delete/{id}','eventsController@destroy');
 
-//Admin Routes
+// //Admin Routes
 
-Route::view('/event','admin.eventdashboard');
-Route::view('/dashboard','admin.dashboard');
-Route::view('/workshop','admin.workshopdash');
-Route::view('/poll','admin.polldash');
-Route::view('/blog','admin.blogdash');
-Route::view('/sponsor','admin.sponsordash');
-Route::view('/pc','admin.pcdash');
-Route::view('/user','admin.userdash');
-Route::view('/feedback','admin.feedbackdash');
-Route::view('/aboutus','admin.aboutusdash');
-Route::view('/contactus','admin.contactusdash');
+// Route::view('/event','admin.eventdashboard');
+// Route::view('/dashboard','admin.dashboard');
+// Route::view('/workshop','admin.workshopdash');
+// Route::view('/poll','admin.polldash');
+// Route::view('/blog','admin.blogdash');
+// Route::view('/sponsor','admin.sponsordash');
+// Route::view('/pc','admin.pcdash');
+// Route::view('/user','admin.userdash');
+// Route::view('/feedback','admin.feedbackdash');
+// Route::view('/aboutus','admin.aboutusdash');
+// Route::view('/contactus','admin.contactusdash');
 
 //Links
 Route::view('/about','admin.aboutus');

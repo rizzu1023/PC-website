@@ -26,8 +26,13 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function feedback()
-    {
-        return view('frontend.feedback');
-    }
+    // public function feedback()
+    // {
+    //     return view('frontend.feedback');
+    // }
+
+    
+
+
+
 }
