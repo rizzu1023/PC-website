@@ -1,4 +1,4 @@
-@extends('frontend.layouts.footer')
+@extends('frontend.layouts.header')
 @extends('frontend.layouts.base')
 
 @section('content')
@@ -520,4 +520,4 @@
 
 @endsection
 
-@extends('layouts.header')
+@extends('frontend.layouts.footer')

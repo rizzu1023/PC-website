@@ -31,6 +31,7 @@ Route::get('github/success', 'Auth\SocialAuthController@handleProviderCallback')
 Route::get('/pc','FrontendController@home');
 
 
+
 // Route::get('/admin','AdminController@Index');
 // Route::view('/admin/dashboard','admin.dashboard');
 // Route::view('admin','admin.adminlogin');
