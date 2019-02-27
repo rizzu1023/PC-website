@@ -10,12 +10,12 @@ class eventsInfoController extends Controller
 {
     public function index(){
         $eventsInfo = event_info::latest()->paginate(5);
-        return view('eventsInfo.index',compact('eventsInfo'))->with('i',(request()->input('page',1)-1)*5);
+        return view('adminpanel.eventsInfo.index',compact('eventsInfo'))->with('i',(request()->input('page',1)-1)*5);
 
     }
 
     public function create(){
-        return view('eventsInfo.add');
+        return view('adminpanel.eventsInfo.add');
     }
 
     public function store(Request $request){
@@ -36,7 +36,7 @@ class eventsInfoController extends Controller
     public function edit($id){
         //dd($request->id);
         $eventsInfo = event_info::find($id);
-        return view('eventsInfo.edit')->with('eventsInfo',$eventsInfo); 
+        return view('adminpanel.eventsInfo.edit')->with('eventsInfo',$eventsInfo); 
     }
 
     public function update(Request $request,$id){

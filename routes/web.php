@@ -27,7 +27,7 @@ Route::get('github/success', 'Auth\SocialAuthController@handleProviderCallback')
 
 
 Route::get('/admin','AdminController@Index');
- Route::view('/admin/dashboard','admin.dashboard');
+Route::view('/admin/dashboard','admin.dashboard');
 Route::view('admin','admin.adminlogin');
 
 
@@ -70,7 +70,7 @@ Route::post('/Workshopsparticipants/edit/{id}','WorkshopNew@updateparticipant');
 
 //Events
 
-Route::get('events','eventsController@index');
+Route::get('events','eventsController@index')->name('events');
 Route::get('events/add','eventsController@create');
 Route::post('events/add','eventsController@store');
 Route::get('events/edit/{id}','eventsController@edit');

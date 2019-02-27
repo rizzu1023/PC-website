@@ -11,11 +11,11 @@ class eventsParticipantController extends Controller
 {
     public function index(){
         $eventsParticipant = event_participants::latest()->paginate(5);
-        return view('eventsParticipant.index',compact('eventsParticipant'))->with('i',(request()->input('page',1)-1)*5);
+        return view('adminpanel.eventsParticipant.index',compact('eventsParticipant'))->with('i',(request()->input('page',1)-1)*5);
     }
 
     public function create(){
-        return view('eventsParticipant.add');
+        return view('adminpanel.eventsParticipant.add');
     }
 
     public function store(Request $request){
@@ -40,7 +40,7 @@ class eventsParticipantController extends Controller
     public function edit($id){
 
         $eventsParticipant = event_participants::find($id);
-        return view('eventsParticipant.edit')->with('eventsParticipant',$eventsParticipant); 
+        return view('adminpanel.eventsParticipant.edit')->with('eventsParticipant',$eventsParticipant); 
 
     }
 
@@ -86,7 +86,7 @@ class eventsParticipantController extends Controller
         $user4=DB::table('users')->where('username','=',$user4)->first();
         
         //dd($user_1,$user_2);
-        return view('eventsParticipant.show',compact('user1','user2','user3','user4'));
+        return view('adminpanel.eventsParticipant.show',compact('user1','user2','user3','user4'));
         //return view('eventsParticipant.show',['user1','user2','user3','user4']);
 
         
