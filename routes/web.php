@@ -197,3 +197,12 @@ Route::post('about/edit/{id}','contactController@aupdate');
 Route::post('about/delete/{id}','contactController@adestroy');
 
 
+//pcteam
+
+Route::get('/pcteam','PcteamController@index');
+Route::get('/pcteam/add','PcteamController@add');
+Route::post('/pcteam/add','PcteamController@store');
+Route::get('pcteam/edit/{id}','PcteamController@edit');
+Route::post('pcteam/edit/{id}','PcteamController@update');
+Route::post('pcteam/delete/{id}','PcteamController@destroy');
+

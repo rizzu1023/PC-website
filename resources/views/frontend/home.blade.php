@@ -1,9 +1,11 @@
-@extends('frontend.layouts.header')
 @extends('frontend.layouts.base')
+@extends('frontend.layouts.header')
+
+
 
 @section('content')
 <section>
-          <img src="{{asset('frontend/img/algon.png')}}">
+          <img src="{{asset('img/algon.png')}}">
       </section>
 
 
@@ -520,4 +522,5 @@
 
 @endsection
 
-@extends('frontend.layouts.footer')
+@section('frontend.layouts.footer')
+@endsection
