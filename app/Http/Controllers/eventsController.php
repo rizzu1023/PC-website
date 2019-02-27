@@ -11,11 +11,11 @@ class eventsController extends Controller
     public function index(){
 
         $event = event::latest()->paginate(5);
-        return view('events.index', compact ('event'))->with('i',(request()->input('page',1)-1)*5);
+        return view('adminpanel.events.index', compact ('event'))->with('i',(request()->input('page',1)-1)*5);
     }
 
     public function create(){
-        return view('events.add');
+        return view('adminpanel.events.add');
     }
 
     public function store(Request $request){
@@ -37,7 +37,7 @@ class eventsController extends Controller
     public function edit($id){
         //dd($request->id);
         $event = event::find($id);
-        return view('events.edit')->with('event',$event); 
+        return view('adminpanel.events.edit')->with('event',$event); 
     }
 
     public function update(Request $request,$id){

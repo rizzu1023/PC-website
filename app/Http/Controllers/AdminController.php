@@ -33,7 +33,10 @@ class AdminController extends Controller
        $password=$request->input('password');
        $admins=DB::table('admins')->where('email','=',$email)->first();
        $admins=DB::table('admins')->where('password','=',$password)->first();
-       return redirect('admin/dashboard');
+
+     
+        return redirect('admin/dashboard');
+             
 
     }
 

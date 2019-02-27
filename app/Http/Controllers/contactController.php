@@ -12,11 +12,11 @@ class contactController extends Controller
     public function index(){
 
         $contact_us = contact_us::latest()->paginate(5);
-        return view('contact.index',compact('contact_us'))->with('i',(request()->input('page',1)-1)*5);
+        return view('adminpanel.contact.index',compact('contact_us'))->with('i',(request()->input('page',1)-1)*5);
     }
 
     public function create(){
-        return view('contact.add');
+        return view('adminpanel.contact.add');
     }
 
     public function store(Request $request){
@@ -31,7 +31,7 @@ class contactController extends Controller
 
     public function edit($id){
         $contact = contact_us::find($id);
-        return view('contact.edit')->with('contact',$contact);
+        return view('adminpanel.contact.edit')->with('contact',$contact);
     }
 
     public function update(Request $request,$id){
@@ -57,7 +57,7 @@ class contactController extends Controller
 
     public function aindex(){
         $about_us = about_us::latest()->paginate(5);
-        return view('about.aindex',compact('about_us'))->with('i',(request()->input('page',1)-1)*5);
+        return view('adminpanel.about.aindex',compact('about_us'))->with('i',(request()->input('page',1)-1)*5);
     }
 
     public function acreate(){
@@ -75,7 +75,7 @@ class contactController extends Controller
 
     public function aedit($id){
         $about_us = about_us::find($id);
-        return view('about.aedit',compact('about_us'));
+        return view('adminpanel.about.aedit',compact('about_us'));
     }
 
     public function aupdate(Request $request, $id){

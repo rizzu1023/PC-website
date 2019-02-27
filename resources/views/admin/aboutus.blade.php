@@ -141,7 +141,10 @@
             </div>
         </div>
 
-            
+
+        
+
+{{--             
           <script src="assets/js/lib/jquery.min.js"></script>
         <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
         <!-- nano scroller -->
@@ -150,7 +153,7 @@
         <!-- sidebar -->
         <script src="assets/js/lib/bootstrap.min.js"></script>
         <script src="assets/js/scripts.js"></script>
-        <!-- scripit init-->
+        <!-- scripit init--> --}}
 </body>
 </body>
 </html>
