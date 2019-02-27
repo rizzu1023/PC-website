@@ -1,256 +1,523 @@
-@extends('frontend.master')
-@section('title')
-Home - Programmers Club Department of Computer Engineering - Kalsekar Technical Campus, Panvel
-@stop
-@section('keywords')
-programmersclub, programmers club, programmersclub.co.in,armash fankar,aiktc.org,kalsekar technical campus,computer engineering,programmers,coding,laravel,php,event,college event,panel,engineering,college events,coding,hackers,code,mongodb
-@stop
-@section('description')
-In Programmers Club, we truly believe in the power of illustration and transformation; thus, engaging and inspiring young programmers to come together on a single platform where they can interact with each other and share their innovative ideas.At Programmers Club, our mission is to make students take advantage of the resources provided and help them build their skills by providing them A clear understanding to define their goals.
-@stop
+@extends('frontend.layouts.footer')
+@extends('frontend.layouts.base')
+
 @section('content')
-
-  <!-- Slider -->
-            <div class="tp-banner-container">
-                <div class="tp-banner" >
-                    <ul>
-                        @foreach($sliders as $slider)
-                            <li data-transition="random-static" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on">
-                                <img src="{{$slider->image_src}}" alt="slider-image" style="height:768;widht:1024";/>
-                                <div class="tp-caption sfl title-slide center" data-x="174" data-y="250" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">
-                                   <!-- EDUCATE HTML TEMPLATES -->
-                                </div>
-                                <div class="tp-caption sfr desc-slide center" data-x="256" data-y="310" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">
-                                </div>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div><!-- /.tp-banner-container -->
-
-            <div class="flat-row course row-bg">
-                <div class = "container">
-                    <div class="row">
-                        <div class="col-md-7 col-sm-12 flat-pdr-100">
-                            <h1 class="title-course">What we learn after we know it all, is what counts.</h1>
-
-                            <p class='flat-lh-25' style="font-size: 16px;">
-                                Programmers Club is the best platform for you to polish & develop your programming & technical skills. Programmers Club helps you to meet new people, interact, share and gain knowledge about different programming aspects and languages. It helps you to improve your technical as well as problem solving skills.
-                            </p>
-
-                            <div class="flat-spacer"></div>
-
-                            <div class="flat-button-container">
-                                <a class="flat-button orange" href="/workshops">VIEW WORKSHOPS</a>
-                                <a class="flat-button orange" href="/tutorials">VIEW TUTORIALS</a>
-                            </div>
-
-                        </div>
-
-                        <!-- <div class="col-md-5 col-sm-12">
-                            <ul class = "flat-course-images">
-                                <li>
-                                    <img src="/frontend/images/index/py.jpg" alt="Python"/>
-                                </li>
-
-                                <li>
-                                    <img src="/frontend/images/index/laravel.jpg" alt="Laravel"/>
-                                </li>
-
-                                <li>
-                                    <img src="/frontend/images/index/java.jpg" alt="Java"/>
-                                </li>
-
-                                <li>
-                                    <img src="/frontend/images/index/php.jpg" alt="PHP"/>
-                                </li>
-
-                                <li>
-                                    <img src="/frontend/images/index/wordpress.jpg" alt="Wordpress"/>
-                                </li>
-
-                                <li>
-                                    <img src="/frontend/images/index/mongodb.jpg" alt="MongoDB"/>
-                                </li>
-                            </ul>
-                        </div> -->
-
-                    </div>
-                </div>
-            </div><!-- /.flat-row -->
+<section>
+          <img src="{{asset('frontend/img/algon.png')}}">
+      </section>
 
 
-             <div class="flat-row course row-bg">
-                <div class = "container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 flat-pdr-100">
-                            <h1 class="title-course text-center">PARTICIPATE IN ALGORITHM 4.0</h1>
-
-                            <p class='flat-lh-25 text-center' style="font-size: 16px;">
-                                The objective of this technical event is to bring the students of different institutes together to interact and offer a new focus for IT students on the challenges of meeting global demands over social causes in a sustainable way. The event will touch on programmer's ability to solve social issues and know how to highlight their knowledge to target the problems in more effective and efficient ways.
-                            </p>
-
-                            <div class="flat-spacer"></div>
-
-                            <div class="flat-button-container text-center">
-                                <a class="flat-button blue" href="/event/algorithm-4o-where-logic-meets-creativity">PARTICIPATE NOW!</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /.flat-row -->
-
-            
-
-            <div class="flat-row join-us parallax parallax1 overlay bg-222">
-                <div class="overlay bg-222">
-                    <div class="container">
-                        <div class="row">
-
-                            <div class="counter-content">
-                                <span class="counter-prefix">Join</span>
-                                <div class="numb-counter">
-                                    <div class="numb-count" data-to="200" data-speed="1000" data-waypoint-active="yes">0</div>
-                                </div>
-                                <span class="counter-suffix"><span style="color: #ffaa30;font-size: 55px;font-family: 'Montserrat', sans-serif;">+</span>students</span>
-                            </div>
-
-                            <p>Programmers Club 
-                            lps you to effectively organize your daily workload into different dedicated activities, so that you can balance your academics along with real world programming tasks.</p>
-
-                            <a href="/contact" class="flat-button">JOIN NOW</a>
-                        </div><!-- /.row -->
-                    </div><!-- /.container -->
-                </div>
+      <section class="probootstrap-section probootstrap-section-colored">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-left section-heading probootstrap-animate">
+              <h2>Welcome to Programmers Club</h2>
             </div>
+          </div>
+        </div>
+      </section>
 
-
-
-           <!--  <section class="flat-row partners">
-                <div class="container">
-                    <ul class="partners-slider">
-                        <li>
-                            <img alt="owlcarousel-item-img" src="images/clients/Logo-01.jpg"/>
-                        </li>
-                        <li>
-                            <img alt="owlcarousel-item-img" src="images/clients/Logo-02.jpg"/>
-                        </li>
-                        <li>
-                            <img alt="owlcarousel-item-img" src="images/clients/Logo-03.jpg"/>
-                        </li>
-                        <li>
-                            <img alt="owlcarousel-item-img" src="images/clients/Logo-04.jpg"/>
-                        </li>
-                        <li>
-                            <img alt="owlcarousel-item-img" src="images/clients/Logo-05.jpg"/>
-                        </li>
-                        <li>
-                            <img alt="owlcarousel-item-img" src="images/clients/Logo-06.jpg"/>
-                        </li>
-                    </ul>
+      <section class="probootstrap-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="probootstrap-flex-block">
+                <div class="probootstrap-text probootstrap-animate">
+                  <h3>About Programmers Club</h3>
+                  <p>Programmers Club is the best platform for you to polish & develop your programming & technical skills. Programmers Club helps you to meet new people, interact, share and gain knowledge about different programming aspects and languages. It helps you to improve your technical as well as problem solving skills. </p>
+                  <p><a href="{{asset('about')}}" class="btn btn-primary">Learn More</a></p>
                 </div>
-            </section> -->
+                <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_3.jpg)">
+                  <a href="https://vimeo.com/45830194" class="btn-video popup-vimeo"><i class="icon-play3"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <section class="flat-row testimonial">
-                <div class="container">
-                    <div class="testimonial-slider">
-                        <div class="testimonial">
-                            <div class="testimonial-content">
-                                <blockquote>
-                                   "Programmers Club is striving hard to enhance the Skill of college Students.They are organizing company standard workshop.The good thing i like is that student teaches to student."
-                                </blockquote>
-                            </div>
-                            <div class="testimonial-meta">
-                                <div class="testimonial-author">
-                                    <strong class="author-name">DR. ABDUL RAZAK HONNUTAGI</strong>
-                                    <div class="author-info">DIRECTOR - KALSEKAR TECHNICAL CAMPUS</div>
-                                </div>
-                            </div>
-                        </div>
+      <section class="probootstrap-section" id="probootstrap-counter">
+        <div class="container">
+          
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+              <div class="probootstrap-counter-wrap">
+                <div class="probootstrap-icon">
+                  <i class="icon-users2"></i>
+                </div>
+                <div class="probootstrap-text">
+                  <span class="probootstrap-counter">
+                    <span class="js-counter" data-from="0" data-to="499" data-speed="1000" data-refresh-interval="50">1</span>
+                  </span>
+                  <span class="probootstrap-counter-label">Students Enrolled</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+              <div class="probootstrap-counter-wrap">
+                <div class="probootstrap-icon">
+                  <i class="icon-user-tie"></i>
+                </div>
+                <div class="probootstrap-text">
+                  <span class="probootstrap-counter">
+                    <span class="js-counter" data-from="0" data-to="77" data-speed="1000" data-refresh-interval="50">1</span>
+                  </span>
+                  <span class="probootstrap-counter-label">Members</span>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix visible-sm-block visible-xs-block"></div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+              <div class="probootstrap-counter-wrap">
+                <div class="probootstrap-icon">
+                  <i class="icon-library"></i>
+                </div>
+                <div class="probootstrap-text">
+                  <span class="probootstrap-counter">
+                    <span class="js-counter" data-from="0" data-to="25" data-speed="1000" data-refresh-interval="50">1</span>
+                  </span>
+                  <span class="probootstrap-counter-label">Workshops</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+               
+               <div class="probootstrap-counter-wrap">
+                <div class="probootstrap-icon">
+                  <i class="icon-smile2"></i>
+                </div>
+                <div class="probootstrap-text">
+                  <span class="probootstrap-counter">
+                    <span class="js-counter" data-from="0" data-to="100" data-speed="1000" data-refresh-interval="50">1</span>%
+                  </span>
+                  <span class="probootstrap-counter-label">Feedback</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                        <div class="testimonial">
-                            <div class="testimonial-content">
-                                <blockquote>
-                                  “The members of Programmers Club have shown excellent performance in this academic year in all activities conducted by them. They always try to devise innovative programs for the benefit of the college students.”
-                                </blockquote>
-                            </div>
-                            <div class="testimonial-meta">
-                                <div class="testimonial-author">
-                                    <strong class="author-name">PROF.TABREZ KHAN</strong>
-                                    <div class="author-info">HOD-DEPARTMENT OF COMPUTER ENGINEERING</div>
-                                </div>
-                            </div>
-                        </div>
+      <section class="probootstrap-section probootstrap-section-colored probootstrap-bg probootstrap-custom-heading probootstrap-tab-section" style="background-image: url(img/slider_2.jpg)">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center section-heading probootstrap-animate">
+              <h2 class="mb0">Highlights</h2>
+            </div>
+          </div>
+        </div>
+        <div class="probootstrap-tab-style-1">
+          <ul class="nav nav-tabs probootstrap-center probootstrap-tabs no-border">
+            <li class="active"><a data-toggle="tab" href="#featured-news">Featured News</a></li>
+            <li><a data-toggle="tab" href="#upcoming-events">Upcoming Events</a></li>
+          </ul>
+        </div>
+      </section>
 
-                        <div class="testimonial">
-                            <div class="testimonial-content">
-                                <blockquote>
-                                  "Programmers Club provides great service for young individuals who are very passionate about programming. They provide great guidance, clean code and fast return times together with competitive technology." 
-                                </blockquote>
-                            </div>
-                            <div class="testimonial-meta">
-                                <div class="testimonial-author">
-                                    <strong class="author-name">MR.ARSHAD ANSARI</strong>
-                                    <div class="author-info">CO-FOUNDER FITRANGI.COM</div>
-                                </div>
-                            </div>
-                        </div>
+      <section class="probootstrap-section probootstrap-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              
+              <div class="tab-content">
 
-                         <div class="testimonial">
-                            <div class="testimonial-content">
-                                <blockquote>
-                                  "Programmers Club is one of the friendliest groups I’ve ever came across. The group is extremely supportive and willing to share advice and expertise. Not only is provides best platform to explore your skills, but it’s also a fun, relaxed way to learn new technologies." 
-                                </blockquote>
+                <div id="featured-news" class="tab-pane fade in active">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="owl-carousel" id="owl1">
+                        <div class="item">
+                          <a href="#" class="probootstrap-featured-news-box">
+                            <figure class="probootstrap-media"><img src="{{asset('frontend/img/img_sm_3.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                            <div class="probootstrap-text">
+                              <h3>Workshop 1</h3>
+                              
+                              <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                              
                             </div>
-                            <div class="testimonial-meta">
-                                <div class="testimonial-author">
-                                    <strong class="author-name">STUDENTS</strong>
-                                    <div class="author-info">DEPARTMENT OF COMPUTER ENGINEERING</div>
-                                </div>
-                            </div>
+                          </a>
                         </div>
+                        <!-- END item -->
+                        <div class="item">
+                          <a href="#" class="probootstrap-featured-news-box">
+                            <figure class="probootstrap-media"><img src="{{asset('frontend/img/img_sm_1.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                            <div class="probootstrap-text">
+                              <h3>Workshop 2</h3>
+                              <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                              
+                            </div>
+                          </a>
+                        </div>
+                        <!-- END item -->
+                        <div class="item">
+                          <a href="#" class="probootstrap-featured-news-box">
+                            <figure class="probootstrap-media"><img src="{{asset('frontend/img/img_sm_2.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                            <div class="probootstrap-text">
+                              <h3>Workshop 3</h3>
+                              <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                              
+                            </div>
+                          </a>
+                        </div>
+                        <!-- END item -->
+                        <div class="item">
+                          <a href="#" class="probootstrap-featured-news-box">
+                            <figure class="probootstrap-media"><img src="{{asset('frontend/img/img_sm_3.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                            <div class="probootstrap-text">
+                              <h3>Workshop 4</h3>
+                              <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                              
+                              
+                            </div>
+                          </a>
+                        </div>
+                        <!-- END item -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END row -->
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <p><a href="{{asset('workshop')}}" class="btn btn-primary">View more</a></p>  
+                    </div>
+                  </div>
+                </div>
+                <div id="upcoming-events" class="tab-pane fade">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="owl-carousel" id="owl2">
+                        <div class="item">
+                          <a href="#" class="probootstrap-featured-news-box">
+                            <figure class="probootstrap-media"><img src="{{asset('frontend/img/img_sm_3.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                            <div class="probootstrap-text">
+                              <h3></h3>
+                              <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                              <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                            </div>
+                          </a>
+                        </div>
+                        <!-- END item -->
+                        <div class="item">
+                          <a href="#" class="probootstrap-featured-news-box">
+                            <figure class="probootstrap-media"><img src="{{asset('frontend/img/img_sm_1.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                            <div class="probootstrap-text">
+                              <h3>Tempora consectetur unde nisi</h3>
+                              <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                              <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                            </div>
+                          </a>
+                        </div>
+                        <!-- END item -->
+                        <div class="item">
+                          <a href="#" class="probootstrap-featured-news-box">
+                            <figure class="probootstrap-media"><img src="{{asset('frontend/img/img_sm_2.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                            <div class="probootstrap-text">
+                              <h3>Tempora consectetur unde nisi</h3>
+                              <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                              <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                            </div>
+                          </a>
+                        </div>
+                        <!-- END item -->
+                        <div class="item">
+                          <a href="#" class="probootstrap-featured-news-box">
+                            <figure class="probootstrap-media"><img src="{{asset('frontend/img/img_sm_3.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                            <div class="probootstrap-text">
+                              <h3>Tempora consectetur unde nisi</h3>
+                              <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                              <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                            </div>
+                          </a>
+                        </div>
+                        <!-- END item -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <p><a href="#" class="btn btn-primary">View all </a></p>  
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="probootstrap-section probootstrap-bg-white probootstrap-border-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+              <h2>Blogs!</h2>
+              <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
+            </div>
+          </div>
+          <!-- END row -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="probootstrap-service-2 probootstrap-animate">
+                <div class="image">
+                  <div class="image-bg">
+                    <img src="{{asset('frontend/img/img_sm_1.jpg')}}" alt="Free Bootstrap Template by uicookies.com">
+                  </div>
+                </div>
+                <div class="text">
+                  <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
+                  <h3>Application Design</h3>
+                  <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
+                  <p><a href="{{asset('bloginfo')}}" class="btn btn-primary">View more</a> </p>
+                </div>
+              </div>
+
+              <div class="probootstrap-service-2 probootstrap-animate">
+                <div class="image">
+                  <div class="image-bg">
+                    <img src="{{asset('frontend/img/img_sm_3.jpg')}}" alt="Free Bootstrap Template by uicookies.com">
+                  </div>
+                </div>
+                <div class="text">
+                  <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
+                  <h3>Chemical Engineering</h3>
+                  <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
+                  <p><a href="{{asset('bloginfo')}}" class="btn btn-primary">View more</a></p>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6">
+              <div class="probootstrap-service-2 probootstrap-animate">
+                <div class="image">
+                  <div class="image-bg">
+                    <img src="{{asset('frontend/img/img_sm_2.jpg')}}" alt="Free Bootstrap Template by uicookies.com">
+                  </div>
+                </div>
+                <div class="text">
+                  <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
+                  <h3>Math Major</h3>
+                  <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
+                  <p><a href="{{asset('bloginfo')}}" class="btn btn-primary">View more</a> </p>
+                </div>
+              </div>
+
+              <div class="probootstrap-service-2 probootstrap-animate">
+                <div class="image">
+                  <div class="image-bg">
+                    <img src="{{asset('frontend/img/img_sm_4.jpg')}}" alt="Free Bootstrap Template by uicookies.com">
+                  </div>
+                </div>
+                <div class="text">
+                  <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
+                  <h3>English Major</h3>
+                  <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
+                  <p><a href="{{asset('bloginfo')}}" class="btn btn-primary">View more</a> <span class="enrolled-count">9,582 students enrolled</span></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      
+      <section class="probootstrap-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+              <h2>Our Sponsors</h2>
+              <p class="lead">A journey of a thousand miles begins with their support!</p>
+            </div>
+          </div>
+          <!-- END row -->
+
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="{{asset('frontend/img/person_1.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                  <h3>Chris Worth</h3>
+                  <p>Physical Education</p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="{{asset('frontend/img/person_5.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                  <h3>Janet Morris</h3>
+                  <p>English Teacher</p>
+                 
+                </div>
+              </div>
+            </div>
+            <div class="clearfix visible-sm-block visible-xs-block"></div>
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="{{asset('frontend/img/person_6.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                  <h3>Linda Reyez</h3>
+                  <p>Math Teacher</p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="{{asset('frontend/img/person_7.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                  <h3>Jessa Sy</h3>
+                  <p>Physics Teacher</p>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section class="probootstrap-section probootstrap-bg probootstrap-section-colored probootstrap-testimonial" style="background-image: url(img/slider_4.jpg);">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+              <h2>What they think</h2>
+              <p class="lead">A combiation of thoughts and advices that have positive effects on the team's responses.</p>
+            </div>
+          </div>
+          <!-- END row -->
+          <div class="row">
+            <div class="col-md-12 probootstrap-animate">
+              <div class="owl-carousel owl-carousel-testimony owl-carousel-fullwidth">
+                <div class="item">
+
+                  <div class="probootstrap-testimony-wrap text-center">
+                    <figure>
+                      <img src="{{asset('frontend/img/person_1.jpg')}}" alt="Free Bootstrap Template by uicookies.com">
+                    </figure>
+                    <blockquote class="quote">&ldquo;Programmers club is  striving hard to enhance the skills of students.They are organizing company standard Workshops.The good thing I like is that the student teaches to student.&rdquo; <cite class="author"> &mdash; <span>DR.ABDUL RAZAK HONNUTAGI</span></cite></blockquote>
+                  
+                    
+                  </div>
+
+                </div>
+                <div class="item">
+                  <div class="probootstrap-testimony-wrap text-center">
+                    <figure>
+                      <img src="{{asset('frontend/img/person_2.jpg')}}" alt="Free Bootstrap Template by uicookies.com">
+                    </figure>
+                    <blockquote class="quote">&ldquo;The members of Programmers Club have shown excellent oerformance in this academic year in all activities coducted by them.They always try to devise innovative programs for the benefit of the college students.&rdquo; <cite class="author"> &mdash;<span>PROF.TABREZ KHAN</span></cite></blockquote>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="probootstrap-testimony-wrap text-center">
+                    <figure>
+                      <img src="{{asset('frontend/img/person_3.jpg')}}" alt="Free Bootstrap Template by uicookies.com">
+                    </figure>
+                    <blockquote class="quote">&ldquo;Programmers Club provides great service for young individuals who are very passionate about programming.They provide great guidance,clean code and fast return times together with competitive technology.&rdquo; <cite class="author">&mdash; <span>MR.ARSHAD ANSARI</span></cite></blockquote>
+                  </div>
+                </div>
+
+                  <div class="item">
+                    <div class="probootstrap-testimony-wrap text-center">
+                      <figure>
+                        <img src="{{asset('frontend/img/person_3.jpg')}}" alt="Free Bootstrap Template by uicookies.com">
+                      </figure>
+                      <blockquote class="quote">&ldquo;Programmers Club is one of the friendliest group I've ever came across. The group is extremely supportive and willing to share advice and expertise. Not only it provides best platform to explore your skills, but it's also a fun, relaxed way to learn new technologies.&rdquo; <cite class="author">&mdash; <span>STUDENTS</span></cite></blockquote>
                     </div>
                 </div>
-            </section>
+                
+              </div>
+            </div>
+          </div>
+          <!-- END row -->
+        </div>
+      </section>
 
-            <section class="flat-row news-letter">
-                <div class="container">
-                    <div class="have-question">
-                        <h2 class="">Get notifications about Workshops, Events and Meet ups</h2>
-                    </div>
-
-                    <div class="news-letter-form">
-                        <div class="widget-mailchimb">
-                            <h1 class="widget-title">NEWSLETTER</h1>
-                            <p>Subscribe now and receive newsletter with programming materials, workshops, interesting project ideas and much more!</p>
-
-                            {!! Form::open(array('url'=>'/newsletter-subscribe','id' => 'newsletter' , 'data-toggle' => 'validator' , 'role' => 'form')) !!}
-                                @if($errors->any())
-                                    <div class="alert alert-error" id="flash">
-                                        {!!  implode('',$errors->all('<li class="error">:message</li>')) !!}
-                                    </div>
-                                @endif
-                                <div id="subscribe-content">
-                                    <div class="input-wrap email">
-                                        <input type="text" id="subscribe-email" name="email" placeholder="Your Email Here">
-                                    </div>
-                                    <div class="button-wrap">
-                                        <button type="submit" id="subscribe-button" class="subscribe-button" title="Subscribe now"> SUBSCRIBE </button>
-                                    </div>
-                                </div>
-                                <div id="subscribe-msg"></div>
-                            {!! Form::close() !!}
-                        </div>
-                    </div>
+      <section class="probootstrap-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+              <h2>Programmers Club</h2>
+              <p class="lead">For The Students, By The Students</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="service left-icon probootstrap-animate">
+                <div class="icon"><i class="icon-checkmark"></i></div>
+                <div class="text">
+                  <h3>Understanding</h3>
+                  <p>A clear understanding to define your goals.</p>
+                </div>  
+              </div>
+              <div class="service left-icon probootstrap-animate">
+                <div class="icon"><i class="icon-checkmark"></i></div>
+                <div class="text">
+                  <h3>Guidance</h3>
+                  <p>Proper guidance for achieving your goals. </p>
                 </div>
-            </section>
-@stop
+              </div>
+              <div class="service left-icon probootstrap-animate">
+                <div class="icon"><i class="icon-checkmark"></i></div>
+                <div class="text">
+                  <h3>Suggestions</h3>
+                  <p>Ongoing suggestions to help them improve your roadmap everytime a change is required.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service left-icon probootstrap-animate">
+                <div class="icon"><i class="icon-checkmark"></i></div>
+                <div class="text">
+                  <h3>Self Learning</h3>
+                  <p>To learn what you want , when you want and how you want.</p>
+                </div>  
+              </div>
+              
+              <div class="service left-icon probootstrap-animate">
+                <div class="icon"><i class="icon-checkmark"></i></div>
+                <div class="text">
+                  <h3>Innovative Ideas</h3>
+                  <p>Innovative ideas that meets new requirents,unarticulated needs or existing needs.</p>
+                </div>
+              </div>
+              
+              <div class="service left-icon probootstrap-animate">
+                <div class="icon"><i class="icon-checkmark"></i></div>
+                <div class="text">
+                  <h3>Team Work</h3>
+                  <p>Collaborative effort of our team to achieve a common goal.</p>
+                </div>
+              </div>
 
-@section('css')
-<style>
-    .flat-course .course-meta li{
-        margin-right : 30px;
-    }
-</style>
-@stop
+            </div>
+          </div>
+          <!-- END row -->
+        </div>
+      </section>
+      
+      <section class="probootstrap-cta">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="probootstrap-animate" data-animate-effect="fadeInRight">Participate Now!</h2>
+              <a href="{{asset('eparticipate')}}" role="button" class="btn btn-primary btn-lg btn-ghost probootstrap-animate" data-animate-effect="fadeInLeft">Enroll</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+@endsection
+
+@extends('layouts.header')
