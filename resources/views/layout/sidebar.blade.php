@@ -46,14 +46,14 @@
                         <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard  </a>
                         <li ><a class="sidebar-sub-toggle"><i class="ti-stack-overflow"></i> Blog </a>
                         <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-pin-alt"></i> Events </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-spray"></i> Workshop </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Poll  </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-money"></i> Sponsor </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-user"></i> PC Team </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-server"></i> User </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-comment"></i>  Feedback </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-agenda"></i> About Us  </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-email"></i> Contact Us </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-spray"></i> Workshop </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Poll  </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-money"></i> Sponsor </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-user"></i> PC Team </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-server"></i> User </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-comment"></i>  Feedback </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-agenda"></i> About Us  </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-email"></i> Contact Us </a>
                         <li><a><i class="ti-close"></i> Logout</a></li>
                     </ul>
                 </div>  
