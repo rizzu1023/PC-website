@@ -49,31 +49,31 @@ Route::get('/', 'ImageUploadController@home');
 Route::post('/upload/images', ['uses'=>'ImageUploadController@uploadImages','as'=>'uploadImage']);
 
 //workshop add
-Route::get('/Workshops','WorkshopController@index');
-Route::get('/Workshop/add','WorkshopController@create');
-Route::post('/Workshop/add','WorkshopController@store');
-Route::get('/Workshop/show/{id}','WorkshopController@show');
-Route::post('/Workshop/delete/{id}','WorkshopController@delete');
-Route::get('/Workshop/edit/{id}','WorkshopController@edit');
-Route::post('/Workshop/edit/{id}','WorkshopController@update');
+Route::get('admin/Workshops','WorkshopController@index');
+Route::get('admin/Workshop/add','WorkshopController@create');
+Route::post('admin/Workshop/add','WorkshopController@store');
+Route::get('admin/Workshop/show/{id}','WorkshopController@show');
+Route::post('admin/Workshop/delete/{id}','WorkshopController@delete');
+Route::get('admin/Workshop/edit/{id}','WorkshopController@edit');
+Route::post('admin/Workshop/edit/{id}','WorkshopController@update');
 
 
-Route::get('/Workshopnew','WorkshopNew@index');
-Route::get('/Workshopnew/add','WorkshopNew@create');
-Route::post('/Workshopnew/add','WorkshopNew@store');
-Route::get('/Workshopnew/show','WorkshopNew@show');
-Route::get('/Workshopnew/delete/{id}','WorkshopNew@delete');
-Route::get('/Workshopnew/edit','WorkshopNew@edit');
-Route::post('/Workshopnew/edit','WorkshopNew@update');
+Route::get('admin/Workshopnew','WorkshopNew@index');
+Route::get('admin/Workshopnew/add','WorkshopNew@create');
+Route::post('admin/Workshopnew/add','WorkshopNew@store');
+Route::get('admin/Workshopnew/show','WorkshopNew@show');
+Route::get('admin/Workshopnew/delete/{id}','WorkshopNew@delete');
+Route::get('admin/Workshopnew/edit','WorkshopNew@edit');
+Route::post('admin/Workshopnew/edit','WorkshopNew@update');
 
 //Workshopparticipants
-Route::get('/Workshopsparticipants','WorkshopNew@home');
-Route::get('/Workshopsparticipants/add','WorkshopNew@new');
-Route::post('/Workshopsparticipants/add','WorkshopNew@storeparticipants');
-Route::get('/Workshopsparticipants/show/{username}','WorkshopNew@userdetails');
-Route::post('/Workshopsparticipants/delete/{id}','WorkshopNew@deleteparticipant');
-Route::get('/Workshopsparticipants/edit/{id}','WorkshopNew@editparticipant');
-Route::post('/Workshopsparticipants/edit/{id}','WorkshopNew@updateparticipant');
+Route::get('admin/Workshopsparticipants','WorkshopNew@home');
+Route::get('admin/Workshopsparticipants/add','WorkshopNew@new');
+Route::post('admin/Workshopsparticipants/add','WorkshopNew@storeparticipants');
+Route::get('admin/Workshopsparticipants/show/{username}','WorkshopNew@userdetails');
+Route::post('admin/Workshopsparticipants/delete/{id}','WorkshopNew@deleteparticipant');
+Route::get('admin/Workshopsparticipants/edit/{id}','WorkshopNew@editparticipant');
+Route::post('admin/Workshopsparticipants/edit/{id}','WorkshopNew@updateparticipant');
 
 
 //Events
@@ -149,20 +149,13 @@ Route::post('/admin/eventSchedule/delete/{id}','eventsProbDefiController@sdestro
 
 
 //Blog
-Route::get('/blog','BlogController@index')->name('blog');
-Route::get('/blog/add','BlogController@create');
-Route::post('/blog/add','BlogController@store');
-Route::get('/blog/show','BlogController@show');
-Route::post('/blog/delete/{id}','BlogController@delete');
-Route::get('/blog/edit/{id}','BlogController@edit');
-Route::post('/blog/edit/{id}','BlogController@update');
-Route::get('/admin//blog','BlogController@index');
-Route::get('/admin//blog/add','BlogController@create');
-Route::get('/admin//blog/edit/{id}','BlogController@edit');
-Route::get('/admin//blog/show','BlogController@show');
-Route::post('/admin//blog/add','BlogController@store');
-Route::post('/admin//blog/delete/{id}','BlogController@delete');
-Route::post('/admin//blog/edit/{id}','BlogController@update');
+Route::get('/admin/blog','BlogController@index');
+Route::get('/admin/blog/add','BlogController@create');
+Route::get('/admin/blog/edit/{id}','BlogController@edit');
+Route::get('/admin/blog/show','BlogController@show');
+Route::post('/admin/blog/add','BlogController@store');
+Route::post('/admin/blog/delete/{id}','BlogController@delete');
+Route::post('/admin/blog/edit/{id}','BlogController@update');
 
 
 

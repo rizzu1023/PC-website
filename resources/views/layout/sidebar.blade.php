@@ -43,17 +43,17 @@
                 <div class="nano-content">
                     <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Programmers Club</span></a></div>
                     <ul>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard  </a>
-                        <li ><a class="sidebar-sub-toggle"><i class="ti-stack-overflow"></i> Blog </a>
-                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-pin-alt"></i> Events </a>
-                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-spray"></i> Workshop </a>
-                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Poll  </a>
-                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-money"></i> Sponsor </a>
-                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-user"></i> PC Team </a>
-                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-server"></i> User </a>
-                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-comment"></i>  Feedback </a>
-                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-agenda"></i> About Us  </a>
-                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-email"></i> Contact Us </a>
+                        <li><a href="/admin/dashboard" class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard  </a>
+                        <li ><a href="/admin/blog" class="sidebar-sub-toggle"><i class="ti-stack-overflow"></i> Blog </a>
+                        <li><a href="/admin/events" class="sidebar-sub-toggle"><i class="ti-pin-alt"></i> Events </a>
+                        <li><a href="/admin/Workshops" class="sidebar-sub-toggle"><i class="ti-spray"></i> Workshop </a>
+                        <li><a href="" class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Poll  </a>
+                        <li><a href="/admin/sponsors" class="sidebar-sub-toggle"><i class="ti-money"></i> Sponsor </a>
+                        <li><a href="/admin/pcteam" class="sidebar-sub-toggle"><i class="ti-user"></i> PC Team </a>
+                        <li><a href="/events" class="sidebar-sub-toggle"><i class="ti-server"></i> User </a>
+                        <li><a href="/admin/feedback" class="sidebar-sub-toggle"><i class="ti-comment"></i>  Feedback </a>
+                        <li><a href="/admin/about" class="sidebar-sub-toggle"><i class="ti-agenda"></i> About Us  </a>
+                        <li><a href="/admin/contact" class="sidebar-sub-toggle"><i class="ti-email"></i> Contact Us </a>
                         <li><a><i class="ti-close"></i> Logout</a></li>
                     </ul>
                 </div>  
