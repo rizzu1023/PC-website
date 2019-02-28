@@ -98,6 +98,10 @@
                                                     <div class="col-sm-2">
                                                         <a class="btn btn-sm btn-warning" href="/admin/blog/edit/{{$blog->id}}">Edit</a>
                                                     </div>
+                                                     <div class="col-sm-2">
+                                                        <a class="btn btn-sm btn-warning" href="/admin/blog/show">Show</a>
+                                                    </div>
+                                                   
                                                     <form action="/admin/blog/delete/{{$blog->id}}" method="POST">
                                                         @csrf
                                                             <div class="col-sm-2">

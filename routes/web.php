@@ -49,13 +49,13 @@ Route::get('/', 'ImageUploadController@home');
 Route::post('/upload/images', ['uses'=>'ImageUploadController@uploadImages','as'=>'uploadImage']);
 
 //workshop add
-Route::get('admin/Workshops','WorkshopController@index');
-Route::get('admin/Workshop/add','WorkshopController@create');
-Route::post('admin/Workshop/add','WorkshopController@store');
-Route::get('admin/Workshop/show/{id}','WorkshopController@show');
-Route::post('admin/Workshop/delete/{id}','WorkshopController@delete');
-Route::get('admin/Workshop/edit/{id}','WorkshopController@edit');
-Route::post('admin/Workshop/edit/{id}','WorkshopController@update');
+Route::get('/admin/Workshops','WorkshopController@index');
+Route::get('/admin/Workshop/add','WorkshopController@create');
+Route::post('/admin/Workshop/add','WorkshopController@store');
+Route::get('/admin/Workshop/show/{id}','WorkshopController@show');
+Route::post('/admin/Workshop/delete/{id}','WorkshopController@delete');
+Route::get('/admin/Workshop/edit/{id}','WorkshopController@edit');
+Route::post('/admin/Workshop/edit/{id}','WorkshopController@update');
 
 
 Route::get('admin/Workshopnew','WorkshopNew@index');
