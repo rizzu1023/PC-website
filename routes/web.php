@@ -150,7 +150,7 @@ Route::post('eventSchedule/delete/{id}','eventsProbDefiController@sdestroy');
 
 
 //Blog
-Route::get('/blog','BlogController@index');
+Route::get('/blog','BlogController@index')->name('blog');
 Route::get('/blog/add','BlogController@create');
 Route::post('/blog/add','BlogController@store');
 Route::get('/blog/show','BlogController@show');
