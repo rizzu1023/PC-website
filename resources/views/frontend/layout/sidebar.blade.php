@@ -43,17 +43,17 @@
                 <div class="nano-content">
                     <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Programmers Club</span></a></div>
                     <ul>
-                        <li class="active"><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard  </a>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard  </a>
                         <li ><a class="sidebar-sub-toggle"><i class="ti-stack-overflow"></i> Blog </a>
                         <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-pin-alt"></i> Events </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-spray"></i> Workshop </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Poll  </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-money"></i> Sponsor </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-user"></i> PC Team </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-server"></i> User </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-comment"></i>  Feedback </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-agenda"></i> About Us  </a>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-email"></i> Contact Us </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-spray"></i> Workshop </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Poll  </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-money"></i> Sponsor </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-user"></i> PC Team </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-server"></i> User </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-comment"></i>  Feedback </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-agenda"></i> About Us  </a>
+                        <li><a href="{{route('events')}}" class="sidebar-sub-toggle"><i class="ti-email"></i> Contact Us </a>
                         <li><a><i class="ti-close"></i> Logout</a></li>
                     </ul>
                 </div>  
@@ -61,16 +61,5 @@
         </div>
         <!-- /# sidebar -->
 
-    
-            
-        {{-- <script src="assets/js/lib/jquery.min.js"></script>
-        <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
-        <!-- nano scroller -->
-        <script src="assets/js/lib/menubar/sidebar.js"></script>
-        <script src="assets/js/lib/preloader/pace.min.js"></script>
-        <!-- sidebar -->
-        <script src="assets/js/lib/bootstrap.min.js"></script>
-        <script src="assets/js/scripts.js"></script>
-        <!-- scripit init--> --}}
 </body>
 </html>

@@ -23,6 +23,7 @@ class eventsController extends Controller
 
         $event->event_name=$request->input('name');
         $event->tagline=$request->input('tagline');
+        $event->banner_image=$request->input('banner');
         $event->about_event=$request->input('about');
         $event->event_theme=$request->input('theme');
         $event->keypoints=$request->input('keypoints');
@@ -30,7 +31,7 @@ class eventsController extends Controller
         
         $event->save();
 
-        return Redirect::to('/events')->with('success','Event has succesfully added..!');
+        return Redirect::to('/admin/events')->with('success','Event has succesfully added..!');
 
     }
 
@@ -53,7 +54,7 @@ class eventsController extends Controller
         
         $event->save();
 
-        return Redirect::to('/events')->with('success','Event has succesfully updated..!');
+        return Redirect::to('/admin/events')->with('success','Event has succesfully updated..!');
     }
 
     public function destroy($id){
@@ -61,6 +62,6 @@ class eventsController extends Controller
         $event = event::find($id);
         $event->delete();
         // dd($event);
-        return Redirect::to('/events')->with('success','Event Removed');
+        return Redirect::to('/admin/events')->with('success','Event Removed');
     }
 }
