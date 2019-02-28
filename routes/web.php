@@ -14,10 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-
-
 Auth::routes();
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
@@ -100,17 +96,17 @@ Route::post('events/delete/{id}','eventsController@destroy');
 // Route::view('/aboutus','admin.aboutusdash');
 // Route::view('/contactus','admin.contactusdash');
 
-//Links
-Route::view('/about','admin.aboutus');
-Route::view('/addpoll','admin.addpoll');
-Route::view('/addblog','admin.addblog');
-Route::view('/addevent','admin.addevent');
-Route::view('/addeventinfo','admin.addeventinfo');
-Route::view('/eventparticipant','admin.eventparticipant');
-Route::view('/pcteam','admin.pcteam');
-Route::view('/addproblemdefination','admin.addpd');
-Route::view('/addschedule','admin.addschedule');
-Route::view('/addsponsor','admin.addsponsor');
+// //Links
+// Route::view('/about','admin.aboutus');
+// Route::view('/addpoll','admin.addpoll');
+// Route::view('/addblog','admin.addblog');
+// Route::view('/addevent','admin.addevent');
+// Route::view('/addeventinfo','admin.addeventinfo');
+// Route::view('/eventparticipant','admin.eventparticipant');
+// Route::view('/pcteam','admin.pcteam');
+// Route::view('/addproblemdefination','admin.addpd');
+// Route::view('/addschedule','admin.addschedule');
+// Route::view('/addsponsor','admin.addsponsor');
 // Events  info
 
 Route::get('eventsInfo','eventsInfoController@index');

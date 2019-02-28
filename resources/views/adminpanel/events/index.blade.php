@@ -67,7 +67,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Event Dashboard</title>
 </head>
-
         <div class="header">
             <div class="container-fluid">
                 <div class="row">

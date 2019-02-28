@@ -1,7 +1,7 @@
 
-        @extends('layout.base')
-        @extends('layout.sidebar')
-        @section('content')
+@extends('layout.base')
+@extends('layout.sidebar')
+@section('content')
             
 
 
