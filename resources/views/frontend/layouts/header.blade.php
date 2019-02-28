@@ -40,12 +40,12 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html" title="enlight">programmersclub</a>
+            <a class="navbar-brand" href="{{asset('pc')}}" title="Programmers Club">ProgrammersClub</a>
           </div>
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="{{asset('index')}}">Home</a></li>
+                <li class="active"><a href="/pc">Home</a></li>
                 <li ><a href="{{asset('events')}}">Events</a></li>
                 <li><a href="{{asset('workshop')}}">Workshop</a></li>
                 <li><a href="{{asset('contact')}}">Contact</a></li>

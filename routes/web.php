@@ -30,10 +30,10 @@ Route::get('github/success', 'Auth\SocialAuthController@handleProviderCallback')
 //Frontend Routes
 Route::get('/pc','FrontendController@home');
 
-
 Route::get('/admin','AdminController@Index');
 Route::view('/admin/dashboard','admin.dashboard');
 Route::view('admin','admin.adminlogin');
+
 // Route::get('/admin','AdminController@Index');
 // Route::view('/admin/dashboard','admin.dashboard');
 // Route::view('admin','admin.adminlogin');
@@ -196,4 +196,13 @@ Route::get('about/edit/{id}','contactController@aedit');
 Route::post('about/edit/{id}','contactController@aupdate');
 Route::post('about/delete/{id}','contactController@adestroy');
 
+
+//pcteam
+
+Route::get('/pcteam','PcteamController@index');
+Route::get('/pcteam/add','PcteamController@add');
+Route::post('/pcteam/add','PcteamController@store');
+Route::get('pcteam/edit/{id}','PcteamController@edit');
+Route::post('pcteam/edit/{id}','PcteamController@update');
+Route::post('pcteam/delete/{id}','PcteamController@destroy');
 

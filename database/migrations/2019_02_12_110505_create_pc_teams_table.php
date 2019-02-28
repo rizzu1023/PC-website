@@ -16,7 +16,7 @@ class CreatePcTeamsTable extends Migration
         Schema::create('pc_teams', function (Blueprint $table) {
             $table->increments('id');
             $table->string('member_name');
-            $table->binary('member_img');
+            $table->binary('member_img')->nullable();
             $table->timestamps();
         });
     }

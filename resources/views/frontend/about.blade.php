@@ -36,7 +36,7 @@
           
           <div class="col-md-6">
             <p>
-              <img src="{{asset('frontend/img/logo.png')}}" alt="Free Bootstrap Template by uicookes.com" class="img-responsive">
+              <img src="{{asset('frontend/img/logo.png')}}" alt="Programmers Club Logo" class="img-responsive">
             </p>
           </div>
           <div class="col-md-6 col-md-push-1">
@@ -64,7 +64,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img/person_1.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img/person_1.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Chris Worth</h3>
@@ -74,7 +74,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img//person_5.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img//person_5.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Janet Morris</h3>
@@ -85,7 +85,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img/person_6.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img/person_6.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Linda Reyez</h3>
@@ -96,7 +96,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img/person_7.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img/person_7.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Jessa Sy</h3>
@@ -109,7 +109,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img/person_1.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img/person_1.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Chris Worth</h3>
@@ -120,7 +120,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img/person_5.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img/person_5.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Janet Morris</h3>
@@ -131,7 +131,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img/person_6.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img/person_6.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Linda Reyez</h3>
@@ -141,7 +141,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img/person_7.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img/person_7.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Jessa Sy</h3>
@@ -154,7 +154,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img/person_1.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img/person_1.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Chris Worth</h3>
@@ -164,7 +164,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img/person_5.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img/person_5.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Janet Morris</h3>
@@ -176,7 +176,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img/person_6.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img/person_6.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Linda Reyez</h3>
@@ -186,7 +186,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img/person_7.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img/person_7.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Jessa Sy</h3>
@@ -199,7 +199,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img/person_1.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img/person_1.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Chris Worth</h3>
@@ -210,7 +210,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img/person_5.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img/person_5.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Janet Morris</h3>
@@ -222,7 +222,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img/person_6.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img/person_6.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Linda Reyez</h3>
@@ -233,7 +233,7 @@
               <div class="col-md-3 col-sm-6">
                 <div class="probootstrap-teacher text-center probootstrap-animate">
                   <figure class="media">
-                    <img src="{{asset('frontend/img/person_7.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    <img src="{{asset('frontend/img/person_7.jpg')}}" alt="PC_Members" class="img-responsive">
                   </figure>
                   <div class="text">
                     <h3>Jessa Sy</h3>
