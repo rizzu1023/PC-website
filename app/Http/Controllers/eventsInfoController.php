@@ -26,11 +26,11 @@ class eventsInfoController extends Controller
         $eventsInfo->location=$request->input('location');
         $eventsInfo->eligible_departments=$request->input('elgibDept');
         $eventsInfo->fees=$request->input('fees');
-        $eventsInfo->max_member=$request->input('mMember');
+        $eventsInfo->max_member=$request->input('member');
 
         $eventsInfo->save();
 
-        return Redirect::to('/eventsInfo')->with('success','Succesffullly Added the eventInfo..!');
+        return Redirect::to('admin/eventsInfo')->with('success','Succesffullly Added the eventInfo..!');
     }
 
     public function edit($id){
@@ -48,17 +48,17 @@ class eventsInfoController extends Controller
         $eventsInfo->location=$request->input('location');
         $eventsInfo->eligible_departments=$request->input('elgibDept');
         $eventsInfo->fees=$request->input('fees');
-        $eventsInfo->max_member=$request->input('mMember');
+        $eventsInfo->max_member=$request->input('member');
 
         $eventsInfo->save();
 
-        return Redirect::to('/eventsInfo')->with('success','Succesffullly Updated the eventInfo..!');
+        return Redirect::to('admin/eventsInfo')->with('success','Succesffullly Updated the eventInfo..!');
     }
 
     public function destroy($id){
         $eventsInfo = event_info::find($id);
         $eventsInfo->delete();
 
-        return Redirect::to('/eventsInfo')->with('success','EventInfo Deleted Successfully..!');
+        return Redirect::to('admin/eventsInfo')->with('success','EventInfo Deleted Successfully..!');
     }
 }

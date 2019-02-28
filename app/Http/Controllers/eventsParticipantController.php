@@ -33,7 +33,7 @@ class eventsParticipantController extends Controller
 
         $eventsParticipant->save();
 
-        return Redirect::to('/eventsParticipant')->with('message','Participant Added Successfully..!');
+        return Redirect::to('/admin/eventsParticipant')->with('message','Participant Added Successfully..!');
 
     }
 
@@ -59,14 +59,14 @@ class eventsParticipantController extends Controller
 
         $eventsParticipant->save();
 
-        return Redirect::to('/eventsParticipant')->with('message','Participant Updated Successfully..!');
+        return Redirect::to('admin/eventsParticipant')->with('message','Participant Updated Successfully..!');
 
     }
 
     public function destroy($id){
         $eventsParticipant = event_participants::find($id);
         $eventsParticipant->delete();
-        return Redirect::to('/eventsParticipant')->with('message','EventPArticipant Deleted Successfully...!');
+        return Redirect::to('admin/eventsParticipant')->with('message','EventPArticipant Deleted Successfully...!');
     }
 
 

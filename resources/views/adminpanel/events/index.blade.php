@@ -51,7 +51,9 @@
                             <div class="page-header">
                                     <div class="col-sm-12">
                                     <a class="btn btn-sm btn-success" href="/admin/events/add">Add New Events</a>
-                                    <a class="btn btn-sm btn-success"href="/admin/eventsInfo/add">Add EventInfo</a>
+                                    <a class="btn btn-sm btn-success"href="/admin/eventsInfo">List Event Info</a>
+                                    <a class="btn btn-sm btn-success"href="/admin/eventsParticipant">List Event Participants</a>
+                                    <a class="btn btn-sm btn-success"href="/admin/eventsPdefinition">Event Problem Definition</a>
                                     </div>
                                      
                                 </div>
