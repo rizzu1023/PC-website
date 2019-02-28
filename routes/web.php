@@ -36,6 +36,9 @@ Route::view('admin','admin.adminlogin');
 
 //Admin Login
 
+Route::get('admin/adminlogin','HomeController@admin')->middleware('admin');
+
+
 Route::get('/admin/adminlogin','AdminController@AdminLogin');
 Route::post('/admin/adminlogin','AdminController@login');
 Route::get('/admin/adminregister','AdminController@AdminRegister');
@@ -146,7 +149,6 @@ Route::post('/admin/eventSchedule/delete/{id}','eventsProbDefiController@sdestro
 
 
 //Blog
-<<<<<<< HEAD
 Route::get('/blog','BlogController@index')->name('blog');
 Route::get('/blog/add','BlogController@create');
 Route::post('/blog/add','BlogController@store');
@@ -154,7 +156,6 @@ Route::get('/blog/show','BlogController@show');
 Route::post('/blog/delete/{id}','BlogController@delete');
 Route::get('/blog/edit/{id}','BlogController@edit');
 Route::post('/blog/edit/{id}','BlogController@update');
-=======
 Route::get('/admin//blog','BlogController@index');
 Route::get('/admin//blog/add','BlogController@create');
 Route::get('/admin//blog/edit/{id}','BlogController@edit');
@@ -162,7 +163,6 @@ Route::get('/admin//blog/show','BlogController@show');
 Route::post('/admin//blog/add','BlogController@store');
 Route::post('/admin//blog/delete/{id}','BlogController@delete');
 Route::post('/admin//blog/edit/{id}','BlogController@update');
->>>>>>> 0d2dc12bd2a60363fa78cf2f920eeee6579dc29c
 
 
 
