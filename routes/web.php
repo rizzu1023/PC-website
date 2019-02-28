@@ -79,12 +79,12 @@ Route::post('/Workshopsparticipants/edit/{id}','WorkshopNew@updateparticipant');
 
 //Events
 
-Route::get('events','eventsController@index')->name('events');
-Route::get('events/add','eventsController@create');
-Route::post('events/add','eventsController@store');
-Route::get('events/edit/{id}','eventsController@edit');
-Route::post('events/edit/{id}','eventsController@update');
-Route::post('events/delete/{id}','eventsController@destroy');
+Route::get('admin/events','eventsController@index')->name('events');
+Route::get('admin/events/add','eventsController@create');
+Route::get('admin/events/edit/{id}','eventsController@edit');
+Route::post('admin/events/add','eventsController@store');
+Route::post('admin/events/edit/{id}','eventsController@update');
+Route::post('admin/events/delete/{id}','eventsController@destroy');
 
 // //Admin Routes
 
@@ -100,63 +100,63 @@ Route::post('events/delete/{id}','eventsController@destroy');
 // Route::view('/aboutus','admin.aboutusdash');
 // Route::view('/contactus','admin.contactusdash');
 
-//Links
-Route::view('/about','admin.aboutus');
-Route::view('/addpoll','admin.addpoll');
-Route::view('/addblog','admin.addblog');
-Route::view('/addevent','admin.addevent');
-Route::view('/addeventinfo','admin.addeventinfo');
-Route::view('/eventparticipant','admin.eventparticipant');
-Route::view('/pcteam','admin.pcteam');
-Route::view('/addproblemdefination','admin.addpd');
-Route::view('/addschedule','admin.addschedule');
-Route::view('/addsponsor','admin.addsponsor');
+// //Links
+// Route::view('/about','admin.aboutus');
+// Route::view('/addpoll','admin.addpoll');
+// Route::view('/addblog','admin.addblog');
+// Route::view('/addevent','admin.addevent');
+// Route::view('/addeventinfo','admin.addeventinfo');
+// Route::view('/eventparticipant','admin.eventparticipant');
+// Route::view('/pcteam','admin.pcteam');
+// Route::view('/addproblemdefination','admin.addpd');
+// Route::view('/addschedule','admin.addschedule');
+// Route::view('/addsponsor','admin.addsponsor');
 // Events  info
 
-Route::get('eventsInfo','eventsInfoController@index');
-Route::get('eventsInfo/add','eventsInfoController@create');
-Route::post('eventsInfo/add','eventsInfoController@store');
-Route::get('eventsInfo/edit/{id}','eventsInfoController@edit');
-Route::post('eventsInfo/edit/{id}','eventsInfoController@update');
-Route::post('eventsInfo/delete/{id}','eventsInfoController@destroy');
+Route::get('/admin/eventsInfo','eventsInfoController@index');
+Route::get('/admin/eventsInfo/add','eventsInfoController@create');
+Route::get('/admin/eventsInfo/edit/{id}','eventsInfoController@edit');
+Route::post('/admin/eventsInfo/add','eventsInfoController@store');
+Route::post('/admin/eventsInfo/edit/{id}','eventsInfoController@update');
+Route::post('/admin/eventsInfo/delete/{id}','eventsInfoController@destroy');
 
 // Events Participant
 
-Route::get('eventsParticipant','eventsParticipantController@index');
-Route::get('eventsParticipant/add','eventsParticipantController@create');
-Route::post('eventsParticipant/add','eventsParticipantController@store');
-Route::get('eventsParticipant/edit/{id}','eventsParticipantController@edit');
-Route::post('eventsParticipant/edit/{id}','eventsParticipantController@update');
-Route::post('eventsParticipant/delete/{id}','eventsParticipantController@destroy');
-Route::get('/eventsParticipant/show/','eventsParticipantController@userdetails');
+Route::get('/admin/eventsParticipant','eventsParticipantController@index');
+Route::get('/admin/eventsParticipant/add','eventsParticipantController@create');
+Route::get('/admin/eventsParticipant/edit/{id}','eventsParticipantController@edit');
+Route::get('/admin/eventsParticipant/show/','eventsParticipantController@userdetails');
+Route::post('/admin/eventsParticipant/add','eventsParticipantController@store');
+Route::post('/admin/eventsParticipant/edit/{id}','eventsParticipantController@update');
+Route::post('/admin/eventsParticipant/delete/{id}','eventsParticipantController@destroy');
 
 // Events Problem Definitions
 
-Route::get('eventsPdefinition','eventsProbDefiController@index');
-Route::get('eventsPdefinition/add','eventsProbDefiController@create');
-Route::post('eventsPdefinition/add','eventsProbDefiController@store');
-Route::get('eventsPdefinition/edit/{id}','eventsProbDefiController@edit');
-Route::post('eventsPdefinition/edit/{id}','eventsProbDefiController@update');
-Route::post('eventsPdefinition/delete/{id}','eventsProbDefiController@destroy');
+Route::get('/admin/eventsPdefinition','eventsProbDefiController@index');
+Route::get('/admin/eventsPdefinition/add','eventsProbDefiController@create');
+Route::get('/admin/eventsPdefinition/edit/{id}','eventsProbDefiController@edit');
+Route::post('/admin/eventsPdefinition/add','eventsProbDefiController@store');
+Route::post('/admin/eventsPdefinition/edit/{id}','eventsProbDefiController@update');
+Route::post('/admin/eventsPdefinition/delete/{id}','eventsProbDefiController@destroy');
 
 // Events Shedule
 
-Route::get('eventSchedule','eventsProbDefiController@sindex');
-Route::get('eventSchedule/add','eventsProbDefiController@screate');
-Route::post('eventSchedule/add','eventsProbDefiController@sstore');
-Route::get('eventSchedule/edit/{id}','eventsProbDefiController@sedit');
-Route::post('eventSchedule/edit/{id}','eventsProbDefiController@supdate');
-Route::post('eventSchedule/delete/{id}','eventsProbDefiController@sdestroy');
+Route::get('/admin/eventSchedule','eventsProbDefiController@sindex');
+Route::get('/admin/eventSchedule/add','eventsProbDefiController@screate');
+Route::get('/admin/eventSchedule/edit/{id}','eventsProbDefiController@sedit');
+Route::post('/admin/eventSchedule/add','eventsProbDefiController@sstore');
+Route::post('/admin/eventSchedule/edit/{id}','eventsProbDefiController@supdate');
+Route::post('/admin/eventSchedule/delete/{id}','eventsProbDefiController@sdestroy');
 
 
 //Blog
-Route::get('/blog','BlogController@index');
-Route::get('/blog/add','BlogController@create');
-Route::post('/blog/add','BlogController@store');
-Route::get('/blog/show','BlogController@show');
-Route::post('/blog/delete/{id}','BlogController@delete');
-Route::get('/blog/edit/{id}','BlogController@edit');
-Route::post('/blog/edit/{id}','BlogController@update');
+Route::get('/admin//blog','BlogController@index');
+Route::get('/admin//blog/add','BlogController@create');
+Route::get('/admin//blog/edit/{id}','BlogController@edit');
+Route::get('/admin//blog/show','BlogController@show');
+Route::post('/admin//blog/add','BlogController@store');
+Route::post('/admin//blog/delete/{id}','BlogController@delete');
+Route::post('/admin//blog/edit/{id}','BlogController@update');
 
 
 
@@ -164,45 +164,44 @@ Route::post('/blog/edit/{id}','BlogController@update');
 Route::get('/user/feedback','HomeController@feedback');
 //feedback
 
-Route::get('/feedback','FeedbackController@index');
-Route::post('/feedback/add','FeedbackController@store');
-Route::post('/feedback/delete/{id}','FeedbackController@delete');
-Route::get('/feedback/show/{username}','FeedbackController@userdetails');
+Route::get('/admin/feedback','FeedbackController@index');
+Route::get('/admin/feedback/show/{username}','FeedbackController@userdetails');
+Route::post('/admin/feedback/add','FeedbackController@store');
+Route::post('/admin/feedback/delete/{id}','FeedbackController@delete');
 
 //sponsors
-Route::get('/sponsors','SponsorController@index');
-Route::get('/sponsors/add','SponsorController@create');
-Route::post('/sponsors/add','SponsorController@store');
-Route::get('/sponsors/edit/{id}','SponsorController@edit');
-Route::post('/sponsors/edit/{id}','SponsorController@update');
-
-Route::post('/sponsors/delete/{id}','SponsorController@delete');
+Route::get('/admin/sponsors/add','SponsorController@create');
+Route::get('/admin/sponsors','SponsorController@index');
+Route::get('/admin/sponsors/edit/{id}','SponsorController@edit');
+Route::post('/admin/sponsors/add','SponsorController@store');
+Route::post('/admin/sponsors/edit/{id}','SponsorController@update');
+Route::post('/admin/sponsors/delete/{id}','SponsorController@delete');
 
 // Contact Us
 
-Route::get('contact','contactController@index');
-Route::get('contact/add','contactController@create');
-Route::post('contact/add','contactController@store');
-Route::get('contact/edit/{id}','contactController@edit');
-Route::post('contact/edit/{id}','contactController@update');
-Route::post('contact/delete/{id}','contactController@destroy');
+Route::get('/admin/contact','contactController@index');
+Route::get('/admin/contact/add','contactController@create');
+Route::get('/admin/contact/edit/{id}','contactController@edit');
+Route::post('/admin/contact/add','contactController@store');
+Route::post('/admin/contact/edit/{id}','contactController@update');
+Route::post('/admin/contact/delete/{id}','contactController@destroy');
 
 // About US 
 
-Route::get('about','contactController@aindex');
-Route::get('about/add','contactController@acreate');
-Route::post('about/add','contactController@astore');
-Route::get('about/edit/{id}','contactController@aedit');
-Route::post('about/edit/{id}','contactController@aupdate');
-Route::post('about/delete/{id}','contactController@adestroy');
+Route::get('/admin/about','contactController@aindex');
+Route::get('/admin/about/add','contactController@acreate');
+Route::get('/admin/about/edit/{id}','contactController@aedit');
+Route::post('/admin/about/add','contactController@astore');
+Route::post('/admin/about/edit/{id}','contactController@aupdate');
+Route::post('/admin/about/delete/{id}','contactController@adestroy');
 
 
 //pcteam
 
-Route::get('/pcteam','PcteamController@index');
-Route::get('/pcteam/add','PcteamController@add');
-Route::post('/pcteam/add','PcteamController@store');
-Route::get('pcteam/edit/{id}','PcteamController@edit');
-Route::post('pcteam/edit/{id}','PcteamController@update');
-Route::post('pcteam/delete/{id}','PcteamController@destroy');
+Route::get('/admin/pcteam','PcteamController@index');
+Route::get('/admin/pcteam/add','PcteamController@add');
+Route::post('/admin/pcteam/add','PcteamController@store');
+Route::get('/admin/pcteam/edit/{id}','PcteamController@edit');
+Route::post('/admin/pcteam/edit/{id}','PcteamController@update');
+Route::post('/admin/pcteam/delete/{id}','PcteamController@destroy');
 

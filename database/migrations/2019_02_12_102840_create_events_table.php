@@ -17,7 +17,7 @@ class CreateEventsTable extends Migration
             $table->increments('id');
             $table->string('event_name');
             $table->text('tagline');
-            $table->binary('banner_image')->null;
+            $table->binary('banner_image');
             $table->longText('about_event');
             $table->longText('event_theme');
             $table->longText('keypoints');
