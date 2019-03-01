@@ -25,7 +25,7 @@ class PcteamController extends Controller
         $pcteam->member_img=$request->input('img');
         $pcteam->save();
 
-        return Redirect::to('/pcteam')->with('successs','Member added successfully..!');
+        return Redirect::to('/admin/pcteam')->with('successs','Member added successfully..!');
     }
 
     public function edit($id){
@@ -40,7 +40,7 @@ class PcteamController extends Controller
         $pcteam->member_img=$request->input('img');
         $pcteam->save();
 
-        return Redirect::to('/pcteam')->with('successs','Member updates successfully..!');
+        return Redirect::to('/admin/pcteam')->with('successs','Member updates successfully..!');
 
     }
 

@@ -66,7 +66,7 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-title">
-                                    <h4>Add Sponsors</h4>
+                                    <h4>Add Sponsor</h4>
                                     
                                 </div>
                                 <div class="card-body">
