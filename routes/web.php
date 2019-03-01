@@ -27,7 +27,7 @@ Route::get('github/success', 'Auth\SocialAuthController@handleProviderCallback')
 Route::get('/pc','FrontendController@home');
 
 Route::get('/admin','AdminController@Index');
-Route::view('/admin/dashboard','admin.dashboard');
+Route::view('/admin/dashboard','admin.dashboard')->name('adminDash');
 Route::view('admin','admin.adminlogin');
 
 // Route::get('/admin','AdminController@Index');
@@ -36,13 +36,13 @@ Route::view('admin','admin.adminlogin');
 
 //Admin Login
 
-Route::get('admin/adminlogin','HomeController@admin')->middleware('admin');
+Route::get('admin/dashboard','HomeController@admin')->middleware('admin');
 
 
-Route::get('/admin/adminlogin','AdminController@AdminLogin');
-Route::post('/admin/adminlogin','AdminController@login');
-Route::get('/admin/adminregister','AdminController@AdminRegister');
-Route::post('/admin/adminregister','AdminController@Insert')->name('AdminRegister');
+//Route::get('/admin/adminlogin','AdminController@AdminLogin');
+//Route::post('/admin/adminlogin','AdminController@login');
+//Route::get('/admin/adminregister','AdminController@AdminRegister');
+//Route::post('/admin/adminregister','AdminController@Insert')->name('AdminRegister');
 
 //cloudder route
 Route::get('/', 'ImageUploadController@home');
