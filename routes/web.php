@@ -204,3 +204,12 @@ Route::get('/admin/pcteam/edit/{id}','PcteamController@edit');
 Route::post('/admin/pcteam/edit/{id}','PcteamController@update');
 Route::post('/admin/pcteam/delete/{id}','PcteamController@destroy');
 
+
+
+//frontend Route
+Route::get('/','HomeController@getHome');
+Route::get('/event','HomeController@getEvent');
+Route::get('/about','HomeController@getAbout');
+Route::get('/contact','HomeController@getContact');
+Route::get('/register','HomeController@getRegister');
+Route::get('/blog','HomeController@getRegister');
