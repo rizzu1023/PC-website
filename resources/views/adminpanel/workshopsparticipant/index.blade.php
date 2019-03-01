@@ -52,6 +52,7 @@
                                     <div class="col-sm-12">
                                     	<a class="btn btn-sm btn-success"href="/admin/Workshops">Go Back</a>
                                     <a class="btn btn-sm btn-success" href="/admin/Workshopsparticipants/add">Add New Workshop Participant</a>
+                                   
                                     
                                     
                                     
@@ -92,11 +93,11 @@
 													
 
 													 <a class="btn btn-sm btn-success" href="/admin/Workshopsparticipants/show/{{$workshopsparticipant->username}}">
-													User details</a>
+																									User details</a>
                                                     <div class="col-sm-2">
-                                                        <a class="btn btn-sm btn-warning" href="/admin/Workshopsparticipants/edit/{{$workshop->id}} ">Edit</a>
+                                                        <a class="btn btn-sm btn-warning" href="/admin/Workshopsparticipants/edit/{{$workshopsparticipant->id}} ">Edit</a>
                                                     </div>
-                                                    <form action="/admin/Workshopsparticipants/delete/{{$workshop->id}}" method="POST">
+                                                    <form action="/admin/Workshopsparticipants/delete/{{$workshopsparticipant->id}}" method="POST">
                                                         @csrf
                                                             <div class="col-sm-2">
                                                                     <button type="submit" class="btn btn-sm btn-danger">delete</button>

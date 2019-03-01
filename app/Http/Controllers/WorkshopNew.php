@@ -105,7 +105,7 @@ class WorkshopNew extends Controller
             $workshopparticipant->email= $request->input('email');
             $workshopparticipant->save();
 
-            return Redirect::to('/Workshopsparticipants');
+            return Redirect::to('/admin/Workshopsparticipants');
 
         
     }
@@ -137,7 +137,7 @@ class WorkshopNew extends Controller
             $workshopparticipant->username= $request->input('username');
             $workshopparticipant->email= $request->input('email');
             $workshopparticipant->save();
-            return Redirect::to('/Workshopsparticipants')
+            return Redirect::to('/admin/Workshopsparticipants')
                       ->with('success', 'workshop Participant updated successfully');
     
     }
@@ -146,7 +146,7 @@ class WorkshopNew extends Controller
     {
         $workshopparticipant= workshops_participant::find($id);
         $workshopparticipant->delete();
-        return Redirect::to('/Workshopsparticipants')
+        return Redirect::to('/admin/Workshopsparticipants')
                         ->with('success', 'workshop participant  entry deleted successfully');
     }
 
