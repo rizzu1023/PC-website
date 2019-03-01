@@ -1,5 +1,17 @@
 @extends('pc.layouts.base')
 
+@section('css')
+    <style>
+        .hero-content-overlay {
+            background: rgba(21,20,33,.5);
+            background: url("{{asset('assets/images/WebWall2.png')}}");
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-y: 10%;
+        }
+    </style>
+@endsection
 @section('content')
 
 <div class="hero-content ">
