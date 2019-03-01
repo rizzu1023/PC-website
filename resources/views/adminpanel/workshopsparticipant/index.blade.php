@@ -79,21 +79,26 @@
 														<th width="50px"><b>no</b></th>
 														<th width="50px"><b>workshop_name</b></th>
 														
-														<th width="30px"><b>username</b></th>
+														<th width="30px"><b>name</b></th>
 														<th width="30px"><b>email</b></th>
+                                                        <th width="30px"><b>contact</b></th>
+                                                       
+                                                    
 													</tr>
 													@foreach($workshopparticipant as $workshopsparticipant)
 														<tr>
 															<td><b>{{++$i}}</b></td>
 														
 															<td>{{$workshopsparticipant->workshop_name}}</td>
-															<td>{{$workshopsparticipant->username}}</td>
+															<td>{{$workshopsparticipant->name}}</td>
 															<td>{{$workshopsparticipant->email}}</td>
+                                                            <td>{{$workshopsparticipant->contact}}</td>
+
 														<td>
 													
-
+<!-- 
 													 <a class="btn btn-sm btn-success" href="/admin/Workshopsparticipants/show/{{$workshopsparticipant->username}}">
-																									User details</a>
+																									User details</a> -->
                                                     <div class="col-sm-2">
                                                         <a class="btn btn-sm btn-warning" href="/admin/Workshopsparticipants/edit/{{$workshopsparticipant->id}} ">Edit</a>
                                                     </div>
