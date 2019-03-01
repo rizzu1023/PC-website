@@ -72,37 +72,92 @@
 
                                     <form  method ="POST" action="/admin/eventsParticipant/add">
                                         @csrf
-                                        
-                                            <div class="form-group">
-                                                <label class="text-muted m-b-15 f-s-12">Event name</label>
-                                                <input type="text" class="form-control input-default " name="name" >
-                                            </div>
+
                                             <div class="form-group">
                                                <p class="text-muted m-b-15 f-s-12">Team Name</p>
                                                 <input type="text" class="form-control input-default" name="tname" placeholder="Team Name" required>
                                             </div>
-                                             <div class="form-group">
-                                                <p class="text-muted m-b-15 f-s-12">No of Member</p>
-                                                <input type="number" class="form-control input-default" placeholder="No of Mmeber" name="nmembers" required>
-                                            </div>
+                                             
 
                                              <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">Participant 1</p>
                                                 <input type="text" class="form-control input-default" placeholder="Username" name="pname1" required>
                                             </div>
+
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Participant 1 Email</p>
+                                                <input type="text" class="form-control input-default" placeholder="Username" name="pnameEmail1" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Participant 1 Contact</p>
+                                                <input type="number" class="form-control input-default" placeholder="Username" name="pnameContact1" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Participant 1 collegeName</p>
+                                                <input type="text" class="form-control input-default" placeholder="Username" name="pnameCollege1" required>
+                                            </div>
+
                                             
                                             <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">Participant 2</p>
-                                                <input type="text" class="form-control input-default" placeholder="Username"  name="pname2" required>
-                                            
+                                                <input type="text" class="form-control input-default" placeholder="Username" name="pname2" required>
                                             </div>
-                                             <div class="form-group">
-                                                <p class="text-muted m-b-15 f-s-12">Participant 3</p>
+
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Participant 2 Email</p>
+                                                <input type="text" class="form-control input-default" placeholder="Username" name="pnameEmail2" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Participant 2 Contact</p>
+                                                <input type="number" class="form-control input-default" placeholder="Username" name="pnameContact2" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Participant 2 collegeName</p>
+                                                <input type="text" class="form-control input-default" placeholder="Username" name="pnameCollege2" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Participant 3 name</p>
                                                 <input type="text" class="form-control input-default" placeholder="Username" name="pname3" required>
                                             </div>
-                                             <div class="form-group">
-                                                <p class="text-muted m-b-15 f-s-12">Participant 4</p>
-                                                <input type="text" class="form-control input-default" placeholder="Username" name="pname4" required>
+
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Participant 3 Email</p>
+                                                <input type="text" class="form-control input-default" placeholder="Username" name="pnameEmail3" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Participant 3 Contact</p>
+                                                <input type="number" class="form-control input-default" placeholder="Username" name="pnameContact3" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Participant 3 collegeName</p>
+                                                <input type="text" class="form-control input-default" placeholder="Username" name="pnameCollege3" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Participant 4 Name</p>
+                                                <input type="text" class="form-control input-default" placeholder="Username" name="pname4">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Participant 4 Email</p>
+                                                <input type="text" class="form-control input-default" placeholder="Username" name="pnameEmail4">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Participant 4 Contact</p>
+                                                <input type="number" class="form-control input-default" placeholder="Username" name="pnameContact4">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Participant 4 collegeName</p>
+                                                <input type="text" class="form-control input-default" placeholder="Username" name="pnameCollege4">
                                             </div>
 
                                             <button type="submit" class="btn btn-primary m-b-10 m-l-5">Submit</button>

@@ -21,15 +21,30 @@ class eventsParticipantController extends Controller
     public function store(Request $request){
 
         $eventsParticipant = new event_participants;
-
-        $eventsParticipant->event_name=$request->input('name');
+        $eventName = 'Algorithm';
+        $eventsParticipant->event_name=$eventName;
         $eventsParticipant->team_name=$request->input('tname');
-        $eventsParticipant->no_of_members=$request->input('nmembers');
-        $eventsParticipant->username_1=$request->input('pname1');
-        $eventsParticipant->username_2=$request->input('pname2');
-        $eventsParticipant->username_3=$request->input('pname3');
-        $eventsParticipant->username_4=$request->input('pname4');
-        $eventsParticipant->payment=$request->input('payment');
+        //$eventsParticipant->no_of_members=$request->input('nmembers');
+        $eventsParticipant->Membername_1=$request->input('pname1');
+        $eventsParticipant->email_1=$request->input('pnameEmail1');
+        $eventsParticipant->contact_1=$request->input('pnameContact1');
+        $eventsParticipant->college_name1=$request->input('pnameCollege1');
+
+        $eventsParticipant->Membername_2=$request->input('pname2');
+        $eventsParticipant->email_2=$request->input('pnameEmail2');
+        $eventsParticipant->contact_2=$request->input('pnameContact2');
+        $eventsParticipant->college_name2=$request->input('pnameCollege2');
+
+        $eventsParticipant->Membername_3=$request->input('pname3');
+        $eventsParticipant->email_3=$request->input('pnameEmail3');
+        $eventsParticipant->contact_3=$request->input('pnameContact3');
+        $eventsParticipant->college_name3=$request->input('pnameCollege3');
+
+        $eventsParticipant->Membername_4=$request->input('pname4');
+        $eventsParticipant->email_4=$request->input('pnameEmail4');
+        $eventsParticipant->contact_4=$request->input('pnameContact4');
+        $eventsParticipant->college_name4=$request->input('pnameCollege4');
+       // $eventsParticipant->payment=$request->input('payment');
 
         $eventsParticipant->save();
 
