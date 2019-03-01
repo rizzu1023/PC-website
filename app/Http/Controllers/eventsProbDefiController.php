@@ -29,7 +29,7 @@ class eventsProbDefiController extends Controller
 
         $eventsPdefinition->save();
 
-        return Redirect::to('admin/eventsPdefinition')->with('success','Successfully Addes the problem Difinition..!');
+        return Redirect::to('/admin/eventsPdefinition')->with('success','Successfully Addes the problem Difinition..!');
     }
 
     public function edit($id){
@@ -47,7 +47,7 @@ class eventsProbDefiController extends Controller
 
         $eventsPdefinition->save();
 
-        return Redirect::to('admin/eventsPdefinition')->with('success','Successfully Addes the problem Difinition..!');
+        return Redirect::to('/admin/eventsPdefinition')->with('success','Successfully Addes the problem Difinition..!');
 
     }
 
@@ -57,7 +57,7 @@ class eventsProbDefiController extends Controller
 
         $eventsPdefinition->delete();        
 
-        return Redirect::to('admin/eventsPdefinition')->with('success','Problem Definition Deleted Successfully..!');
+        return Redirect::to('/admin/eventsPdefinition')->with('success','Problem Definition Deleted Successfully..!');
     }
 
     // Events Shedule Function

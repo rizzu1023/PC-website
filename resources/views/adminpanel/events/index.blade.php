@@ -48,7 +48,7 @@
                     <div class="row">
                         <div class="col-lg-8 p-r-0 title-margin-right">
                             <div class="page-header">
-                                    <div class="col-sm-12">
+                                    <div class="col-sm-14">
                                     <a class="btn btn-sm btn-success" href="/admin/events/add">Add New Events</a>
                                     <a class="btn btn-sm btn-success"href="/admin/eventsInfo">List Event Info</a>
                                     <a class="btn btn-sm btn-success"href="/admin/eventsParticipant">List Event Participants</a>

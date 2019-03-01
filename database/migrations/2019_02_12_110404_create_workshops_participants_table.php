@@ -16,8 +16,11 @@ class CreateWorkshopsParticipantsTable extends Migration
         Schema::create('workshops_participants', function (Blueprint $table) {
             $table->increments('id');
             $table->string('workshop_name');
-            $table->string('username');
+             $table->string('name');
             $table->string('email');
+            $table->integer('contact')->unique();
+
+        
             $table->timestamps();
         });
     }

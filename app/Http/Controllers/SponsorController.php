@@ -29,7 +29,7 @@ class SponsorController extends Controller
             $sponsor->company_name=  $request->input('companyname');
             $sponsor->company_logo= $request->input('companylogo');
             $sponsor->save();
-			return Redirect::to('/sponsors');
+			return Redirect::to('/admin/sponsors');
 
         
     }
@@ -48,7 +48,7 @@ class SponsorController extends Controller
             $sponsor->company_logo= $request->input('companylogo');
             
             $sponsor->save();
-             return Redirect::to('/sponsors')
+             return Redirect::to('/admin/sponsors')
                       ->with('success', 'Sponsors updated successfully');
     
     }
@@ -58,7 +58,7 @@ class SponsorController extends Controller
     {
         $sponsor= sponsorship::find($id);
         $sponsor->delete();
-        return Redirect::to('/sponsors')
+        return Redirect::to('/admin/sponsors')
                         ->with('success', 'Sponsors entry deleted successfully');
     }
 

@@ -17,16 +17,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('username')->unique();
-            $table->string('email')->unique();
-            $table->boolean('isAdmin')->nullable();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->integer('contact')->unique();
-            $table->string('college_name');
-            $table->string('branch');
-            $table->string('year');
             $table->string('password');
-            $table->string('avatar')->nullable();
-            $table->string('avatar_original')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

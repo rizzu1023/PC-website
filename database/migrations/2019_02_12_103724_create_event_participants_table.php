@@ -18,10 +18,24 @@ class CreateEventParticipantsTable extends Migration
             $table->string('event_name');
             $table->string('team_name');
             $table->integer('no_of_members');
-            $table->string('username_1');
-            $table->string('username_2');
-            $table->string('username_3');
-            $table->string('username_4');
+            $table->string('Membername_1');
+            $table->string('email_1');
+            $table->integer('contact_1')->unique();
+
+            $table->string('Membername_2');
+            $table->string('email_2');
+            $table->integer('contact_2')->unique();
+            
+            $table->string('Membername_3');
+            $table->string('email_3');
+            $table->integer('contact_3')->unique();
+            
+            $table->string('Membername_4');
+            $table->string('email_4');
+            $table->integer('contact_4')->unique();
+
+            $table->string('college_name');
+            
             $table->integer('payment')->nullable();
             $table->timestamps();
         });
