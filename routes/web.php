@@ -204,3 +204,9 @@ Route::get('/admin/pcteam/edit/{id}','PcteamController@edit');
 Route::post('/admin/pcteam/edit/{id}','PcteamController@update');
 Route::post('/admin/pcteam/delete/{id}','PcteamController@destroy');
 
+
+
+
+Route::get('/home', function () {
+    return view('pc.about');
+});
