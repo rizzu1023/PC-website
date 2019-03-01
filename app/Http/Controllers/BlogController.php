@@ -30,11 +30,11 @@ class BlogController extends Controller
             $blog->title= $request->input('title');
             $blog->desc= $request->input('desc');
             $blog->body= $request->input('body');
-            $blog->img= $request->input('img');
+            $blog->image= $request->input('img');
             
              $blog->save();
 
-            return Redirect::to('/blog');
+            return Redirect::to('/admin/blog');
 
         
     }
@@ -52,9 +52,9 @@ class BlogController extends Controller
 	  $blog->title= $request->input('title');
       $blog->desc=$request->input('desc');
       $blog->body=$request->input('body');
-      $blog->img=$request->input('img');
+      $blog->image=$request->input('img');
       $blog->save();
-      return Redirect::to('/blog')->with('success', 'Blog entry updated successfully');
+      return Redirect::to('/admin/blog')->with('success', 'Blog entry updated successfully');
     
     }
 
@@ -72,7 +72,7 @@ class BlogController extends Controller
     {
     	 $blog=blog::find($id);
     	 $blog->delete();
-        return Redirect::to('/blog')->with('success', 'Blog deleted successfully');
+        return Redirect::to('/admin/blog')->with('success', 'Blog deleted successfully');
     
    
     }

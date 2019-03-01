@@ -17,16 +17,12 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('username')->unique();
-            $table->string('email')->unique();
-            $table->boolean('isAdmin')->nullable();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->integer('contact')->unique();
-            $table->string('college_name');
-            $table->string('branch');
-            $table->string('year');
             $table->string('password');
+<<<<<<< HEAD
             $table->string('avatar')->nullable();
             $table->string('avatar_original')->nullable();
+=======
+>>>>>>> 7d0dc5db7a1f53bc76f3c035bfb4b34f547076cf
             $table->rememberToken();
             $table->timestamps();
         });

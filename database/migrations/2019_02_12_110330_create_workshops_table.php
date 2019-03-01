@@ -16,9 +16,9 @@ class CreateWorkshopsTable extends Migration
         Schema::create('workshops', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->binary('banner_image')->nullable();
+            $table->binary('banner_image');
             $table->longText('about');
-            $table->string('status')->nullable();
+            $table->string('status');
             $table->timestamps();
         });
     }
