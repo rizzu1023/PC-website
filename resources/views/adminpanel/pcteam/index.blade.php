@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sponsor</title>
+    <title>PC team</title>
 </head>
         <div class="header">
             <div class="container-fluid">
@@ -65,7 +65,7 @@
                                     <div class="col-lg-12">
                                         <div class="card">
                                             <div class="card-title">
-                                                <h4>Sponsor</h4>
+                                                <h4>PC team</h4>
                                                 
                                             </div>
                                 <div class="bootstrap-data-table-panel">
@@ -87,11 +87,11 @@
                                                  
 
                                                     <div class="col-sm-2">
-                                                        <a class="btn btn-sm btn-warning" href="/pcteam/edit/{{$pcteam->id}}">Edit</a>
+                                                        <a class="btn btn-sm btn-warning" href="/admin/pcteam/edit/{{$pcteam->id}}">Edit</a>
                                                     </div>
                                                      
                                                    
-                                                    <form action="/pcteam/delete/{{$pcteam->id}}" method="POST">
+                                                    <form action="/admin/pcteam/delete/{{$pcteam->id}}" method="POST">
                                                         @csrf
                                                             <div class="col-sm-2">
                                                                     <button type="submit" class="btn btn-sm btn-danger">delete</button>

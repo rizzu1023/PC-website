@@ -49,7 +49,7 @@ class PcteamController extends Controller
         $pcteam = pc_team::find($id);
 
         $pcteam->delete();
-        return Redirect::to('/pcteam')->with('success','Deleted Successfully...!');
+        return Redirect::to('/admin/pcteam')->with('success','Deleted Successfully...!');
     }
 
 }

@@ -128,7 +128,7 @@ Route::get('/admin/eventsParticipant/show/','eventsParticipantController@userdet
 Route::post('/admin/eventsParticipant/add','eventsParticipantController@store');
 Route::post('/admin/eventsParticipant/edit/{id}','eventsParticipantController@update');
 Route::post('/admin/eventsParticipant/delete/{id}','eventsParticipantController@destroy');
-
+// Route::post('/mobile/api/success','mobileController@Insert');
 // Events Problem Definitions
 
 Route::get('/admin/eventsPdefinition','eventsProbDefiController@index');

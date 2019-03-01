@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sponosors</title>
+    <title>PC team</title>
 </head>
 <body>
 
@@ -78,7 +78,7 @@
                                         </div>
                                         <div class="form-group">
                                             <p class="text-muted m-b-15 f-s-12">Upload Image</p>
-                                            <input type="file" placeholder="Member image" class="form-control input-default" name="memberimg" >
+                                            <input type="file" placeholder="Member image" class="form-control input-default" name="img" >
                                         </div>
                                         </div>
                                         <!-- /# card -->
