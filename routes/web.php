@@ -128,7 +128,7 @@ Route::get('/admin/eventsParticipant/show/','eventsParticipantController@userdet
 Route::post('/admin/eventsParticipant/add','eventsParticipantController@store');
 Route::post('/admin/eventsParticipant/edit/{id}','eventsParticipantController@update');
 Route::post('/admin/eventsParticipant/delete/{id}','eventsParticipantController@destroy');
-
+// Route::post('/mobile/api/success','mobileController@Insert');
 // Events Problem Definitions
 
 Route::get('/admin/eventsPdefinition','eventsProbDefiController@index');
@@ -204,3 +204,12 @@ Route::get('/admin/pcteam/edit/{id}','PcteamController@edit');
 Route::post('/admin/pcteam/edit/{id}','PcteamController@update');
 Route::post('/admin/pcteam/delete/{id}','PcteamController@destroy');
 
+
+
+//frontend Route
+Route::get('/','HomeController@getHome');
+Route::get('/event','HomeController@getEvent');
+Route::get('/about','HomeController@getAbout');
+Route::get('/contact','HomeController@getContact');
+Route::get('/register','HomeController@getRegister');
+Route::get('/blog','HomeController@getRegister');
