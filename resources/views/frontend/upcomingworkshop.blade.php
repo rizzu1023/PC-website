@@ -1,5 +1,8 @@
-@extends('layouts.footer')
 @extends('layouts.base')
+@section('title')
+Workshop - Programmers Club
+@endsection
+
 @section('content')
 
 <section>
@@ -39,4 +42,3 @@
 
       
 @endsection
-@extends('layouts.header')

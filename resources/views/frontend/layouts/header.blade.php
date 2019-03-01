@@ -1,4 +1,4 @@
-<div class="probootstrap-search" id="probootstrap-search">
+<div class="probootstrap-search " id="probootstrap-search">
       <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
       <form action="#">
         <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
@@ -40,13 +40,13 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{asset('pc')}}" title="Programmers Club">ProgrammersClub</a>
+            <a class="navbar-brand" href="index.html" title="enlight">programmersclub</a>
           </div>
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="/pc">Home</a></li>
-                <li ><a href="{{asset('events')}}">Events</a></li>
+                <li class="active "><a href="{{asset('index')}}">Home</a></li>
+                <li><a href="{{asset('events')}}">Events</a></li>
                 <li><a href="{{asset('workshop')}}">Workshop</a></li>
                 <li><a href="{{asset('contact')}}">Contact</a></li>
                 <li ><a href="{{asset('about')}}">About</a></li>

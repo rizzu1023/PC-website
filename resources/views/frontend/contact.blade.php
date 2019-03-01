@@ -1,5 +1,8 @@
-@extends('layouts.footer')
 @extends('layouts.base')
+@section('title')
+Contact - Programmers Club
+@endsection
+
 @section('content')
 <section class="probootstrap-section probootstrap-section-colored">
         <div class="container">
@@ -68,8 +71,9 @@
               <div class="probootstrap-service-2 probootstrap-animate">
                
                 <div class="text">
-                  <span class="probootstrap-meta"><i class="icon-calendar2"></i></span>
                   <h3>Social Media</h3>
+                  <span class="probootstrap-meta"><i class="icon-calendar2"></i></span>
+
                   <ul class="probootstrap-footer-social">
                     <li><a href="#"><i class="icon-twitter"></i></a></li>
                     <li><a href="#"><i class="icon-facebook"></i></a></li>
@@ -146,4 +150,3 @@
       </section>
 
 @endsection
-@extends('layouts.header')

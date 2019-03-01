@@ -1,5 +1,8 @@
-@extends('layouts.footer')
 @extends('layouts.base')
+@section('title')
+Algorithm 2.O - Programmers Club
+@endsection
+
 @section('content')
 <section>
              <img src="{{asset('frontend/img/algo2a.png')}}">
@@ -98,4 +101,3 @@
         </section>
 
 @endsection
-@extends('layouts.header')

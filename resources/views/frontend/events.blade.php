@@ -1,5 +1,8 @@
-@extends('layouts.footer')
 @extends('layouts.base')
+@section('title')
+Events - Programmers Club
+@endsection
+
 @section('content')
 <section class="probootstrap-section probootstrap-section-colored">
         <div class="container">
@@ -7,7 +10,6 @@
 
             <div class="col-md-12 text-left section-heading probootstrap-animate">
               <h1>Events</h1>
-              <iframe src="https://free.timeanddate.com/countdown/i6n8ms10/n4771/cf12/cm0/cu4/ct0/cs0/ca0/co0/cr0/ss0/cacfff/cpcfff/pct/tcfff/fs100/szw576/szh243/iso2019-03-15T09:00:00/pd2" allowTransparency="true" frameborder="0" width="197" height="52"></iframe>
 
             </div>
            
@@ -28,9 +30,9 @@
                     <span class="probootstrap-date"><i class="icon-calendar"></i>15-16 March 2019</span>
                     <span class="probootstrap-location"><i class="icon-location2"></i>AIKTC, New Panvel</span>
                   </p>
-                  <p><a href="{{asset('eparticipate')}}" class="btn btn-primary">Participate now!</a></p>
+                  <p><a href="{{asset('participate')}}" class="btn btn-primary">Participate now!</a></p>
                 </div>
-                <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/algo2.jpg)">
+                <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/algo1.png)">
                   <!--<a href="https://vimeo.com/45830194" class="btn-video popup-vimeo"><i class="icon-play3"></i></a>-->
                 </div>
               </div>
@@ -122,10 +124,9 @@
           <div class="row">
             <div class="col-md-12">
               <h2 class="probootstrap-animate" data-animate-effect="fadeInRight">Participate Now!</h2>
-              <a href="{{asset('eparticipate')}}" role="button" class="btn btn-primary btn-lg btn-ghost probootstrap-animate" data-animate-effect="fadeInLeft">Enroll</a>
+              <a href="{{asset('participate')}}" role="button" class="btn btn-primary btn-lg btn-ghost probootstrap-animate" data-animate-effect="fadeInLeft">Enroll</a>
             </div>
           </div>
         </div>
       </section>
 @endsection
-@extends('layouts.header')

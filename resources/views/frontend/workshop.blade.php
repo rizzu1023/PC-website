@@ -1,5 +1,8 @@
-@extends('layouts.footer')
 @extends('layouts.base')
+@section('title')
+Workshop - Programmers Club
+@endsection
+
 @section('content')
 <section class="probootstrap-section probootstrap-section-colored">
         <div class="container">
@@ -39,7 +42,7 @@
           <div class="clearfix visible-sm-block visible-xs-block"></div>
           <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
             <a href="{{asset('info')}}" class="probootstrap-featured-news-box">
-              <figure class="probootstrap-media"><img src="{{asset('frontend/img/img_sm_3.jpg')}} alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+              <figure class="probootstrap-media"><img src="{{asset('frontend/img/img_sm_3.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
               <div class="probootstrap-text">
                 <h3>Workshop 3</h3>
                 <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
@@ -196,4 +199,3 @@
       </section>
       
 @endsection
-@extends('layouts.header')

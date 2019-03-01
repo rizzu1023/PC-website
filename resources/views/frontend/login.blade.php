@@ -1,5 +1,8 @@
-@extends('layouts.footer')
 @extends('layouts.base')
+@section('title')
+Login - Programmers Club
+@endsection
+
 @section('content')
 <section class="probootstrap-section probootstrap-section-colored">
         <div class="container">
@@ -54,4 +57,3 @@
         </div>
       </section>
 @endsection
-@extends('layouts.header')
