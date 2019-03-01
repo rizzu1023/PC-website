@@ -1,66 +1,133 @@
-@extends('layouts.app')
+@extends('layout.base')
+@extends('layout.sidebar')
 @section('content')
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h3>Edit Workshop Info</h3>
-      </div>
-    </div>
 
-    @if ($errors->any())
-      <div class="alert alert-danger">
-        <strong>Whoops! </strong> there where some problems with your input.<br>
-        <ul>
-          @foreach ($errors as $error)
-            <li>{{$error}}</li>
-          @endforeach
-        </ul>
-      </div>
-    @endif
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+         <title>Workshops</title>
+    <body>
 
-    <form action="{{route('workshopinfo.update',$workshopinfo->id)}}" method="post">
-      @csrf
-      @method('PUT')
-      <div class="row">
-        <div class="col-md-12">
-          <strong>Workshop ID</strong>
-          <input type="text" name="workshop_id" class="form-control" value="{{$workshopinfo->workshop_id}}">
+        <div class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="float-left">
+                            <div class="hamburger sidebar-toggle">
+                                <span class="line"></span>
+                                <span class="line"></span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="float-right">
+                            <ul>
+
+                             
+                            
+                                <li class="header-icon dib"><span class="user-avatar">John <i class="ti-angle-down f-s-10"></i></span>
+                                    <div class="drop-down dropdown-profile">
+                                   
+                                        <div class="dropdown-content-body">
+                                            <ul>
+     
+                                                <li><a href="#"><i class="ti-power-off"></i> <span>Logout</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-wrap">
+            <div class="main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-8 p-r-0 title-margin-right">
+                            <div class="page-header">
+                                <div class="page-title">
+                                    <a class="btn btn-sm btn-success" href="/admin/Workshopnew">Go Back</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <section id="main-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-title">
+                                    <h4>Add new workshop Info</h4>
+                                    
+                                </div>
+                                <div class="card-body">
+                                    <div class="basic-form">
+
+                                    <form  method ="POST" action="/admin/Workshopnew/edit/{{$workshopinfo->id}}">
+                                        @csrf
+                                        
+                                            <div class="form-group">
+                                                <label class="text-muted m-b-15 f-s-12">Duration</label>
+                                                <input type="text" value="{{$workshopinfo->duration}}" class="form-control input-default placeholder="Workshop name" name="duration" >
+                                            </div>
+                                            <div class="form-group">
+                                               <p class="text-muted m-b-15 f-s-12">Workshop date</p>
+                                                <input type="text" value="{{$workshopinfo->workshop_date}}" class="form-control input-default" placeholder="Username" name="workshopdate" >
+                                            </div>
+                                            
+                                             <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Time</p>
+                                                <input type="time" value="{{$workshopinfo->workshop_time}}" class="form-control input-default" placeholder="Time" name="workshoptime" required>
+                                            </div>
+
+                                              <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Location</p>
+                                                <input type="text" value="{{$workshopinfo->location}}" class="form-control input-default" placeholder="Location" name="location" required>
+                                            </div>
+
+                                             <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Fees</p>
+                                                <input type="fees" value="{{$workshopinfo->fees}}" class="form-control input-default" placeholder="Fees" name="fees" required>
+                                            </div>
+                                           
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Notes</p>
+                                                <input type="file" value="{{$workshopinfo->notes}}" class="form-control input-default" placeholder="Upload pdf" name="notes" required>
+                                            </div>
+                                           
+                                           
+                                                                  
+                                            
+                                            
+                                            <button type="submit" class="btn btn-primary m-b-10 m-l-5">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                </div>  
+            </div>
         </div>
 
- <div class="col-md-12">
-        <strong>Duration</strong>
-          <input type="text" name="title" class="form-control" value="{{$workshopinfo->duration}}">
-        </div>
-
-         <div class="col-md-12">
-          <strong>Workshop date</strong>
-           <input type="text" name="about" class="form-control" value="{{$workshopinfo->workshop_date}}">
-        </div>
-
-
-        <div class="col-md-12">
-          <strong>Workshop time</strong>
-           <input type="text" name="about" class="form-control" value="{{$workshopinfo->workshop_time}}">
-        </div>
-
-        <div class="col-md-12">
-        <strong>location</strong>
-          <input type="text" name="about" class="form-control" value="{{$workshopinfo->location}}">
-        </div>
-
-         <div class="col-md-12">
-        <strong>fees</strong>
-          <input type="text" name="about" class="form-control" value="{{$workshopinfo->fees}}">
-        </div>
-
-
-
-
-        <div class="col-md-12">
-          <a href="{{route('workshopinfo.index')}}" class="btn btn-sm btn-success">Back</a>
-          <button type="submit" class="btn btn-sm btn-primary">Submit</button>
-        </div>
-      </div>
-    </form>
-  </div>
+            
+          <script src="assets/js/lib/jquery.min.js"></script>
+        <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
+        <!-- nano scroller
+        <script src="assets/js/lib/menubar/sidebar.js"></script>
+        <script src="assets/js/lib/preloader/pace.min.js"></script>
+        <!-- sidebar -->
+        <script src="assets/js/lib/bootstrap.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <!-- scripit init-->
+</body>
+</body>
+</html>
 @endsection

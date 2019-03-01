@@ -53,6 +53,7 @@
                                     <a class="btn btn-sm btn-success"href="/admin/eventsInfo">List Event Info</a>
                                     <a class="btn btn-sm btn-success"href="/admin/eventsParticipant">List Event Participants</a>
                                     <a class="btn btn-sm btn-success"href="/admin/eventsPdefinition">Event Problem Definition</a>
+                                    <a class="btn btn-sm btn-success"href="/admin/eventSchedule">Event Schedule</a>
                                     </div>
                                      
                                 </div>

@@ -58,13 +58,13 @@ Route::get('/admin/Workshop/edit/{id}','WorkshopController@edit');
 Route::post('/admin/Workshop/edit/{id}','WorkshopController@update');
 
 
-Route::get('admin/Workshopnew','WorkshopNew@index');
-Route::get('admin/Workshopnew/add','WorkshopNew@create');
-Route::post('admin/Workshopnew/add','WorkshopNew@store');
-Route::get('admin/Workshopnew/show','WorkshopNew@show');
-Route::get('admin/Workshopnew/delete/{id}','WorkshopNew@delete');
-Route::get('admin/Workshopnew/edit','WorkshopNew@edit');
-Route::post('admin/Workshopnew/edit','WorkshopNew@update');
+Route::get('/admin/Workshopnew','WorkshopNew@index');
+Route::get('/admin/Workshopnew/add','WorkshopNew@create');
+Route::post('/admin/Workshopnew/add','WorkshopNew@store');
+Route::get('/admin/Workshopnew/show','WorkshopNew@show');
+Route::post('/admin/Workshopnew/delete/{id}','WorkshopNew@delete');
+Route::get('/admin/Workshopnew/edit/{id}','WorkshopNew@edit');
+Route::post('/admin/Workshopnew/edit/{id}','WorkshopNew@update');
 
 //Workshopparticipants
 Route::get('admin/Workshopsparticipants','WorkshopNew@home');

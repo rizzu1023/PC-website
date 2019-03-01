@@ -81,7 +81,7 @@ class eventsProbDefiController extends Controller
 
         $eventSchedule->save();
 
-        return Redirect::to('/eventSchedule')->with('success','Event Scheduled Added Successfully..!');
+        return Redirect::to('/admin/eventSchedule')->with('success','Event Scheduled Added Successfully..!');
     }
 
     public function sedit($id){
@@ -99,7 +99,7 @@ class eventsProbDefiController extends Controller
 
         $eventSchedule->save();
 
-        return Redirect::to('/eventSchedule')->with('success','Event Scheduled Updated Successfully..!');
+        return Redirect::to('/admin/eventSchedule')->with('success','Event Scheduled Updated Successfully..!');
 
     }
 
@@ -107,6 +107,6 @@ class eventsProbDefiController extends Controller
         $eventSchedule = event_schedule::find($id);
 
         $eventSchedule->delete();
-        return Redirect::to('/eventSchedule')->with('success','Deleted Successfully...!');
+        return Redirect::to('/admin/eventSchedule')->with('success','Deleted Successfully...!');
     }
 }
