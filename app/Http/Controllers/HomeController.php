@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Redirect;
 
 class HomeController extends Controller
 {
@@ -19,11 +20,22 @@ class HomeController extends Controller
     // {
     //     $this->middleware(['auth','admin']);
     // }
-
+    
 
     public function index()
     {
         return view('/home');
+    }
+
+    public function getHome()
+    {
+        return Redirect::to('/admin/dashboard');
+    }
+
+
+    public function admin()
+    {
+        return view('adminpanel.events.add');
     }
 
 
