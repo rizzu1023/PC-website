@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\adminauth;
 use App\admin;
+use App\User;
 use DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -31,8 +32,8 @@ class AdminController extends Controller
 
        $email=$request->input('email');
        $password=$request->input('password');
-       $admins=DB::table('admins')->where('email','=',$email)->first();
-       $admins=DB::table('admins')->where('password','=',$password)->first();
+       $admins=DB::table('users')->where('email','=',$email)->first();
+       $admins=DB::table('users')->where('password','=',$password)->first();
 
      
         return redirect('admin/dashboard');
@@ -53,7 +54,7 @@ class AdminController extends Controller
 
       public function Insert(Request $req,Response $res)
     {
-    	$admin = new admin();
+    	$admin = new User();
 
        $admin->name=$req->input('name');
        $admin->email=$req->input('email');

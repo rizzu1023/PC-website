@@ -145,7 +145,7 @@ a:hover, a:active {
         width: 90px;
     }
 
-    .nav-bar{
+     {
         height: 80px;
     }
 }
@@ -194,6 +194,7 @@ a:hover, a:active {
     position: fixed;
     top: 0;
     width: 100vw;
+    height: 85px;
 }
 .nav-bar .flex-column li a{
     color: #000;
@@ -311,6 +312,41 @@ a:hover, a:active {
     left: 0;
 }
 
+.site-navigation ul li:nth-child(6) {
+
+    background: #19c880;    
+    margin-left: 10px;
+    
+}
+
+.site-navigation ul li:nth-child(6) a{
+    color: #fff;
+}
+.site-navigation ul li:nth-child(6) a:hover {
+    color: #000;
+    background: rgba(255,255,255,1);
+}
+
+@media screen and (max-width: 576px){
+
+    .site-navigation ul li:nth-child(6) {
+
+        background: #fff;    
+        margin-left: 0px;
+
+        
+    }
+    
+    .site-navigation ul li:nth-child(6) a{
+        color: #000;
+    }
+    .site-navigation ul li:nth-child(6) a:hover {
+        background: #19c880;
+        color: #fff;
+        /* background: rgba(255,255,255,1); */
+    }
+}
+
 .site-navigation ul li a {
     display: block;
     padding: 12px 26px;
@@ -330,11 +366,14 @@ a:hover, a:active {
         overflow: auto;
         background: transparent;
     }
+
+    
 }
 
 .site-navigation ul li a:hover,
 .site-navigation ul li.current-menu-item a {
-    color: #19c880;
+    background: #19c880;
+    color: #fff;
 }
 
 /*
@@ -756,36 +795,29 @@ a.btn:hover {
     background: #fff;
 }
 .about-section .button{
-    padding: 10px 40px;
-   
-    background: #19c880;
-    color: #fff;
-    /* border: 2px solid #999; */
     position: relative;
     left: 50%;
     transform: translate(-50%);
-    font-weight: 400;
-    text-transform: uppercase;
 }
 
 .about-section a{
     text-decoration: none;
     display: block;
 }
-.about-section .button:hover{
-    background: #999;
-    color: #fff;
-}
+
 
 .about-section .heading { 
-    padding-right: 80px;
+    /* padding-right: 80px; */
 }
 
 .about-section .heading .entry-title {
     margin: 0;
-    font-size: 42px;
-    font-weight: 400;
-    color: #999;
+    font-size: 45px;
+    font-weight: 600;
+    color: #454545;
+    text-align: center;
+    letter-spacing: 4px;
+    /* transform: translateX(50%); */
 }
 
 .about-section .heading  p {
@@ -820,6 +852,13 @@ a.btn:hover {
     .ezuca-stats .stats-count {
         width: 100%;
     }
+
+    
+.about-section .heading .entry-title {
+    font-size: 40px;
+    letter-spacing: 3px;
+    /* transform: translateX(50%); */
+}
 }
 
 
