@@ -213,6 +213,8 @@ Route::get('/about','HomeController@getAbout');
 Route::get('/contact','HomeController@getContact');
 Route::get('/eventRegister','HomeController@getRegister');
 Route::get('/blog','HomeController@getBlog');
+Route::get('/team','HomeController@getTeam');
+
 
 Auth::routes();
 

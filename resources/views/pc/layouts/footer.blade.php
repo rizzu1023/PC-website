@@ -6,9 +6,9 @@
                         <div class="foot-about">
                             <a  href="#"><img class="foot-logo" src="{{asset('assets/images/logo.png')}}" alt=""></a>
                             <ul class="mt-4">
-                                    <li>Email : connect@programmersclub.co.in</li>
-                                    <li>Phone : 8286101918</li>
-                                    <li>Address : Department of Computer EngineeringPlot No. 2 & 3, Sector - 16, Near Thana Naka, Khandagao, New Panvel,Navi Mumbai, Maharashtra 410206</li>
+                                    <li>Email : <span>connect@programmersclub.co.in</span></li>
+                                    <li>Phone : <span>8286101918</span></li>
+                                    <li>Address : <span>Department of Computer EngineeringPlot No. 2 & 3, Sector - 16, Near Thana Naka, Khandagao, New Panvel,Navi Mumbai, Maharashtra 410206</span></li>
                                 </ul>
                         </div><!-- .foot-about -->
                     </div><!-- .col -->
@@ -32,7 +32,7 @@
                             <ul class="">
                                 <li><a href="#">Register</a></li>
                                 <li><a href="#">About Us</a></li>
-                                <li><a href="#">Language Packs</a></li>
+                                <li><a href="/about#team">Our Team</a></li>
                                 <li><a href="#">Release Status</a></li>
                             </ul>
                         </div>

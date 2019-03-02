@@ -1,5 +1,9 @@
 @extends('pc.layouts.base')
 
+@section('title')
+Home
+@endsection
+
 @section('content')
 
 <section class="page-header">

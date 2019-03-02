@@ -1,5 +1,9 @@
 @extends('pc.layouts.base')
 
+@section('title')
+Home
+@endsection
+
 @section('css')
     <style>
         .hero-content-overlay {
@@ -59,7 +63,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <h4 class="text-center">
+                                        <h4 class="text-center ml-5">
                                             <br />
                                             <div class="counter" style="margin:50px" id ="days"></div><span class="counter-value">Days</span>
                                             <div class="counter" style="margin:50px" id="hours"></div><span class="counter-value">Hours</span>

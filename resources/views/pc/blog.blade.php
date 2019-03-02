@@ -1,5 +1,8 @@
 @extends('pc.layouts.base')
 
+@section('title')
+Blog
+@endsection
 
 @section('content')
 <section class="page-header">

@@ -300,7 +300,6 @@ a:hover, a:active {
     left: -320px;
     z-index: 9999;
     width: 100vw;
-    max-width: calc(100% - 120px);
     height: 100%;
     overflow-x: scroll;
     padding: 30px 15px;
@@ -312,7 +311,7 @@ a:hover, a:active {
     left: 0;
 }
 
-.site-navigation ul li:nth-child(6) {
+.site-navigation ul li:nth-child(7) {
 
     background: #19c880;    
     margin-left: 10px;
@@ -320,11 +319,11 @@ a:hover, a:active {
 }
 
 .site-navigation ul li:nth-child(6) a{
-    color: #fff;
+    /* color: #fff; */
 }
 .site-navigation ul li:nth-child(6) a:hover {
-    color: #000;
-    background: rgba(255,255,255,1);
+    /* color: #000; */
+    /* background: rgba(255,255,255,1); */
 }
 
 @media screen and (max-width: 576px){
@@ -2008,7 +2007,9 @@ ul.black-doted {
 /*--------------------------------------------------------------
 # About Page
 --------------------------------------------------------------*/
-
+.team-section{
+    padding: 20px 0;
+}
 .about-heading,
 .team-heading {
     margin-top: 80px;
@@ -2648,10 +2649,19 @@ ul.author-social-profile li:hover .fa {
 .contact-form h3,
 .contact-info h3 {
     margin-bottom: 12px;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 400;
     color: #383749;
 }
+
+.contact-info ul li{
+    font-size: 18px;
+}
+
+.contact-info ul li span{
+    font-size: 25px;
+}
+
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
@@ -2762,13 +2772,22 @@ ul.author-social-profile li:hover .fa {
     color: #757686;
 }
 
+.foot-about ul li{
+    font-size: 20px;
+    color: #ccc;
+}
+.foot-about ul li span{
+    font-size: 16px;
+}
+
+
 p.footer-copyright {
     color: #c0c1cd;
 }
 
 .footer-widgets h2 {
     margin-bottom: 40px;
-    font-size: 20px;
+    font-size: 25px;
     color: #ccc;
 }
 
@@ -2783,7 +2802,7 @@ p.footer-copyright {
 }
 
 .footer-widgets ul li a {
-    color: #f6f6f6;
+    color: #ccc;
     text-decoration: none;
 }
 
@@ -2909,6 +2928,11 @@ p.footer-copyright {
 .event-section .event-fee h4{
     font-size: 23px;
 }
+.event-section .event-fee span{
+    font-size: 30px;
+    font-weight: 400;
+}
+
 
 .event-section .event-button{
     margin-top: 30px;
@@ -2957,6 +2981,15 @@ p.footer-copyright {
     margin-left: -4px;
     width: 10vw;
     text-decoration: none;
+}
+
+.newsletter h2{
+    font-size: 45px;
+    color: #000;
+}
+
+.newsletter p{
+    color: #000;
 }
 
 

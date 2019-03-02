@@ -1,5 +1,8 @@
 @extends('pc.layouts.base')
 
+@section('title')
+Events
+@endsection
 
 @section('content')
 
@@ -32,7 +35,7 @@
                       <li><i class="far fa-user"></i>Participation<span>Team of 04</span></li>
                       <li><i class="fa fa-building-o"></i>Departments<span>CO, IT, CS</span></li>
                     </ul>
-                    <div class="event-fee"><h4>Participant Fees: <span>FREE</span></h4></div>
+                    <div class="event-fee"><h4>Participant Fees : <span>FREE</span></h4></div>
                     <div class="event-button"><a href="#" class="btn-success">Register Now</a></div>
                 </div>
             </div><!-- .col -->
