@@ -126,7 +126,7 @@ Route::get('/admin/eventsParticipant','eventsParticipantController@index');
 Route::get('/admin/eventsParticipant/add','eventsParticipantController@create');
 Route::get('/admin/eventsParticipant/edit/{id}','eventsParticipantController@edit');
 Route::get('/admin/eventsParticipant/show/','eventsParticipantController@userdetails');
-Route::post('/admin/eventsParticipant/add','eventsParticipantController@store');
+Route::post('/admin/eventsParticipant/add','eventsParticipantController@store')->name('addParticipant');
 Route::post('/admin/eventsParticipant/edit/{id}','eventsParticipantController@update');
 Route::post('/admin/eventsParticipant/delete/{id}','eventsParticipantController@destroy');
 // Route::post('/mobile/api/success','mobileController@Insert');

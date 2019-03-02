@@ -26,7 +26,7 @@
                 <div class="contact-form">
                         <h3>Registration Form</h3>
 
-                    <form>
+                    <form action="" method="POST">
                         <div class="row">
                             <div class="col-lg-12">
                                 <input class="col-lg-12" type="text" placeholder="Team Name">
