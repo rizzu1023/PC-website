@@ -77,15 +77,20 @@
                                                 <input type="text" class="form-control input-default placeholder="Workshop name" name="workshopname" >
                                             </div>
                                             <div class="form-group">
-                                               <p class="text-muted m-b-15 f-s-12">Username</p>
-                                                <input type="text" class="form-control input-default" placeholder="Username" name="username" >
+                                               <p class="text-muted m-b-15 f-s-12">Name</p>
+                                                <input type="text" class="form-control input-default" placeholder="Username" name="name" >
                                             </div>
                                             
                                              <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">email</p>
                                                 <input type="email" class="form-control input-default" placeholder="Email" name="email" required>
                                             </div>
-                                                                  
+                                                    
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Contact</p>
+                                                <input type="number" class="form-control input-default" placeholder="Email" name="contact" required>
+                                            </div>
+                                                           
                                             
                                             
                                             <button type="submit" class="btn btn-primary m-b-10 m-l-5">Submit</button>

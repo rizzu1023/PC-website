@@ -77,14 +77,20 @@
                                                 <input type="text" value="{{$workshopparticipant->workshop_name}}" class="form-control input-default placeholder="Workshop name" name="workshopname" >
                                             </div>
                                             <div class="form-group">
-                                               <p class="text-muted m-b-15 f-s-12">Username</p>
-                                                <input type="text" value="{{$workshopparticipant->username}}" class="form-control input-default" placeholder="Username" name="username" >
+                                               <p class="text-muted m-b-15 f-s-12">Name</p>
+                                                <input type="text" value="{{$workshopparticipant->username}}" class="form-control input-default" placeholder="Username" name="name" >
                                             </div>
                                             
                                              <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">email</p>
                                                 <input type="email" value="{{$workshopparticipant->email}}" class="form-control input-default" placeholder="Email" name="email" required>
                                             </div>
+
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Contact</p>
+                                                <input type="number"   value="{{$workshopparticipant->contact}}" class="form-control input-default" placeholder="Email" name="contact" required>
+                                            </div>
+                                            
                                                                   
                                             
                                             

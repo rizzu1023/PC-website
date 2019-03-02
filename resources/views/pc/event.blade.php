@@ -21,7 +21,7 @@
             <div class="col-12 col-lg-5">
                     <div class="event-section-left border">
                     <h4>Event Info</h4>
-                    <div><img width="100%" src="images/algo1.jpeg"></div>
+                    <div><img width="100%" src="{{asset('assets/images/algo1.jpeg')}}"></div>
                     <ul class="p-0 m-0">
                       <li><i class="fas fa-map-marker-alt"></i>Location <span>AIKTC, New Panvel</span></li>
                       <li><i class="far fa-calendar-alt"></i>Date <span>15-16th March</span></li>
@@ -59,27 +59,27 @@
                     <div class="col-12 text-center ">
                         <div class="row mt-5">
                     <div class="logo-wrap col-lg-4">
-                        <img src="images/logo-1.png" alt="">
+                        <img src="{{asset('assets/images/logo-1.png')}}" alt="">
                     </div><!-- .logo-wrap -->
 
                     <div class="logo-wrap col-lg-4">
-                        <img src="images/logo-2.png" alt="">
+                        <img src="{{asset('assets/images/logo-2.png')}}" alt="">
                     </div><!-- .logo-wrap -->
 
                     <div class="logo-wrap col-lg-4">
-                        <img src="images/logo-3.png" alt="">
+                        <img src="{{asset('assets/images/logo-3.png')}}" alt="">
                     </div><!-- .logo-wrap -->
 
                     <div class="logo-wrap col-lg-4">
-                            <img src="images/logo-4.png" alt="">
+                            <img src="{{asset('assets/images/logo-4.png')}}" alt="">
                     </div><!-- .logo-wrap -->
     
                     <div class="logo-wrap col-lg-4">
-                            <img src="images/logo-5.png" alt="">
+                            <img src="{{asset('assets/images/logo-5.png')}}" alt="">
                     </div><!-- .logo-wrap -->
     
                     <div class="logo-wrap col-lg-4">
-                            <img src="images/logo-1.png" alt="">
+                            <img src="{{asset('assets/images/logo-1.png')}}" alt="">
                     </div><!-- .logo-wrap -->
                 </div>
               

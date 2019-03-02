@@ -30,9 +30,9 @@ Route::get('/admin','AdminController@Index');
 Route::view('/admin/dashboard','admin.dashboard')->name('adminDash');
 Route::view('admin','admin.adminlogin');
 
-// Route::get('/admin','AdminController@Index');
-// Route::view('/admin/dashboard','admin.dashboard');
-// Route::view('admin','admin.adminlogin');
+Route::get('/admin','AdminController@Index');
+Route::view('/admin/dashboard','admin.dashboard');
+Route::view('admin','admin.adminlogin');
 
 //Admin Login
 

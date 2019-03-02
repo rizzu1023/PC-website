@@ -4,7 +4,7 @@ body {
     color: #383749;
     font-size: 16px;
     line-height: 1.8;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Coda', cursive;
 }
 
 img {
@@ -362,12 +362,7 @@ a:hover, a:active {
 }
 
 .hero-content-overlay {
-    height: 100vh;
-    background: rgba(21,20,33,.5);
-    background: url("images/WebWall2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: 10%;
+    
     /* background-size: 100vw 40vh; */
     /* background-attachment: fixed; */
 }
@@ -2850,9 +2845,10 @@ p.footer-copyright {
 .event-section-left ul li{
     /* width: 100%; */
     /* background: orange; */
-    padding: 6px 0 12px 0;
+    padding: 6px 10px 12px 10px;
     border-bottom: .5px solid gray;
     color: gray;
+
 }
 
 .event-section .event-fee{

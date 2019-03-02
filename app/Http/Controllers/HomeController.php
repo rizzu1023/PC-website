@@ -16,6 +16,10 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
+    // public function __construct()
+    // {
+    //     $this->middleware(['auth','admin']);
+    // }
 
     /**
      * Show the application dashboard.
@@ -24,12 +28,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('/home');
     }
 
-    // public function admin(){
-    //     return view('admin.dashboard');
-    // }
+    public function admin(){
+        return view('admin.dashboard');
+    }
 
     // public function feedback()
     // {
