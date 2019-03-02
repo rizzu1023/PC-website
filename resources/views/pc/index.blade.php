@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 
-                <a href="/pc/eventRegister" class="btn button mt-3">REGISTER</a>
+                <a href="/event" class="btn button mt-3">REGISTER</a>
                
             </div><!-- .row -->
         </div><!-- .container -->
@@ -183,7 +183,7 @@
 
                 <div class="stats-count">
                         <i class="fas fa-graduation-cap"></i>
-                    <span>77</span>
+                    <span>44</span>
                     <p>MEMBERS</p>
                 </div><!-- .stats-count -->
 

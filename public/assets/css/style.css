@@ -1262,6 +1262,10 @@ a.btn:hover {
     margin-top: 25px;
 }
 
+.sponsor-section .heading h4{
+    font-size: 45px;
+}
+
 /*--------------------------------------------------------------
 # Courses Page
 --------------------------------------------------------------*/
@@ -1595,9 +1599,9 @@ a.btn:hover {
     text-align: center;
 }
 
-.faq-section  .faq-section-header h2{
-    font-size: 50px;
-    padding: 30px;
+.faq-section .heading h4{
+    font-size: 45px;
+    padding: 50px;
 }
 
 @media screen and (max-width: 992px){
@@ -2651,6 +2655,8 @@ ul.author-social-profile li:hover .fa {
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
+.contact-form input[type="number"],
+
 .contact-form textarea {
     width: 100%;
     padding: 12px 20px;
@@ -2662,12 +2668,16 @@ ul.author-social-profile li:hover .fa {
 
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
+.contact-form input[type="number"]:focus,
+
 .contact-form textarea:focus {
     outline: none;
 }
 
 .contact-form input[type="text"]::placeholder,
 .contact-form input[type="email"]::placeholder,
+.contact-form input[type="number"]::placeholder,
+
 .contact-form textarea::placeholder {
     color: #c0c1cd;
 }
@@ -2773,7 +2783,7 @@ p.footer-copyright {
 }
 
 .footer-widgets ul li a {
-    color: #757686;
+    color: #f6f6f6;
     text-decoration: none;
 }
 
@@ -2920,12 +2930,16 @@ p.footer-copyright {
 }
 
 
-.event-section-right{
+@media screen and (max-width: 576px) {
     
+    .event-section-right{
+        margin-top: 30px;
+        
+    }
     
 }
 .event-section-right p{
-    font-size: 14px;
+    font-size: 16px;
 }
 
 
@@ -3010,11 +3024,14 @@ p.footer-copyright {
 }
 
 .schedule-section {
-    padding: 30px 0;
+    padding: 30px 0 0 0;
     background: #f6f6f6;
 }
+.schedule-section h4{
+    font-size: 45px;
+} 
 
-.schedule-section h3{
+.schedule-section h3{ 
     /* background: orange; */
     text-align: center;
     margin-bottom: 30px;
