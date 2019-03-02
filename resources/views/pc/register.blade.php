@@ -2,6 +2,7 @@
 
 @section('content')
 
+<section class="page-header">
 
 <div class="page-header-overlay">
             <div class="container">
@@ -15,7 +16,7 @@
             </div><!-- .container -->
         </div><!-- .page-header-overlay -->
     </div><!-- .page-header -->
-
+</section>
 
 <section class="register-form">
     <div class="container">

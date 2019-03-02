@@ -3,7 +3,7 @@
 
 @section('content')
 
-
+<section class="page-header">
 <div class="page-header-overlay">
             <div class="container">
                 <div class="row">
@@ -16,7 +16,7 @@
             </div><!-- .container -->
         </div><!-- .page-header-overlay -->
     </div><!-- .page-header -->
-
+</section>
 
 <section class="about-pc">
     <div class="container">
@@ -32,7 +32,7 @@
                 </div><!-- .about-heading -->
             </div><!-- .col -->
             <div class="col-lg-4">
-                <img src="images/pc_image.jpg" style="width:400px; ">
+                <img src="{{asset('assets/images/pc_image.jpg')}}" style="width:400px; ">
             </div>
 </section>
 
@@ -49,7 +49,7 @@
 
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="team-member">
-                    <img src="images/team-1.jpg" alt="">
+                    <img src="{{asset('assets/images/bg2.jpg')}}" alt="">
                     <h3>Mr. John Wick</h3>
                 </div><!-- .team-member -->
             </div><!-- .col -->
@@ -67,8 +67,8 @@
                 </div><!-- .col -->
                 <div class="col-12 col-md-6 col-lg-3">
                         <div class="team-member">
-                            <img src="images/team-4.jpg" alt="">
-                            <h3>Mr. John Wick</h3>
+                            <img src="{{asset('assets/images/bg2.jpg')}}" alt="">
+                            <h3>Mohammed<br>Rizwan</h3>
                         </div><!-- .team-member -->
                     </div><!-- .col -->
                     <div class="col-12 col-md-6 col-lg-3">

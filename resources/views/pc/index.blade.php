@@ -10,6 +10,19 @@
             background-repeat: no-repeat;
             background-position-y: 10%;
         }
+    @media screen and (max-width: 576px){
+        .hero-content-overlay {
+
+    /* height: 40vh; */
+        background: rgba(21,20,33,.5);
+        background: url("{{asset('assets/images/WebWall2.png')}}"); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: 50%;
+        background-size: 100vw 70vh;
+        /* background-attachment: fixed; */
+    }
+}
     </style>
 @endsection
 @section('content')
