@@ -36,7 +36,7 @@ Route::view('admin','admin.adminlogin');
 
 //Admin Login
 
-Route::get('/admin/dashboard','HomeController@admin')->middleware('admin');
+Route::get('/admin/dashboard','HomeController@admin');
 
 
 Route::get('/admin/adminlogin','AdminController@AdminLogin');
