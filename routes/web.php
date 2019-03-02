@@ -14,13 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Auth::routes();
-// maldanldA
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('socialauth/github', 'Auth\SocialAuthController@redirectToProvider');
 Route::get('github/success', 'Auth\SocialAuthController@handleProviderCallback');
 
@@ -37,7 +35,7 @@ Route::view('admin','admin.adminlogin');
 
 //Admin Login
 
-Route::get('admin/dashboard','HomeController@admin')->middleware('admin');
+Route::get('admin/dashboard','HomeController@admin');
 
 
 Route::get('/admin/adminlogin','AdminController@AdminLogin');
@@ -208,9 +206,13 @@ Route::post('/admin/pcteam/delete/{id}','PcteamController@destroy');
 
 
 //frontend Route
-Route::get('/','HomeController@getHome');
+Route::get('/','HomeController@Home');
 Route::get('/event','HomeController@getEvent');
 Route::get('/about','HomeController@getAbout');
 Route::get('/contact','HomeController@getContact');
-Route::get('/register','HomeController@getRegister');
-Route::get('/blog','HomeController@getRegister');
+Route::get('/eventRegister','HomeController@getRegister');
+Route::get('/blog','HomeController@getBlog');
+
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
