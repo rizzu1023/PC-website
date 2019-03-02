@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Auth::routes();
+// maldanldA
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
