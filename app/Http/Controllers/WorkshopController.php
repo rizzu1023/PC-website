@@ -33,7 +33,7 @@ class WorkshopController extends Controller
             $workshop->status = $request->input('status');
             $workshop->save();
 
-            return Redirect::to('/Workshops');
+            return Redirect::to('/admin/Workshops');
 
         
     }
@@ -61,7 +61,7 @@ class WorkshopController extends Controller
       $workshop->about=$request->input('about');
       $workshop->status=$request->input('status');
       $workshop->save();
-      return Redirect::to('Workshops')
+      return Redirect::to('/admin/Workshops')
                       ->with('success', 'workshop updated successfully');
     
     }
@@ -70,7 +70,7 @@ class WorkshopController extends Controller
     {
         $workshop= Workshops::find($id);
         $workshop->delete();
-        return Redirect::to('Workshops')
+        return Redirect::to('/admin/Workshops')
                         ->with('success', 'workshop  entry deleted successfully');
     }
 

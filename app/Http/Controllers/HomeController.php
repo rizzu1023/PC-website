@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Redirect;
 
 class HomeController extends Controller
 {
@@ -11,27 +12,63 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index()
-    {
-        return view('home');
-    }
-
-    // public function feedback()
+    // public function __construct()
     // {
-    //     return view('frontend.feedback');
+    //     $this->middleware('auth');
+    // }
+    // public function __construct()
+    // {
+    //     $this->middleware(['auth','admin']);
     // }
 
+     public function index()
+    {
+        return view('auth.login');
+    }
+
     
+
+    public function Home()
+    {
+        return view('pc.index');
+    }
+
+    public function getEvent()
+    {
+        return view('pc.event');
+    }
+
+    public function getAbout()
+    {
+        return view('pc.about');
+    }
+
+    public function getHome()
+    {
+        return Redirect::to('/admin/dashboard');
+    }
+
+
+    public function admin()
+    {
+        return view('admin.dashboard');
+    }
+
+    public function getRegister()
+    {
+        return view('pc.register');
+    }
+
+    public function getContact()
+    {
+        return view('pc.contact');
+    }
+
+    public function getBlog(){
+        return view('pc.blog');
+    }
+
+
 
 
 

@@ -1,27 +1,34 @@
 <?php
 
 namespace App\Http\Middleware;
-
+use Auth;
+use Illuminate\Http\Request; 
 use Closure;
-
-class Admin
+use Redirect;
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @return mixed
-     */
-    public function handle($request, Closure $next)
-    {
-        return $next($request);
-        if(auth()->user()->isAdmin == 1){
-        return $next($request);
-        }else{
-            return redirect('home')->with('error','You have not admin access');
+    // /**
+    //  * Handle an incoming request.
+    //  *
+    //  * @param  \Illuminate\Http\Request  $request
+    //  * @param  \Closure  $next
+    //  * @return mixed
+    //  */
+    // //public function handle(Request $request, Closure $next)
+    // {   
+    // //    $is =  Auth::user()->isAdmin;
+    // //     //dd($is);
+    // //     //return $next($request);
+    // //     if($is == 1){
+    // //        return $next($request);
+    // //        return Redirect::to('/admin/dashboard')->with('success','Welcome to Dashboard');
+    // //     }
         
-        }
-        
-    }
+    // //     else{
+                
+    // //          return $next($request);
+    // //          return redirect('home')->with('error','You have not admin access');
+            
+    //     }
+                    
+    // }
 }

@@ -14,12 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Auth::routes();
 
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/admin/login', 'HomeController@index');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('socialauth/github', 'Auth\SocialAuthController@redirectToProvider');
 Route::get('github/success', 'Auth\SocialAuthController@handleProviderCallback');
 
@@ -27,14 +27,17 @@ Route::get('github/success', 'Auth\SocialAuthController@handleProviderCallback')
 Route::get('/pc','FrontendController@home');
 
 Route::get('/admin','AdminController@Index');
+Route::view('/admin/dashboard','admin.dashboard')->name('adminDash');
+Route::view('admin','admin.adminlogin');
+
+Route::get('/admin','AdminController@Index');
 Route::view('/admin/dashboard','admin.dashboard');
 Route::view('admin','admin.adminlogin');
 
-// Route::get('/admin','AdminController@Index');
-// Route::view('/admin/dashboard','admin.dashboard');
-// Route::view('admin','admin.adminlogin');
-
 //Admin Login
+
+Route::get('/admin/dashboard','HomeController@admin');
+
 
 Route::get('/admin/adminlogin','AdminController@AdminLogin');
 Route::post('/admin/adminlogin','AdminController@login');
@@ -46,31 +49,31 @@ Route::get('/', 'ImageUploadController@home');
 Route::post('/upload/images', ['uses'=>'ImageUploadController@uploadImages','as'=>'uploadImage']);
 
 //workshop add
-Route::get('/Workshops','WorkshopController@index');
-Route::get('/Workshop/add','WorkshopController@create');
-Route::post('/Workshop/add','WorkshopController@store');
-Route::get('/Workshop/show/{id}','WorkshopController@show');
-Route::post('/Workshop/delete/{id}','WorkshopController@delete');
-Route::get('/Workshop/edit/{id}','WorkshopController@edit');
-Route::post('/Workshop/edit/{id}','WorkshopController@update');
+Route::get('/admin/Workshops','WorkshopController@index');
+Route::get('/admin/Workshop/add','WorkshopController@create');
+Route::post('/admin/Workshop/add','WorkshopController@store');
+Route::get('/admin/Workshop/show/{id}','WorkshopController@show');
+Route::post('/admin/Workshop/delete/{id}','WorkshopController@delete');
+Route::get('/admin/Workshop/edit/{id}','WorkshopController@edit');
+Route::post('/admin/Workshop/edit/{id}','WorkshopController@update');
 
 
-Route::get('/Workshopnew','WorkshopNew@index');
-Route::get('/Workshopnew/add','WorkshopNew@create');
-Route::post('/Workshopnew/add','WorkshopNew@store');
-Route::get('/Workshopnew/show','WorkshopNew@show');
-Route::get('/Workshopnew/delete/{id}','WorkshopNew@delete');
-Route::get('/Workshopnew/edit','WorkshopNew@edit');
-Route::post('/Workshopnew/edit','WorkshopNew@update');
+Route::get('/admin/Workshopnew','WorkshopNew@index');
+Route::get('/admin/Workshopnew/add','WorkshopNew@create');
+Route::post('/admin/Workshopnew/add','WorkshopNew@store');
+Route::get('/admin/Workshopnew/show','WorkshopNew@show');
+Route::post('/admin/Workshopnew/delete/{id}','WorkshopNew@delete');
+Route::get('/admin/Workshopnew/edit/{id}','WorkshopNew@edit');
+Route::post('/admin/Workshopnew/edit/{id}','WorkshopNew@update');
 
 //Workshopparticipants
-Route::get('/Workshopsparticipants','WorkshopNew@home');
-Route::get('/Workshopsparticipants/add','WorkshopNew@new');
-Route::post('/Workshopsparticipants/add','WorkshopNew@storeparticipants');
-Route::get('/Workshopsparticipants/show/{username}','WorkshopNew@userdetails');
-Route::post('/Workshopsparticipants/delete/{id}','WorkshopNew@deleteparticipant');
-Route::get('/Workshopsparticipants/edit/{id}','WorkshopNew@editparticipant');
-Route::post('/Workshopsparticipants/edit/{id}','WorkshopNew@updateparticipant');
+Route::get('admin/Workshopsparticipants','WorkshopNew@home');
+Route::get('admin/Workshopsparticipants/add','WorkshopNew@new');
+Route::post('admin/Workshopsparticipants/add','WorkshopNew@storeparticipants');
+Route::get('admin/Workshopsparticipants/show/{username}','WorkshopNew@userdetails');
+Route::post('admin/Workshopsparticipants/delete/{id}','WorkshopNew@deleteparticipant');
+Route::get('admin/Workshopsparticipants/edit/{id}','WorkshopNew@editparticipant');
+Route::post('admin/Workshopsparticipants/edit/{id}','WorkshopNew@updateparticipant');
 
 
 //Events
@@ -122,10 +125,10 @@ Route::get('/admin/eventsParticipant','eventsParticipantController@index');
 Route::get('/admin/eventsParticipant/add','eventsParticipantController@create');
 Route::get('/admin/eventsParticipant/edit/{id}','eventsParticipantController@edit');
 Route::get('/admin/eventsParticipant/show/','eventsParticipantController@userdetails');
-Route::post('/admin/eventsParticipant/add','eventsParticipantController@store');
+Route::post('/admin/eventsParticipant/add','eventsParticipantController@store')->name('addParticipant');
 Route::post('/admin/eventsParticipant/edit/{id}','eventsParticipantController@update');
 Route::post('/admin/eventsParticipant/delete/{id}','eventsParticipantController@destroy');
-
+// Route::post('/mobile/api/success','mobileController@Insert');
 // Events Problem Definitions
 
 Route::get('/admin/eventsPdefinition','eventsProbDefiController@index');
@@ -146,23 +149,13 @@ Route::post('/admin/eventSchedule/delete/{id}','eventsProbDefiController@sdestro
 
 
 //Blog
-<<<<<<< HEAD
-Route::get('/blog','BlogController@index')->name('blog');
-Route::get('/blog/add','BlogController@create');
-Route::post('/blog/add','BlogController@store');
-Route::get('/blog/show','BlogController@show');
-Route::post('/blog/delete/{id}','BlogController@delete');
-Route::get('/blog/edit/{id}','BlogController@edit');
-Route::post('/blog/edit/{id}','BlogController@update');
-=======
-Route::get('/admin//blog','BlogController@index');
-Route::get('/admin//blog/add','BlogController@create');
-Route::get('/admin//blog/edit/{id}','BlogController@edit');
-Route::get('/admin//blog/show','BlogController@show');
-Route::post('/admin//blog/add','BlogController@store');
-Route::post('/admin//blog/delete/{id}','BlogController@delete');
-Route::post('/admin//blog/edit/{id}','BlogController@update');
->>>>>>> 0d2dc12bd2a60363fa78cf2f920eeee6579dc29c
+Route::get('/admin/blog','BlogController@index');
+Route::get('/admin/blog/add','BlogController@create');
+Route::get('/admin/blog/edit/{id}','BlogController@edit');
+Route::get('/admin/blog/show','BlogController@show');
+Route::post('/admin/blog/add','BlogController@store');
+Route::post('/admin/blog/delete/{id}','BlogController@delete');
+Route::post('/admin/blog/edit/{id}','BlogController@update');
 
 
 
@@ -211,3 +204,16 @@ Route::get('/admin/pcteam/edit/{id}','PcteamController@edit');
 Route::post('/admin/pcteam/edit/{id}','PcteamController@update');
 Route::post('/admin/pcteam/delete/{id}','PcteamController@destroy');
 
+
+
+//frontend Route
+Route::get('/','HomeController@Home');
+Route::get('/event','HomeController@getEvent');
+Route::get('/about','HomeController@getAbout');
+Route::get('/contact','HomeController@getContact');
+Route::get('/eventRegister','HomeController@getRegister');
+Route::get('/blog','HomeController@getBlog');
+
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
