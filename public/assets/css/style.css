@@ -1602,6 +1602,11 @@ a.btn:hover {
     text-align: center;
 }
 
+.faq-section  .faq-section-header h2{
+    font-size: 50px;
+    padding: 30px;
+}
+
 @media screen and (max-width: 992px){
     .single-courses-page .featured-image {
         margin-top: 80px;

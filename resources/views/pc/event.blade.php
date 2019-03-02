@@ -49,13 +49,14 @@
 </section>
 
 
-<section class="faq-section">
-<div class="container">    
-<div class="row">
+<section class="faq-section">   
+    <div class="container">    
+     <div class="row">
 
         <div class="col-12 cl-lg-12">
-
- 
+                    <div class="faq-section-header text-center">
+                    <h2>FAQ's</h2>
+                    </div>
         <div class="single-course-accordion-cont mt-3">
                        
 
@@ -93,11 +94,12 @@
                     </div><!-- .single-course-accordion-cont  -->
                     </div>
                 </div>
-</div>
-        </section>
+      </div>
+    </div>
+</section>
 
-
-<div class="clients-logo">
+<section>
+    <div class="clients-logo">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-12 text-center">
@@ -138,7 +140,7 @@
             </div><!-- .row -->
         </div><!-- .container -->
     </div><!-- .clients-logo -->
- 
+</section>
   
 
 
