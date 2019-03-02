@@ -31,33 +31,42 @@ Team
                 </div><!-- .team-heading -->
             </div><!-- .col -->
 
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="team-member">
-                    <img src="{{asset('assets/images/bg2.jpg')}}" alt="">
-                    <h3>Mr. John Wick</h3>
-                </div><!-- .team-member -->
-            </div><!-- .col -->
-                 <div class="col-12 col-md-6 col-lg-3">
-                <div class="team-member">
-                    <img src="images/team-2.jpg" alt="">
-                    <h3>Mr. John Wick</h3>
-                </div><!-- .team-member -->
-            </div><!-- .col -->
-            <div class="col-12 col-md-6 col-lg-3">
-                    <div class="team-member">
-                        <img src="images/team-3.jpg" alt="">
-                        <h3>Mr. John Wick</h3>
-                    </div><!-- .team-member -->
-                </div><!-- .col -->
+     
+         
+          
                 <div class="col-12 col-md-6 col-lg-3">
                         <div class="team-member">
                             <img src="{{asset('assets/images/bg2.jpg')}}" alt="">
-                            <h3>Mohammed<br>Rizwan</h3>
+                            <h3>Jhon<br>Doe</h3>
+                        </div><!-- .team-member -->
+                    </div><!-- .col -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="team-member">
+                            <img src="{{asset('assets/images/bg2.jpg')}}" alt="">
+                            <h3>Jhon<br>Doe</h3>
+                        </div><!-- .team-member -->
+                    </div><!-- .col -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="team-member">
+                            <img src="{{asset('assets/images/bg2.jpg')}}" alt="">
+                            <h3>Jhon<br>Doe</h3>
+                        </div><!-- .team-member -->
+                    </div><!-- .col -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="team-member">
+                            <img src="{{asset('assets/images/bg2.jpg')}}" alt="">
+                            <h3>Jhon<br>Doe</h3>
+                        </div><!-- .team-member -->
+                    </div><!-- .col -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="team-member">
+                            <img src="{{asset('assets/images/bg2.jpg')}}" alt="">
+                            <h3>Jhon<br>Doe</h3>
                         </div><!-- .team-member -->
                     </div><!-- .col -->
                     <div class="col-12 col-md-6 col-lg-3">
                             <div class="team-member">
-                                <img src="images/team-4.jpg" alt="">
+                                <img src="images/team-4.jpg" alt=""/>
                                 <h3>Mr. John Wick</h3>
                             </div><!-- .team-member -->
                         </div><!-- .col -->

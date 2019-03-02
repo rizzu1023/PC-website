@@ -300,6 +300,7 @@ a:hover, a:active {
     left: -320px;
     z-index: 9999;
     width: 100vw;
+    max-width: 70vw;
     height: 100%;
     overflow-x: scroll;
     padding: 30px 15px;
@@ -318,12 +319,12 @@ a:hover, a:active {
     
 }
 
-.site-navigation ul li:nth-child(6) a{
-    /* color: #fff; */
+.site-navigation ul li:nth-child(7) a{
+    color: #fff;
 }
-.site-navigation ul li:nth-child(6) a:hover {
-    /* color: #000; */
-    /* background: rgba(255,255,255,1); */
+.site-navigation ul li:nth-child(7) a:hover {
+    color: #000;
+    background: rgba(255,255,255,1);
 }
 
 @media screen and (max-width: 576px){
@@ -3093,5 +3094,54 @@ p.footer-copyright {
 
 .schedule-section ul li span{
     float: right;
+}
+
+
+
+.prize-section{
+    background: #454545;
+    padding: 40px;
+    color: #ccc;
+}
+
+.prize-section .prize-top{
+    padding: 50px;
+}
+
+.prize-section .prize-top p{
+    font-size: 35px;
+    margin-bottom: -35px;
+}
+
+.prize-section .prize-top span{
+    font-size: 70px;
+}
+
+
+.prize-section .prize-mid{
+    padding: 40px;
+}
+
+
+.prize-section .prize-mid p{
+    font-size: 22px;
+    margin-bottom: -22px;
+}
+
+.prize-section .prize-mid span{
+    font-size: 60px;
+}
+
+
+.prize-section .prize-bottom{
+    padding: 20px 0;
+}
+.prize-section .prize-bottom p{
+    font-size: 17px;
+    margin-bottom: -20px;
+}
+
+.prize-section .prize-bottom span{
+    font-size: 50px;
 }
 

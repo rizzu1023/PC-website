@@ -55,6 +55,39 @@ whose objective is to stimulate <b>HEALTH AND FITNESS</b> for the common masses 
     </div><!-- .container -->
 </section>
 
+<div class="prize-section">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12 col-lg-12">
+                <div class="prize-top">
+                        <p>Total Prize in INR</p>
+                        <span>30,000 &#8377</span> 
+                </div>
+            </div>
+            <div class="col-12 col-lg-12">
+                <div class="prize-mid">
+                        <p>First place</p>
+                        <span>12,000 &#8377</span>
+                </div>
+            </div>
+            <div class="col-12 col-lg-12">
+                <div class="prize-bottom">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p>Second Place</p>
+                                <span>10,000 &#8377</span>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Third Place</p>
+                                <span>8,000 &#8377</span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <section class="schedule-section">
     <div class="container">
         <div class="row">
