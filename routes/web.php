@@ -15,7 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/admin/login', 'HomeController@index');
 
 
 
@@ -35,7 +36,7 @@ Route::view('admin','admin.adminlogin');
 
 //Admin Login
 
-Route::get('admin/dashboard','HomeController@admin');
+Route::get('/admin/dashboard','HomeController@admin')->middleware('admin');
 
 
 Route::get('/admin/adminlogin','AdminController@AdminLogin');
@@ -215,4 +216,4 @@ Route::get('/blog','HomeController@getBlog');
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

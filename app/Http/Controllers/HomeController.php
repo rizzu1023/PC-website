@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Redirect;
 
 class HomeController extends Controller
 {
@@ -20,6 +21,12 @@ class HomeController extends Controller
     //     $this->middleware(['auth','admin']);
     // }
 
+     public function index()
+    {
+        return view('auth.login');
+    }
+
+    
 
     public function Home()
     {
@@ -36,6 +43,17 @@ class HomeController extends Controller
         return view('pc.about');
     }
 
+    public function getHome()
+    {
+        return Redirect::to('/admin/dashboard');
+    }
+
+
+    public function admin()
+    {
+        return view('admin.dashboard');
+    }
+
     public function getRegister()
     {
         return view('pc.register');
@@ -49,6 +67,7 @@ class HomeController extends Controller
     public function getBlog(){
         return view('pc.blog');
     }
+
 
 
 
