@@ -14,13 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Auth::routes();
-// maldanldA
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('socialauth/github', 'Auth\SocialAuthController@redirectToProvider');
 Route::get('github/success', 'Auth\SocialAuthController@handleProviderCallback');
 
@@ -214,3 +212,7 @@ Route::get('/about','HomeController@getAbout');
 Route::get('/contact','HomeController@getContact');
 Route::get('/register','HomeController@getRegister');
 Route::get('/blog','HomeController@getRegister');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

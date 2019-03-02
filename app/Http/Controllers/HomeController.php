@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request; 
-
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -12,10 +11,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-    // public function __construct()
-    // {
-    //     $this->middleware(['auth','admin']);
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     /**
      * Show the application dashboard.
@@ -26,40 +25,6 @@ class HomeController extends Controller
     {
         return view('home');
     }
-
-    public function admin(){
-        return view('admin.dashboard');
-    }
-
-    // public function feedback()
-    // {
-    //     return view('frontend.feedback');
-    // }
-
-    public function getHome(){
-        return view('pc.index');
-    }
-
-    public function getEvent(){
-        return view('pc.event');
-    }
-
-    public function getAbout(){
-        return view('pc.about');
-    }
-
-    public function getBlog(){
-        return view('pc.blog');
-    }
-
-    public function getContact(){
-        return view('pc.contact');
-    }
-
-    public function getRegister(){
-        return view('pc.register');
-    }
-
 
 
 }
