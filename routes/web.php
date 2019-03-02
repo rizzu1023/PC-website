@@ -206,12 +206,12 @@ Route::post('/admin/pcteam/delete/{id}','PcteamController@destroy');
 
 
 //frontend Route
-Route::get('/','HomeController@getHome');
+Route::get('/','HomeController@Home');
 Route::get('/event','HomeController@getEvent');
 Route::get('/about','HomeController@getAbout');
 Route::get('/contact','HomeController@getContact');
-Route::get('/register','HomeController@getRegister');
-Route::get('/blog','HomeController@getRegister');
+Route::get('/eventRegister','HomeController@getRegister');
+Route::get('/blog','HomeController@getBlog');
 
 Auth::routes();
 
