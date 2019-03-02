@@ -3,7 +3,7 @@
 
 @section('content')
 
-
+<section class="page-header">
 <div class="page-header-overlay">
             <div class="container">
                 <div class="row">
@@ -16,10 +16,10 @@
             </div><!-- .container -->
         </div><!-- .page-header-overlay -->
     </div><!-- .page-header -->
+</section>
 
-    <div class="container">
-  
-
+<section class="contact-section" style="padding:30px 0px">
+<div class="container">
         <div class="row justify-content-between">
             <div class="col-12 col-lg-6">
                 <div class="contact-form">

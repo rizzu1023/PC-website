@@ -1,8 +1,9 @@
 @extends('pc.layouts.base')
 
+
 @section('content')
 
-
+<section class="page-header">
 <div class="page-header-overlay">
             <div class="container">
                 <div class="row">
@@ -15,6 +16,7 @@
             </div><!-- .container -->
         </div><!-- .page-header-overlay -->
     </div><!-- .page-header -->
+</section>
 <section class="event-section">
    <div class="container">
         <div class="row">
@@ -48,14 +50,43 @@
     </div><!-- .container -->
 </section>
 
+<section class="schedule-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6 schedule-section-left">
+                            <h3>Day 1</h3>
+                            <ul>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                            </ul>
+                        </div>
+                    <div class="col-lg-6 schedule-section-right">
+                        <h3>Day 2</h3>
+                            <ul>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<section class="faq-section">
-<div class="container">    
-<div class="row">
+<section class="faq-section">   
+    <div class="container">    
+     <div class="row">
 
         <div class="col-12 cl-lg-12">
-
- 
+                    <div class="faq-section-header text-center">
+                    <h2>FAQ's</h2>
+                    </div>
         <div class="single-course-accordion-cont mt-3">
                        
 
@@ -93,11 +124,12 @@
                     </div><!-- .single-course-accordion-cont  -->
                     </div>
                 </div>
-</div>
-        </section>
+      </div>
+    </div>
+</section>
 
-
-<div class="clients-logo">
+<section class="sponsor-section">
+    <div class="clients-logo">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-12 text-center">
@@ -110,6 +142,7 @@
                         <div class="row mt-5">
                     <div class="logo-wrap col-lg-4">
                         <img src="{{asset('assets/images/logo-1.png')}}" alt="">
+                        <p>Bright Academy</p>
                     </div><!-- .logo-wrap -->
 
                     <div class="logo-wrap col-lg-4">
@@ -138,7 +171,7 @@
             </div><!-- .row -->
         </div><!-- .container -->
     </div><!-- .clients-logo -->
- 
+</section>
   
 
 
