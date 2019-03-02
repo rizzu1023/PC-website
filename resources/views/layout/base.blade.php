@@ -32,7 +32,7 @@
         <link href="{{asset('assets/css/lib/menubar/sidebar.css')}}" rel="stylesheet">
         <link href="{{asset('assets/css/lib/bootstrap.min.css')}}" rel="stylesheet">
         <link href="{{asset('assets/css/lib/helper.css')}}" rel="stylesheet">
-        <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/css/lib/style.css')}}" rel="stylesheet">
   
 
 </head>
@@ -48,14 +48,14 @@
 
 
 
-        <script src="assets/js/lib/jquery.min.js"></script>
-        <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
+        <script src="{{asset('assets/js/lib/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/js/lib/jquery.nanoscroller.min.js')}}"></script>
         <!-- nano scroller -->
-        <script src="assets/js/lib/menubar/sidebar.js"></script>
-        <script src="assets/js/lib/preloader/pace.min.js"></script>
+        <script src="{{asset('assets/js/lib/menubar/sidebar.js')}}"></script>
+        <script src="{{asset('assets/js/lib/preloader/pace.min.js')}}"></script>
         <!-- sidebar -->
-        <script src="assets/js/lib/bootstrap.min.js"></script>
-        <script src="assets/js/scripts.js"></script>
+        <script src="{{asset('assets/js/lib/bootstrap.min.js')}}"></script>
+        <script src="{{asset('assets/js/lib/scripts.js')}}"></script>
         <!-- scripit init-->
 </body>
 </html>
