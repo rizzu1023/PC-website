@@ -47,8 +47,9 @@ class eventsParticipantController extends Controller
        // $eventsParticipant->payment=$request->input('payment');
 
         $eventsParticipant->save();
+        return view('pc.event')->with('message','You are Registered Successfully..!');
 
-        return Redirect::to('/admin/eventsParticipant')->with('message','Participant Added Successfully..!');
+        //return Redirect::to('/admin/eventsParticipant')->with('message','Participant Added Successfully..!');
 
     }
 

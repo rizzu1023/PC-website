@@ -27,7 +27,7 @@
                                         <div class="dropdown-content-body">
                                             <ul>
      
-                                                <li><a href="#"><i class="ti-power-off"></i> <span>Logout</span></a></li>
+                                                <li><a href="/logout"><i class="ti-power-off"></i> <span>Logout</span></a></li>
                                             </ul>
                                         </div>
                                     </div>
