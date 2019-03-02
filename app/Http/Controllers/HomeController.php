@@ -20,6 +20,12 @@ class HomeController extends Controller
     // {
     //     $this->middleware(['auth','admin']);
     // }
+
+     public function index()
+    {
+        return view('auth.login');
+    }
+
     
 
     public function Home()
@@ -45,7 +51,7 @@ class HomeController extends Controller
 
     public function admin()
     {
-        return view('adminpanel.events.add');
+        return view('admin.dashboard');
     }
 
     public function getRegister()
