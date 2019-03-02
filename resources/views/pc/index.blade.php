@@ -33,13 +33,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-12 align-content-lg-stretch">
-                    <header class="heading text-center">
-                        <h2 class="entry-title">Participate in Algorithm 5.O</h2>
-                        <p>The objective of this technical event is to bring the students of different institutes together to interact and offer a new focus for IT students on the challenges of meeting global demands over social causes in a sustainable way. The event will touch on programmer's ability to solve social issues and know how to highlight their knowledge to target the problems in more effective and efficient ways.</p>
+                    <header class="heading">
+                        <h2 class="entry-title">ALGORITHM 5.O</h2>
+                        <!-- <p>The objective of this technical event is to bring the students of different institutes together to interact and offer a new focus for IT students on the challenges of meeting global demands over social causes in a sustainable way. The event will touch on programmer's ability to solve social issues and know how to highlight their knowledge to target the problems in more effective and efficient ways.</p> -->
                     </header><!-- .heading -->
 
                 </div><!-- .col -->
-                <div class="col-lg-12 col-12 mt-4">
+                <div class="col-lg-12 col-12">
                     <div class="single-event">
                         <div class="event-content">
                             <!-- <h2 class="text-center"><a href="event-single.html">STARTS IN</a></h2> -->
@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 
-                <a href="#" class="button mt-3">Participate Now</a>
+                <a href="/event" class="btn button mt-3">REGISTER</a>
                
             </div><!-- .row -->
         </div><!-- .container -->
