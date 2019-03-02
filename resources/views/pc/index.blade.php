@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 
-                <a href="/event" class="btn button mt-3">REGISTER</a>
+                <a href="/pc/eventRegister" class="btn button mt-3">REGISTER</a>
                
             </div><!-- .row -->
         </div><!-- .container -->
