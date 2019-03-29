@@ -42,8 +42,8 @@
                 <div class="nano-content">
                     <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Programmers Club</span></a></div>
                     <ul>
-                        <li><a href="/admin/dashboard" class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard  </a>
-                        <li ><a href="/admin/blog" class="sidebar-sub-toggle"><i class="ti-stack-overflow"></i> Blog </a>
+                        <li><a href="/admin/dashboard" class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard  </a></li>
+                        <li><a href="/admin/blog" class="sidebar-sub-toggle"><i class="ti-stack-overflow"></i> Blog </a></li>
                         <li><a href="/admin/events" class="sidebar-sub-toggle"><i class="ti-pin-alt"></i> Events </a>
                         <li><a href="/admin/Workshops" class="sidebar-sub-toggle"><i class="ti-spray"></i> Workshop </a>
                         <li><a href="" class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Poll  </a>
