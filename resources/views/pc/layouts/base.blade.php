@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Hello World</title>
+    <title>@yield('title')</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -26,7 +26,11 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-    
+    <style>
+    .page-header{
+        background: url("{{asset('assets/images/bg1.jpg')}}") no-repeat center;
+    }
+</style>
     @yield('css')
 </head>
 <body>

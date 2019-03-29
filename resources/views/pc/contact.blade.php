@@ -1,9 +1,12 @@
 @extends('pc.layouts.base')
 
+@section('title')
+Contact
+@endsection
 
 @section('content')
 
-
+<section class="page-header">
 <div class="page-header-overlay">
             <div class="container">
                 <div class="row">
@@ -16,10 +19,10 @@
             </div><!-- .container -->
         </div><!-- .page-header-overlay -->
     </div><!-- .page-header -->
+</section>
 
-    <div class="container">
-  
-
+<section class="contact-section" style="padding:30px 0px">
+<div class="container">
         <div class="row justify-content-between">
             <div class="col-12 col-lg-6">
                 <div class="contact-form">
@@ -39,12 +42,12 @@
                 <div class="contact-info">
                     <h3>Contact Information</h3>
 
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. </p>
+                    <!-- <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. </p> -->
 
                     <ul class="p-0 m-0">
-                        <li><span>Location:</span>40 Baria Sreet 133/2 NewYork City, US</li>
-                        <li><span>Email:</span>connect@programmersclub.co.in</li>
-                        <li><span>Phone:</span>Jhon : 421236666<br>Doe : 8441988897</li>
+                        <li><span>Location :</span>Department of Computer EngineeringPlot No. 2 & 3, Sector - 16, Near Thana Naka, Khandagao, New Panvel,Navi Mumbai, Maharashtra 410206</li>
+                        <li><span>Email :</span>connect@programmersclub.co.in</li>
+                        <li><span>Phone :</span>Azam : 8286101918<br>Haris : 8097781689</li>
                     </ul>
                 </div><!-- .contact-info -->
             </div><!-- .col -->

@@ -1,5 +1,9 @@
 @extends('pc.layouts.base')
 
+@section('title')
+Home
+@endsection
+
 @section('css')
     <style>
         .hero-content-overlay {
@@ -10,6 +14,19 @@
             background-repeat: no-repeat;
             background-position-y: 10%;
         }
+    @media screen and (max-width: 576px){
+        .hero-content-overlay {
+
+    /* height: 40vh; */
+        background: rgba(21,20,33,.5);
+        background: url("{{asset('assets/images/WebWall2.png')}}"); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: 50%;
+        background-size: 100vw 70vh;
+        /* background-attachment: fixed; */
+    }
+}
     </style>
 @endsection
 @section('content')
@@ -46,7 +63,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <h4 class="text-center">
+                                        <h4 class="text-center ml-5">
                                             <br />
                                             <div class="counter" style="margin:50px" id ="days"></div><span class="counter-value">Days</span>
                                             <div class="counter" style="margin:50px" id="hours"></div><span class="counter-value">Hours</span>
@@ -170,7 +187,7 @@
 
                 <div class="stats-count">
                         <i class="fas fa-graduation-cap"></i>
-                    <span>77</span>
+                    <span>44</span>
                     <p>MEMBERS</p>
                 </div><!-- .stats-count -->
 

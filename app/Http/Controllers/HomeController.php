@@ -68,6 +68,10 @@ class HomeController extends Controller
         return view('pc.blog');
     }
 
+    public function getTeam(){
+        return view('pc.team');
+    }
+
 
 
 

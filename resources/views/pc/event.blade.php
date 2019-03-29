@@ -1,8 +1,12 @@
 @extends('pc.layouts.base')
 
+@section('title')
+Events
+@endsection
+
 @section('content')
 
-
+<section class="page-header">
 <div class="page-header-overlay">
             <div class="container">
                 <div class="row">
@@ -15,6 +19,7 @@
             </div><!-- .container -->
         </div><!-- .page-header-overlay -->
     </div><!-- .page-header -->
+</section>
 <section class="event-section">
    <div class="container">
         <div class="row">
@@ -30,16 +35,18 @@
                       <li><i class="far fa-user"></i>Participation<span>Team of 04</span></li>
                       <li><i class="fa fa-building-o"></i>Departments<span>CO, IT, CS</span></li>
                     </ul>
-                    <div class="event-fee"><h4>Participant Fees: <span>FREE</span></h4></div>
-                    <div class="event-button"><a href="#" class="btn-success">Participate Now</a></div>
+                    <div class="event-fee"><h4>Participant Fees : <span>FREE</span></h4></div>
+                    <div class="event-button"><a href="#" class="btn-success">Register Now</a></div>
                 </div>
             </div><!-- .col -->
             <div class="col-12 col-lg-7">
                     <div class="event-section-right">
                     <h3>About the Event</h3>
-                    <p class="mt-2">Greetings! We, the Department of Computer Engineering-A.I.Kalsekar, delightfully invite you to our 36 hours of Socio-Technical mega event Algorithm 4.O. Algorithm 4.O is a platform provided by our department for the students of different colleges as an Inter-college event which helps them come forward to compete with each other and will be held on March 16, 2018 - March 17,2018. The main purpose of this technical event is to bring the students of different institutes together to get involved and offer a new focus for IT students on the challenges of meeting global demands over social causes in workable way. The event will touch on Programmer's ability to solve the social issues and know how to focus on the knowledge by targeting the problems in more effective and efficient ways. You all are warmly welcome to grab this wonderful opportunity of exploring real life problems, communicate with fellow participants and industrial experts, highlight your knowledge and share your innovative ideas by just participating!</p>
+                    <p class="mt-2">Greetings! We, the Department of Computer Engineering-A.I.Kalsekar, delightfully invite you to our 36 hours of Socio-Technical mega event Algorithm 5.O. Algorithm 5.O is a platform provided by our department for the students of different colleges as an Inter-college event which helps them come forward to compete with each other and will be held on March 15, 2019 - March 16,2019. The main purpose of this technical event is to bring the students of different institutes together to get involved and offer a new focus for IT students on the challenges of meeting global demands over social causes in workable way. The event will touch on Programmer's ability to solve the social issues and know how to focus on the knowledge by targeting the problems in more effective and efficient ways. You all are warmly welcome to grab this wonderful opportunity of exploring real life problems, communicate with fellow participants and industrial experts, highlight your knowledge and share your innovative ideas by just participating!</p>
                     <h3 class="mt-4">Event Theme</h3>
-                    <p class="mt-2">The Algorithm event gives a platform to a person with technical background contributing their shares towards society. It lets humans share, feel included, inspired, and be recognized for their contributions. This time, the fourth installment of ALGORITHM is presented in the form of Hackathon where you can innovate, collaborate and transform your innovation in the time-span of 24 hrs where the problem statements enlightened are the crises for the event are various issues faced by Mumbaikars in their day to day lives. The issues were put forth by the residents of Mumbai through a survey that we conducted. A Mumbaikar faces a lot of day to day life problems. Algorithm 4.O is organised to come up with innovative technical solutions to solve the issues faced by a mumbaikar. The problem definitions that we have put forth are raised through a survey that was conducted in the city of Mumbai.</p>
+                    <p class="mt-2">The objective of our event is to create a software implemented solution, for problems faced by everyday working class citizens. Algorithm evolved through the years from its first installation bringing social awareness through web development, to creating digital solution for natural and man-made disaster, to helping farmers and senior citizens. Last year we aimed to solve problems faced by the citizens of Mumbai. This would be the 5th installation of our event,
+whose objective is to stimulate <b>HEALTH AND FITNESS</b> for the common masses by means of a mobile application or a website or any technical solution[software].
+</p>
                 </div>
           
             </div><!-- .col -->
@@ -48,14 +55,79 @@
     </div><!-- .container -->
 </section>
 
+<div class="prize-section">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12 col-lg-12">
+                <div class="prize-top">
+                        <p>Total Prize in INR</p>
+                        <span>30,000 &#8377</span> 
+                </div>
+            </div>
+            <div class="col-12 col-lg-12">
+                <div class="prize-mid">
+                        <p>First place</p>
+                        <span>12,000 &#8377</span>
+                </div>
+            </div>
+            <div class="col-12 col-lg-12">
+                <div class="prize-bottom">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p>Second Place</p>
+                                <span>10,000 &#8377</span>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Third Place</p>
+                                <span>8,000 &#8377</span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="schedule-section">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-12 text-center p-2">
+            <h4>Schedule</h4>
+            </div>
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6 schedule-section-left">
+                            <h3>Day 1</h3>
+                            <ul>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                            </ul>
+                        </div>
+                    <div class="col-lg-6 schedule-section-right">
+                        <h3>Day 2</h3>
+                            <ul>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                                <li>12pm to 1pm<span>Introduction</span></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="faq-section">   
     <div class="container">    
      <div class="row">
 
         <div class="col-12 cl-lg-12">
-                    <div class="faq-section-header text-center">
-                    <h2>FAQ's</h2>
+                    <div class="faq-section-header text-center heading">
+                    <h4>FAQ's</h4>
                     </div>
         <div class="single-course-accordion-cont mt-3">
                        
@@ -98,12 +170,12 @@
     </div>
 </section>
 
-<section>
+<section class="sponsor-section">
     <div class="clients-logo">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-12 text-center">
-                    <h2>Our Sponsors</h2>
+                <div class="col-12 col-lg-12 text-center heading">
+                    <h4>Our Sponsors</h4>
                 </div>
             </div>
             <div class="row">
@@ -112,6 +184,7 @@
                         <div class="row mt-5">
                     <div class="logo-wrap col-lg-4">
                         <img src="{{asset('assets/images/logo-1.png')}}" alt="">
+                        <p>Bright Academy</p>
                     </div><!-- .logo-wrap -->
 
                     <div class="logo-wrap col-lg-4">

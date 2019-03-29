@@ -1,8 +1,11 @@
 @extends('pc.layouts.base')
 
+@section('title')
+Blog
+@endsection
 
 @section('content')
-
+<section class="page-header">
 <div class="page-header-overlay">
             <div class="container">
                 <div class="row">
@@ -15,7 +18,7 @@
             </div><!-- .container -->
         </div><!-- .page-header-overlay -->
     </div><!-- .page-header -->
-
+</section>
     <div class="container">
         <div class="row">
             <div class="col-12">
